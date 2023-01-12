@@ -24,10 +24,10 @@
 1. **What is the basic difference between AI, Machine Learning(ML) & Deep Learning(DL)?**. ⭐
 
 
-   `Ans:` Artificial Intelligence (AI) is a broad field that encompasses many different techniques and technologies, including machine learning (ML) and deep learning (DL). <br />
-   - **Artificial Intelligence (AI)** refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. It is a broad field that includes many different approaches and techniques, such as rule-based systems, and expert systems. <br />
-   - **Machine Learning (ML)** is a subfield of AI that is focused on the development of algorithms and statistical models that enable machines to learn from data and make predictions or decisions without being explicitly programmed. <br />
-   - **Deep Learning (DL)** is a type of machine learning that is inspired by the structure and function of the brain's neural networks. It uses multiple layers of artificial neural networks to learn representations of data with multiple levels of abstraction. DL algorithms can be used for tasks such as image and speech recognition, natural language processing, and decision-making.
+`Ans:` Artificial Intelligence (AI) is a broad field that encompasses many different techniques and technologies, including machine learning (ML) and deep learning (DL). <br />
+- **Artificial Intelligence (AI)** refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. It is a broad field that includes many different approaches and techniques, such as rule-based systems, and expert systems. <br />
+- **Machine Learning (ML)** is a subfield of AI that is focused on the development of algorithms and statistical models that enable machines to learn from data and make predictions or decisions without being explicitly programmed. <br />
+1- **Deep Learning (DL)** is a type of machine learning that is inspired by the structure and function of the brain's neural networks. It uses multiple layers of artificial neural networks to learn representations of data with multiple levels of abstraction. DL algorithms can be used for tasks such as image and speech recognition, natural language processing, and decision-making.
    
 		![al_ml_dl](https://user-images.githubusercontent.com/44112345/212048865-51478738-282a-46b5-b6ad-952fdb3abebd.JPG)
 
@@ -36,39 +36,39 @@
 2. **Can you explain the difference between supervised and unsupervised learning?**. ⭐
 
 
-   `Ans:` The main difference between them is the type and amount of input provided to the algorithms.
-   - **Supervised learning** is a type of machine learning where the model is trained on a labeled dataset, i.e., the model is provided with input-output pairs, and the goal is to learn a mapping from inputs to outputs. This mapping can then be used to make predictions on new, unseen data. Examples of supervised learning include regression, classification and prediction tasks. <br />
-   - **Unsupervised learning**, on the other hand, is a type of machine learning where the model is not provided with labeled data. Instead, the algorithm is given a dataset without any output labels, and the goal is to find patterns or structure within the data. Examples of unsupervised learning include clustering, dimensionality reduction, and anomaly detection tasks.
+`Ans:` The main difference between them is the type and amount of input provided to the algorithms.
+- **Supervised learning** is a type of machine learning where the model is trained on a labeled dataset, i.e., the model is provided with input-output pairs, and the goal is to learn a mapping from inputs to outputs. This mapping can then be used to make predictions on new, unseen data. Examples of supervised learning include regression, classification and prediction tasks. <br />
+- **Unsupervised learning**, on the other hand, is a type of machine learning where the model is not provided with labeled data. Instead, the algorithm is given a dataset without any output labels, and the goal is to find patterns or structure within the data. Examples of unsupervised learning include clustering, dimensionality reduction, and anomaly detection tasks.
 
 ---
 
 3.  **Can you explain the difference between supervised and unsupervised learning?**. ⭐
 
 
-   `Ans:` There are several techniques for handling missing data in a dataset, some of the most common include: <br />
-   - **Mean/Median Imputation:** This method replaces the missing value with the mean or median of the non-missing values in the same column. (Numerical)
-   - **Random Sample Imputation:** This method replaces the missing value with a random sample from the non-missing values in the same column. (Numerical)
-   - **Most Frequent Imputation** Most Frequent is another statistical strategy to impute missing values which work with categorical features (strings or numerical representations) by replacing missing data with the most frequent values within each column. (Numerical/Categorical)
-   - **Zero or Constant Imputation** By this method, the missing values are replaced by zero/constant values.(Numerical)
-   - **Regression Imputation:** By this method, the missing values are predicted using Regression techniques such as KNN Imputation, and Logistic Regression for Categorical missing values.(Numerical/Categorical)
-   -  **Multivariate Imputation by Chained Equation (MICE):** This type of imputation works by filling in the missing data multiple times. Multiple Imputations (MIs) are much better than a single imputation as it measures the uncertainty of the missing values in a better way.
+`Ans:` There are several techniques for handling missing data in a dataset, some of the most common include: <br />
+- **Mean/Median Imputation:** This method replaces the missing value with the mean or median of the non-missing values in the same column. (Numerical)
+- **Random Sample Imputation:** This method replaces the missing value with a random sample from the non-missing values in the same column. (Numerical)
+- **Most Frequent Imputation** Most Frequent is another statistical strategy to impute missing values which work with categorical features (strings or numerical representations) by replacing missing data with the most frequent values within each column. (Numerical/Categorical)
+- **Zero or Constant Imputation** By this method, the missing values are replaced by zero/constant values.(Numerical)
+- **Regression Imputation:** By this method, the missing values are predicted using Regression techniques such as KNN Imputation, and Logistic Regression for Categorical missing values.(Numerical/Categorical)
+-  **Multivariate Imputation by Chained Equation (MICE):** This type of imputation works by filling in the missing data multiple times. Multiple Imputations (MIs) are much better than a single imputation as it measures the uncertainty of the missing values in a better way.
 
 ---
 
 4.  **How do you select the appropriate evaluation metric for a given problem, and what are the trade-offs between different metrics such as precision, recall, and F1-score?**. ⭐
 
 
-   `Ans:` Selecting the appropriate evaluation metric for a given problem depends on the characteristics of the data and the goals of the model. Here are some common evaluation metrics and the situations in which they are typically used:
+`Ans:` Selecting the appropriate evaluation metric for a given problem depends on the characteristics of the data and the goals of the model. Here are some common evaluation metrics and the situations in which they are typically used:
 
-	- **Accuracy:** This metric measures the proportion of correct predictions made by the model. It is commonly used when the classes are well balanced and the goal is to have a high overall performance of the model.
+- **Accuracy:** This metric measures the proportion of correct predictions made by the model. It is commonly used when the classes are well balanced and the goal is to have a high overall performance of the model.
     
-	- **Precision:** This metric measures the proportion of true positive predictions to all positive predictions made by the model. It is commonly used when the goal is to minimize false positives. (Ex- Financial Transactions/ Spam Mail)
+- **Precision:** This metric measures the proportion of true positive predictions to all positive predictions made by the model. It is commonly used when the goal is to minimize false positives. (Ex- Financial Transactions/ Spam Mail)
     
-	- **Recall:** This metric measures the proportion of true positive predictions to all actual positive cases in the dataset. It is commonly used when the goal is to minimize false negatives. (Ex-Medical diseases/Stock Market breakdown)
+- **Recall:** This metric measures the proportion of true positive predictions to all actual positive cases in the dataset. It is commonly used when the goal is to minimize false negatives. (Ex-Medical diseases/Stock Market breakdown)
     
-	- **F1-Score:** This metric is the harmonic mean of precision and recall. It balances the trade-off between precision and recall and is commonly used when the goal is to have a balance between both.
+- **F1-Score:** This metric is the harmonic mean of precision and recall. It balances the trade-off between precision and recall and is commonly used when the goal is to have a balance between both.
     
-	- **ROC-AUC:** This metric measures the area under the Receiver Operating Characteristic curve and is commonly used when the classes are imbalanced and the goal is to have a high overall performance of the model.
+- **ROC-AUC:** This metric measures the area under the Receiver Operating Characteristic curve and is commonly used when the classes are imbalanced and the goal is to have a high overall performance of the model.
 
 ---
 
