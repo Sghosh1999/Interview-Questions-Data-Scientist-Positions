@@ -358,6 +358,8 @@ These techniques are used to reduce the number of features in a dataset while pr
 - Dimensionality Reduction: The last step is to project the centered data onto the principal components using a dot product. This results in a new dataset with reduced dimensions (k dimensions) that captures the most variation in the original data.`
 ---
 
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
 ## Regression Techniques ( Concepts )
 
 1. **Can you explain the difference between simple linear regression and multiple linear regression? How do you decide which one to use for a given problem?**.⭐⭐
