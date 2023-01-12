@@ -474,3 +474,14 @@ Additionally, it's important to use different evaluation metrics other than accu
 
 
 ---
+13. **Can you explain the concept of Elastic Net regression? How does it differ from Ridge and Lasso regression?**.⭐⭐
+
+`Ans:`Elastic Net is a linear regression model that combines the properties of both Ridge and Lasso regression. Like Ridge, it adds a L2 regularization term to the cost function to prevent overfitting. Like Lasso, it adds a L1 regularization term to the cost function to perform feature selection. *The trade-off between the L1 and L2 regularization terms is controlled by a parameter, alpha, that ranges from 0 to 1. **When alpha = 0, the model becomes a Ridge regression, and when alpha = 1, it becomes a Lasso regression.***
+
+---
+14. **-   In a sparse dataset where most of the values are 0, which supervised classification algorithm we should use?**.⭐⭐
+
+`Ans:`When dealing with a sparse dataset where most of the values are zero, a suitable supervised classification algorithm to use could be the **Naive Bayes Classifier, especially the variant called Multinomial Naive Bayes,** because **it can handle the large number of zero values and it relies on counting the occurrences of the features, this method can work well when a dataset is sparse** and the classifier can learn useful information from the occurrences of the features.
+It uses multinomial distributions for the likelihood estimates of the features, which models the occurrences which are robust to the sparse data.
+
+---
