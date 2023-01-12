@@ -16,7 +16,7 @@
 | Topics (Ongoing) | No Of Questions |
 |--|--|
 | [Data Science & ML - General Topics](#data-science--ml---general-topics) | 29 |
-| [Regression Techniques ( Concepts )](#regression-techniques--concepts-) | 3* |
+| [Regression Techniques ( Concepts )](#regression-techniques--concepts-) | 5* |
 
 
 ### Data Science & ML - General Topics
@@ -404,7 +404,7 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 - **Ridge regression, also known as L2 regularization,** is another type of linear regression that uses a penalty term *equal to the square of the magnitude of the coefficients.* Instead of shrinking the coefficients to zero, this penalty term helps to *shrink the coefficients of less important features towards zero, but it doesn't make them exactly zero.* Ridge Regression is useful to handle multicollinearity problems by reducing the variance of the coefficients.
 
 ---
-5. **How do we select the right regularization parameters?**⭐
+5. **How do we select the right regularization parameters?**.⭐
 
 `Ans:` Regularization is a technique used to prevent overfitting by adding a penalty term to the cost function of a model. The regularization term is controlled by a parameter, called the regularization parameter or hyperparameter. The value of this parameter determines the strength of the regularization.
 - There are several ways to select the right regularization parameter:
