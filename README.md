@@ -29,7 +29,7 @@
 - **Machine Learning (ML)** is a subfield of AI that is focused on the development of algorithms and statistical models that enable machines to learn from data and make predictions or decisions without being explicitly programmed. <br />
 1- **Deep Learning (DL)** is a type of machine learning that is inspired by the structure and function of the brain's neural networks. It uses multiple layers of artificial neural networks to learn representations of data with multiple levels of abstraction. DL algorithms can be used for tasks such as image and speech recognition, natural language processing, and decision-making.
    
-		![al_ml_dl](https://user-images.githubusercontent.com/44112345/212048865-51478738-282a-46b5-b6ad-952fdb3abebd.JPG)
+![al_ml_dl](https://user-images.githubusercontent.com/44112345/212048865-51478738-282a-46b5-b6ad-952fdb3abebd.JPG)
 
 ---
    
