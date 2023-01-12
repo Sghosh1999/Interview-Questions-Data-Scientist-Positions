@@ -1,4 +1,5 @@
 
+
 ![data_science_topics](https://user-images.githubusercontent.com/44112345/211920662-d87c5754-b60e-4eb4-9d93-5b7324421b1e.JPG)
 
 # Interview Questions - Data Scientist Positions ( Entry, Mid & Senior)
@@ -49,6 +50,8 @@
 - A beta value of 1 is equivalent to the F1 score, which means it gives equal weight to precision and recall. 
 - A beta value less than 1 gives more weight to precision, which means it will increase the importance of precision over recall. 
 - A beta value greater than 1 gives more weight to recall, which means it will increase the importance of recall over precision.
+		![fbeta](https://user-images.githubusercontent.com/44112345/212004531-62545b14-f6cc-4de2-9e63-184e4e223c3c.JPG)
+
 
 6. ### What are the advantages & disadvantages of Linear Regression?⭐
    `Ans:`
@@ -107,18 +110,64 @@
 Hypothesis testing is a statistical method used to determine whether a claim or hypothesis about a population parameter is true or false. The process of hypothesis testing involves making an initial assumption or hypothesis about the population parameter and then using sample data to test the validity of that assumption.
 - There are two types of hypotheses in hypothesis testing: **the null hypothesis (H0)** and the **alternative hypothesis (H1).** The null hypothesis states that there is no difference or relationship between the population parameter of interest and the sample data, while the alternative hypothesis states that there is a difference or relationship.
 - The process of hypothesis testing involves several steps:
-1.  State the null and alternative hypotheses
-2.  Choose a level of significance (alpha)
-3.  Collect and analyze sample data
-4.  Calculate a test statistic and its corresponding p-value
-5.  Compare the p-value to the level of significance (alpha)
-6.  Make a decision and interpret the results. <br/>
-    `For example, let's say a company wants to know if the mean weight of their product is equal to 50 grams. The null hypothesis (H0) would be that the mean weight of the product is equal to 50 grams, and the alternative hypothesis (H1) would be that the mean weight of the product is not equal to 50 grams. The company would then take a sample of products and calculate the mean weight of the sample. Using statistical methods, they would determine if the sample mean is statistically significantly different from 50 grams. If the sample mean is statistically significantly different from 50 grams, the company would reject the null hypothesis and conclude that the mean weight of the product is not equal to 50 grams.`
-    
+	1.  State the null and alternative hypotheses
+	2.  Choose a level of significance (alpha)
+	3.  Collect and analyze sample data
+	4.  Calculate a test statistic and its corresponding p-value
+	5.  Compare the p-value to the level of significance (alpha)
+	6.  Make a decision and interpret the results. <br/>
+    `For example, let's say a company wants to know if the mean weight of their product is equal to 50 grams. The null hypothesis (H0) would be that the mean weight of the product is equal to 50 grams, and the alternative hypothesis (H1) would be that the mean weight of the product is not equal to 50 grams. The company would then take a sample of products and calculate the mean weight of the sample. Using statistical methods, they would determine if the sample mean is statistically significantly different from 50 grams. If the sample mean is statistically significantly different from 50 grams, the company would reject the null hypothesis and conclude that the mean weight of the product is not equal to 50 grams.` <br/>
+
+
 13. ### What is Type 1 & Type 2 error?⭐
    `Ans:` *Type 1 error, **also known as a false positive, occurs when the null hypothesis is rejected, but it is actually true.** In other words, **it is a mistake of rejecting a null hypothesis that is true.** The probability of making a Type 1 error is represented by the level of significance (alpha) chosen before the hypothesis test. A common level of significance is 0.05, which means that there is a 5% chance of making a Type 1 error.
 - For example, in a medical test to detect a disease, a Type 1 error would be a false positive, where the test says a patient has the disease, but they actually do not.
 Type 2 error, also known as a false negative, occurs ***when the null hypothesis is not rejected, but it is actually false.*** In other words, **it is a mistake of not rejecting a null hypothesis that is false.** The probability of making a Type 2 error is represented by the beta (beta). A common level of beta is 0.2, which means that there is a 20% chance of making a Type 2 error.
 - For example, in a medical test to detect a disease, a Type 2 error would be a false negative, where the test says a patient does not have the disease, but they actually do.
+
+14. ### Explain some of the Statistical test's use cases (Ex- 2 Tail test, T-Test, Anona test, Chi-Squared test)⭐
+   `Ans:` The use cases of the tests are as follows,<br/>
+	- **t-test:** A t-test is used to determine if there is a significant difference between the means of two groups. There are several types of t-tests, including independent samples t-test, dependent samples t-test, and one-sample t-test. It is commonly used for comparing the means of two samples or for comparing a sample mean to a known population mean.
+	- **ANOVA (Analysis of Variance):** ANOVA is used to determine if there is a significant difference between the means of two or more groups. There are several types of ANOVA, including one-way ANOVA, two-way ANOVA, and repeated measures ANOVA. It is commonly used for comparing means of multiple samples or for comparing a sample mean to multiple known population means.
+	- **Chi-Square test:** A Chi-Square test is used to determine if there is a significant association between two categorical variables. It is commonly used for testing independence in contingency tables and for goodness of fit tests.
+
+15. ###  What do you mean when the p-values are high and low?⭐
+   `Ans:`In hypothesis testing, the p-value is used to estimate the probability of obtaining a test statistic as extreme or more extreme than the one observed, assuming that the null hypothesis is true.
+   - A **low p-value (typically less than 0.05) indicates that the evidence against the null hypothesis is strong and that the null hypothesis is unlikely to be true given the data.** In other words, a low p-value suggests that the sample data is unlikely to have occurred by chance alone and that the observed difference is statistically significant.
+   - A **high p-value (typically greater than 0.05) indicates that the evidence against the null hypothesis is weak and that the null hypothesis is likely to be true given the data.** In other words, a high p-value suggests that the sample data is likely to have occurred by chance alone and that the observed difference is not statistically significant.
+
+16. What is the significance of KL Divergence in Machine Learning?⭐⭐
+   `Ans:` KL divergence (also known as Kullback-Leibler divergence) is a measure of the difference between two probability distributions. In machine learning, KL divergence is used to measure the similarity or dissimilarity between two probability distributions, usually between the estimated distribution and the true distribution.
+	- One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
+	- **KL divergence is a popular measure for comparing probability distributions because it is a non-symmetric measure, which means that the KL divergence between distribution P and Q is not the same as the KL divergence between Q and P.** This makes it useful for comparing distributions that have different support sets. Additionally, it is a computationally efficient measure, and it is easy to calculate the gradient of KL divergence, which makes it suitable for optimization.
+
+18. How could you deal with data skewness? What are the approaches to resolve the skewness in the data?⭐
+`Ans:`Skewness is a measure of the asymmetry of a probability distribution. 
+- When the *skewness is positive, it indicates that the distribution has a long tail on the right side and the mode is less than the mean, which is also less than the median.* 
+- When *the skewness is negative, it indicates that the distribution has a long tail on the left side and the mode is greater than the mean, which is also greater than the median.*
+-  **There are several ways to deal with skewness in data:**
+	1. Data Transformation: Data transformations like logarithmic, square root, and reciprocal can help to reduce skewness in the data. Logarithmic transformation is generally used for data that is positively skewed, square root and reciprocal for data that is negatively skewed.
+	2. Binning: Binning is a method of grouping continuous variables into a smaller number of categories. It can be used to reduce the effect of outliers and to make the data more symmetrical.
+
+18. What is IQR? How it is been used to detect Outliers.⭐
+`Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
+	![IQR](https://user-images.githubusercontent.com/44112345/212009455-fe60d8b1-ed02-45d4-9ea0-da4f8e1baca8.JPG)
+- Outliers can be detected using the IQR method by calculating the lower and upper bounds of the data. The lower bound is defined as Q1 - 1.5 * IQR, and the upper bound is defined as Q3 + 1.5 * IQR. Any data points that fall outside of this range are considered to be outliers.
+- It is important to note that while the IQR method is a useful tool for identifying outliers, it is not always the best method to use, especially when the data has a non-normal distribution. Other methods such as the Z-score method should also be considered.
+
+19. What are the algorithms that are sensitive & Robust to Outliers?⭐
+`Ans:` There are several algorithms that are considered to be robust to outliers:
+	- **The Median Absolute Deviation (MAD) method:** This is a robust measure of statistical dispersion that is based on the median of the absolute deviations from the median, rather than the mean.
+	- **The Huber loss function:** This is a robust cost function that is less sensitive to outliers than the mean squared error (MSE) function.
+	- **The RANSAC algorithm:** This is a robust estimation method that is designed to fit a model to a dataset that contains outliers.
+	- **Random Forest:** Random Forest creates multiple decision trees, and each tree is trained on different random subset of features and observations, it is less sensitive to outliers than a single decision tree.
+	- **Gradient Boosting Machine (GBM):** GBM is also a collection of decision trees, it is less sensitive to outliers because it combines the decision of multiple weak learners.
+	- **Support Vector Machines (SVMs):** SVMs are robust to outliers because they try to find the largest margin between the classes, it is less affected by the presence of outliers.
+
+20. Why Feature Scaling is important? What are the feature scaling techniques?⭐
+`Ans:` Feature scaling is an important step in the preprocessing of data for machine learning algorithms because it helps to standardize the range of independent variables or features of the data.
+	- MinMaxScaler: This class provides a transformer to scale the data set in a given range, usually between 0 and 1.
+	- StandardScaler: This class provides a transformer to standardize the data set, by centering and scaling.
+	- RobustScaler: This class provides a transformer to scale the data set using statistics that are robust to outliers.
 
 
