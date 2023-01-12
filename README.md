@@ -22,6 +22,8 @@
 ### Data Science & ML - General Topics
 
 1. **What is the basic difference between AI, Machine Learning(ML) & Deep Learning(DL)?** ⭐
+
+
    `Ans:` Artificial Intelligence (AI) is a broad field that encompasses many different techniques and technologies, including machine learning (ML) and deep learning (DL). <br />
    - **Artificial Intelligence (AI)** refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. It is a broad field that includes many different approaches and techniques, such as rule-based systems, and expert systems. <br />
    - **Machine Learning (ML)** is a subfield of AI that is focused on the development of algorithms and statistical models that enable machines to learn from data and make predictions or decisions without being explicitly programmed. <br />
@@ -32,6 +34,8 @@
 ---
    
 2. **Can you explain the difference between supervised and unsupervised learning?** ⭐
+
+
    `Ans:` The main difference between them is the type and amount of input provided to the algorithms.
    - **Supervised learning** is a type of machine learning where the model is trained on a labeled dataset, i.e., the model is provided with input-output pairs, and the goal is to learn a mapping from inputs to outputs. This mapping can then be used to make predictions on new, unseen data. Examples of supervised learning include regression, classification and prediction tasks. <br />
    - **Unsupervised learning**, on the other hand, is a type of machine learning where the model is not provided with labeled data. Instead, the algorithm is given a dataset without any output labels, and the goal is to find patterns or structure within the data. Examples of unsupervised learning include clustering, dimensionality reduction, and anomaly detection tasks.
@@ -39,6 +43,8 @@
 ---
 
 3.  **Can you explain the difference between supervised and unsupervised learning?** ⭐
+
+
    `Ans:` There are several techniques for handling missing data in a dataset, some of the most common include: <br />
    - **Mean/Median Imputation:** This method replaces the missing value with the mean or median of the non-missing values in the same column. (Numerical)
    - **Random Sample Imputation:** This method replaces the missing value with a random sample from the non-missing values in the same column. (Numerical)
@@ -50,6 +56,8 @@
 ---
 
 4.  **How do you select the appropriate evaluation metric for a given problem, and what are the trade-offs between different metrics such as precision, recall, and F1-score?** ⭐
+
+
    `Ans:` Selecting the appropriate evaluation metric for a given problem depends on the characteristics of the data and the goals of the model. Here are some common evaluation metrics and the situations in which they are typically used:
 
 	- **Accuracy:** This metric measures the proportion of correct predictions made by the model. It is commonly used when the classes are well balanced and the goal is to have a high overall performance of the model.
@@ -65,6 +73,8 @@
 ---
 
 5. **What is the beta value implies in the F-beta score? What is the optimum beta value?** ⭐⭐
+
+
    `Ans:` The F-beta score is a variant of the F1-score, where the beta value controls the trade-off between precision and recall. The F1-score is a harmonic mean of precision and recall and is calculated as `(2 * (precision * recall)) / (precision + recall).`
 - A beta value of 1 is equivalent to the F1 score, which means it gives equal weight to precision and recall. 
 - A beta value less than 1 gives more weight to precision, which means it will increase the importance of precision over recall. 
@@ -75,6 +85,8 @@
 
 
 6.  **What are the advantages & disadvantages of Linear Regression?**⭐
+
+
    `Ans:`
 - Advantages:
 	- Linear regression is a simple and interpretable algorithm that is easy to understand and implement.
@@ -92,6 +104,8 @@
 ---
 
 7.  **How do you handle categorical variables in a dataset?**⭐
+
+
    `Ans:`Handling categorical variables in a dataset is an important step in the preprocessing of data before applying machine learning models. Here are some common techniques for handling categorical variables:
 	- **One-Hot Encoding:** This method creates a new binary column for each unique category in a categorical variable. Each row is then encoded with a 1 or 0 in the corresponding column, depending on the category. *This method is useful when there is no ordinal relationship between categories.*
 	- **Ordinal Encoding:** This method assigns an integer value to each category in a categorical variable. This method is useful when there is an ordinal relationship between categories.
@@ -104,6 +118,8 @@
 ---
   
 8.  **What is the curse of dimensionality and how does it affect machine learning?**⭐
+
+
    `Ans:`The curse of dimensionality refers to the problem of increasing complexity and computational cost in high-dimensional spaces. In machine learning, the curse of dimensionality arises when the number of features in a dataset is large relative to the number of observations. This can cause problems for several reasons:
 	 - **Sparsity:** With a high number of features, most observations will have many missing or zero values for many of the features. This can make it difficult for models to learn from the data.
 	 - **Overfitting:** With a high number of features, models are more likely to fit the noise in the data rather than the underlying patterns. This can lead to poor performance on new, unseen data.
@@ -111,6 +127,8 @@
 
 ---
 9.  **What are the approaches to mitigate Dimensionality reduction?**⭐
+
+
    `Ans:`These are some mechanisms to deal with Dimensionality reduction,
    - Techniques like **principal component analysis (PCA), linear discriminant analysis (LDA), or t-distributed stochastic neighbor embedding (t-SNE)** can be used to reduce the number of features by combining or selecting a subset of the original features.
 	- **Regularization:** Techniques like L1 or L2 regularization can help prevent overfitting by adding a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
@@ -120,6 +138,8 @@
 ---
 
 10. **Can you explain the bias-variance tradeoff?**⭐
+
+
    `Ans:`The bias-variance tradeoff is a fundamental concept in machine learning that describes the trade-off between how well a model fits the training data (bias) and how well the model generalizes to new, unseen data (variance). <br/>
 - Bias refers to the error introduced by approximating a real-world problem, which may be incredibly complex, with a much simpler model. High-bias models are typically considered to be "oversimplified" and will have a high error on the training set.
 - On the other hand, variance refers to the error introduced by the model's sensitivity to small fluctuations in the training data. High variance models are typically considered to be "overcomplicated" or "overfit" and will have a high error on the test set.
@@ -128,6 +148,8 @@
 ---
 		
 11.  **How do you prevent overfitting in a model?**⭐
+
+
    `Ans:` Overfitting occurs when a model is too complex and captures the noise in the training data, instead of the underlying patterns. This can lead to poor performance on new, unseen data. Here are some common techniques for preventing overfitting: 
    - **Regularization:** Techniques *like L1, L2 regularization, or dropout,* add a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
 - **Early stopping:** This technique is used when training deep neural networks, it monitors the performance of the model on a validation set and stops the training process when the performance on the validation set starts to degrade.
@@ -139,6 +161,8 @@
 ---
 
 12.  **What is Hypothesis Testing. Explain with proper example.**⭐
+
+
    `Ans:` 
 Hypothesis testing is a statistical method used to determine whether a claim or hypothesis about a population parameter is true or false. The process of hypothesis testing involves making an initial assumption or hypothesis about the population parameter and then using sample data to test the validity of that assumption.
 - There are two types of hypotheses in hypothesis testing: **the null hypothesis (H0)** and the **alternative hypothesis (H1).** The null hypothesis states that there is no difference or relationship between the population parameter of interest and the sample data, while the alternative hypothesis states that there is a difference or relationship.
@@ -155,6 +179,8 @@ Hypothesis testing is a statistical method used to determine whether a claim or 
 
 
 13. **What is Type 1 & Type 2 error?**⭐
+
+
    `Ans:` *Type 1 error, **also known as a false positive, occurs when the null hypothesis is rejected, but it is actually true.** In other words, **it is a mistake of rejecting a null hypothesis that is true.** The probability of making a Type 1 error is represented by the level of significance (alpha) chosen before the hypothesis test. A common level of significance is 0.05, which means that there is a 5% chance of making a Type 1 error.
 - For example, in a medical test to detect a disease, a Type 1 error would be a false positive, where the test says a patient has the disease, but they actually do not.
 Type 2 error, also known as a false negative, occurs ***when the null hypothesis is not rejected, but it is actually false.*** In other words, **it is a mistake of not rejecting a null hypothesis that is false.** The probability of making a Type 2 error is represented by the beta (beta). A common level of beta is 0.2, which means that there is a 20% chance of making a Type 2 error.
@@ -163,6 +189,8 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 ---
 
 14. **Explain some of the Statistical test's use cases (Ex- 2 Tail test, T-Test, Anona test, Chi-Squared test)**⭐
+
+
    `Ans:` The use cases of the tests are as follows,<br/>
 	- **t-test:** A t-test is used to determine if there is a significant difference between the means of two groups. There are several types of t-tests, including independent samples t-test, dependent samples t-test, and one-sample t-test. It is commonly used for comparing the means of two samples or for comparing a sample mean to a known population mean.
 	- **ANOVA (Analysis of Variance):** ANOVA is used to determine if there is a significant difference between the means of two or more groups. There are several types of ANOVA, including one-way ANOVA, two-way ANOVA, and repeated measures ANOVA. It is commonly used for comparing means of multiple samples or for comparing a sample mean to multiple known population means.
@@ -171,6 +199,8 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 ---
 
 15. **What do you mean when the p-values are high and low?**⭐
+
+
    `Ans:`In hypothesis testing, the p-value is used to estimate the probability of obtaining a test statistic as extreme or more extreme than the one observed, assuming that the null hypothesis is true.
    - A **low p-value (typically less than 0.05) indicates that the evidence against the null hypothesis is strong and that the null hypothesis is unlikely to be true given the data.** In other words, a low p-value suggests that the sample data is unlikely to have occurred by chance alone and that the observed difference is statistically significant.
    - A **high p-value (typically greater than 0.05) indicates that the evidence against the null hypothesis is weak and that the null hypothesis is likely to be true given the data.** In other words, a high p-value suggests that the sample data is likely to have occurred by chance alone and that the observed difference is not statistically significant.
@@ -179,6 +209,8 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 16. **What is the significance of KL Divergence in Machine Learning?**⭐⭐
 
+
+
    `Ans:` KL divergence (also known as Kullback-Leibler divergence) is a measure of the difference between two probability distributions. In machine learning, KL divergence is used to measure the similarity or dissimilarity between two probability distributions, usually between the estimated distribution and the true distribution.
 	- One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
 	- **KL divergence is a popular measure for comparing probability distributions because it is a non-symmetric measure, which means that the KL divergence between distribution P and Q is not the same as the KL divergence between Q and P.** This makes it useful for comparing distributions that have different support sets. Additionally, it is a computationally efficient measure, and it is easy to calculate the gradient of KL divergence, which makes it suitable for optimization.
@@ -186,6 +218,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 ---
 
 17. **How could you deal with data skewness? What are the approaches to resolve the skewness in the data?**⭐
+
 
    `Ans:`Skewness is a measure of the asymmetry of a probability distribution. 
 - When the *skewness is positive, it indicates that the distribution has a long tail on the right side and the mode is less than the mean, which is also less than the median.* 
@@ -198,6 +231,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 18. **What is IQR? How it is been used to detect Outliers?**.⭐
 
+
    `Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
 	![IQR](https://user-images.githubusercontent.com/44112345/212009455-fe60d8b1-ed02-45d4-9ea0-da4f8e1baca8.JPG)
 - Outliers can be detected using the IQR method by calculating the lower and upper bounds of the data. The lower bound is defined as Q1 - 1.5 * IQR, and the upper bound is defined as Q3 + 1.5 * IQR. Any data points that fall outside of this range are considered to be outliers.
@@ -206,6 +240,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 ---
 
 19. **What are the algorithms that are sensitive & Robust to Outliers?**.⭐
+
 
    `Ans:` There are several algorithms that are considered to be robust to outliers:
  - **The Median Absolute Deviation (MAD) method:** This is a robust measure of statistical dispersion that is based on the median of the absolute deviations from the median, rather than the mean.
@@ -218,6 +253,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 ---
 
 20. **Why Feature Scaling is important? What are the feature scaling techniques?**.⭐
+
 
   `Ans:` Feature scaling is an important step in the preprocessing of data for machine learning algorithms because it helps to standardize the range of independent variables or features of the data.
  - MinMaxScaler: This class provides a transformer to scale the data set in a given range, usually between 0 and 1.
@@ -240,12 +276,15 @@ Removing high correlated variables before training the model can help to improve
 ---
 
 22. **What is Spearman Correlation? What do you mean by positive and negative Correlation?**.⭐
+
+
 `Ans:`Spearman correlation is a measure of the statistical dependence between two variables, it is also known as the Spearman rank correlation coefficient. *It is a non-parametric measure of correlation, which means that it does not assume that the underlying distribution of the data is normal. Instead, it calculates the correlation between the ranks of the data points.*
  - Spearman correlation coefficient ranges from -1 to 1. **A coefficient of 1 indicates a perfect positive correlation, meaning that as one variable increases, the other variable also increases.** **A coefficient of -1 indicates a perfect negative correlation, meaning that as one variable increases, the other variable decreases.** A coefficient of 0 indicates no correlation between the two variables.
 
 ---
 
 23.  **What is the difference between Co-Variance & Correlation?**.⭐⭐
+
 
    `Ans:` Covariance `is a measure of the degree to which two random variables change together. It can be positive, negative or zero.` A positive covariance means that the variables increase or decrease together, a negative covariance means that as one variable increases, the other variable decreases and a zero covariance means that there is no relationship between the two variables. The formula for covariance is:
 														Cov(X, Y) = (1/n) * Σ(x - x̄) * (y - ȳ)
@@ -259,6 +298,7 @@ In summary, covariance is a measure of how two variables change together while c
 
 24. **What is the difference between Multiclass Classification Models & Multilabel Classification Models?.**⭐
 
+
 `Ans:` In multiclass classification, the goal is to classify instances into one of several predefined classes. For example, classifying images of animals into dog, cat, and horse classes. Each instance can only belong to one class, and the classes are mutually exclusive.
 
 Multilabel classification, on the other hand, is a problem where each instance can belong to multiple classes simultaneously. For example, classifying news articles into multiple topics, such as sports, politics, and technology. In this case, an article can belong to the sports and politics class simultaneously.
@@ -267,11 +307,13 @@ Multilabel classification, on the other hand, is a problem where each instance c
 
 25. **Can you explain the concept of ensemble learning?**.⭐
 
+
 `Ans:` Ensemble learning is a technique in machine learning where multiple models are combined to create a more powerful model. The idea behind ensemble learning is to combine the predictions of multiple models to create a final prediction that is more accurate and robust than the predictions of any individual model.
 
 ---
 
 26. **What are the different ensembling Modeling Strategies in ML?**.⭐
+
 
 `Ans:` There are several ensemble learning techniques, including:
   - **Bagging:** This technique *involves training multiple models independently on different subsets of the data* and then averaging or voting on their predictions. This can be useful for reducing the variance of a model.
@@ -282,6 +324,7 @@ Multilabel classification, on the other hand, is a problem where each instance c
 ---
 27. **How do you select features for a machine-learning model?**.⭐
 
+
 `Ans:` There are several feature selection algorithms used in machine learning, including:
 - **Filter Methods:** This approach is based on the correlation between the features and the target variable. It includes methods like *correlation coefficient, mutual information and Chi-Squared.*
 -  **Wrapper Methods:** This approach is based on evaluating the performance of a subset of features in a model. It includes methods like *forward selection, backward elimination, recursive feature elimination and genetic algorithms.*
@@ -291,6 +334,7 @@ Multilabel classification, on the other hand, is a problem where each instance c
 
 ---
 28.  **What are the dimensionality Reduction techniques in Machine Learning?**.⭐⭐
+
 
 `Ans:` There are several dimensionality reduction techniques in machine learning, including:
 - Principal Component Analysis (PCA)
@@ -306,6 +350,7 @@ These techniques are used to reduce the number of features in a dataset while pr
 ---
 29. **Explain the PCA steps in machine learning.**.⭐⭐
 
+
 `Ans:`Principal Component Analysis (PCA) is a widely used dimensionality reduction technique in machine learning. It is a linear technique that transforms the original dataset into a new set of uncorrelated variables called principal components. The goal of PCA is to find the directions (principal components) that capture the most variation in the data. The following are the steps for performing PCA:
 -  Data Preprocessing: PCA is performed on the centered data, thus the first step is to center the data by subtracting the mean from each feature.
 - Covariance Matrix: The next step is to calculate the covariance matrix of the centered data. The covariance matrix is a square matrix that contains the variances and covariances of the features.
@@ -317,6 +362,7 @@ These techniques are used to reduce the number of features in a dataset while pr
 ## Regression Techniques ( Concepts )
 
 1. **Can you explain the difference between simple linear regression and multiple linear regression? How do you decide which one to use for a given problem?**.⭐⭐
+
 
 `Ans:`Simple linear regression is a type of linear regression *where the **target variable is predicted using a single predictor variable.** The relationship between the predictor variable and the target variable is represented by a straight line.* The equation for a simple linear regression model is:
 
@@ -334,6 +380,7 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 
 2. **What are the assumptions of linear regression and how do you check if they hold for a given dataset?**.⭐
 
+
 `Ans:`The assumptions of linear regression are:
 - **Linearity:** The relationship between the predictor variables and the target variable is linear. This means that a straight line can be used to approximate the relationship.
 - **Independence of errors:** The *errors (residuals) of the model are independent and identically distributed.* This means that the errors are not correlated and have the same distribution.
@@ -342,6 +389,7 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 - **No multicollinearity:** *The predictor variables are not highly correlated with each other.* This means that the predictor variables are independent of each other.
 ---
 3. **How do you handle categorical variables in linear regression?**.⭐
+
 
 `Ans:`Categorical imputations are the techniques that can be performed before fitting into the model.
 - **OneHot Encoding:** One-hot encoding is a technique that converts a categorical variable into multiple binary variables, one for each category.
