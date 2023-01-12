@@ -395,3 +395,20 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 - **Ordinal Encoding:** Ordinal encoding is a technique that assigns an integer value to each category of a categorical variable. This method is useful when the categories have an ordinal relationship.
 - **Effect Encoding:** Effect Encoding is a technique that represents each categorical variable as a set of contrasts between the different levels of that variable and a reference level.
 ---
+
+4. **What is the difference between Lasso & Ridge regression?**.⭐
+
+
+`Ans:` Both Lasso and Ridge regression are types of linear regression, but they have different approaches to solving the problem of overfitting, which occurs when a model is too complex and captures the noise in the data as well as the underlying relationship.
+- **Lasso (Least Absolute Shrinkage and Selection Operator) regression** also known as L1 regularization, adds *a penalty term to the cost function equal to the absolute value of the magnitude of the coefficients.* Lasso Regression is useful to select important features of a dataset, *it will shrink the less important feature's coefficient to zero and it's generally used where the number of features is high.*
+- **Ridge regression, also known as L2 regularization,** is another type of linear regression that uses a penalty term *equal to the square of the magnitude of the coefficients.* Instead of shrinking the coefficients to zero, this penalty term helps to *shrink the coefficients of less important features towards zero, but it doesn't make them exactly zero.* Ridge Regression is useful to handle multicollinearity problems by reducing the variance of the coefficients.
+
+---
+5. **How do we select the right regularization parameters?**⭐
+
+`Ans:` Regularization is a technique used to prevent overfitting by adding a penalty term to the cost function of a model. The regularization term is controlled by a parameter, called the regularization parameter or hyperparameter. The value of this parameter determines the strength of the regularization.
+- There are several ways to select the right regularization parameter:
+	- **Grid Search:** Grid search is a technique that involves training the model with a range of different regularization parameter values and evaluating the performance of each one using a validation set. The regularization parameter value that results in the best performance is chosen as the final value.
+	- **LassoCV:** LassoCV is a variant of Lasso Regression that uses cross-validation to select the regularization parameter. It performs the grid search and cross-validation internally and returns the best regularization parameter.
+	- **RidgeCV:** RidgeCV is a variant of Ridge Regression that uses cross-validation to select the regularization parameter. It performs the grid search and cross-validation internally and returns the best regularization parameter.
+---
