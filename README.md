@@ -21,7 +21,7 @@
 
 ### Data Science & ML - General Topics
 
-1. **What is the basic difference between AI, Machine Learning(ML) & Deep Learning(DL)?** ⭐
+1. **What is the basic difference between AI, Machine Learning(ML) & Deep Learning(DL)?**. ⭐
 
 
    `Ans:` Artificial Intelligence (AI) is a broad field that encompasses many different techniques and technologies, including machine learning (ML) and deep learning (DL). <br />
@@ -33,7 +33,7 @@
 
 ---
    
-2. **Can you explain the difference between supervised and unsupervised learning?** ⭐
+2. **Can you explain the difference between supervised and unsupervised learning?**. ⭐
 
 
    `Ans:` The main difference between them is the type and amount of input provided to the algorithms.
@@ -42,7 +42,7 @@
 
 ---
 
-3.  **Can you explain the difference between supervised and unsupervised learning?** ⭐
+3.  **Can you explain the difference between supervised and unsupervised learning?**. ⭐
 
 
    `Ans:` There are several techniques for handling missing data in a dataset, some of the most common include: <br />
@@ -55,7 +55,7 @@
 
 ---
 
-4.  **How do you select the appropriate evaluation metric for a given problem, and what are the trade-offs between different metrics such as precision, recall, and F1-score?** ⭐
+4.  **How do you select the appropriate evaluation metric for a given problem, and what are the trade-offs between different metrics such as precision, recall, and F1-score?**. ⭐
 
 
    `Ans:` Selecting the appropriate evaluation metric for a given problem depends on the characteristics of the data and the goals of the model. Here are some common evaluation metrics and the situations in which they are typically used:
@@ -72,7 +72,7 @@
 
 ---
 
-5. **What is the beta value implies in the F-beta score? What is the optimum beta value?** ⭐⭐
+5. **What is the beta value implies in the F-beta score? What is the optimum beta value?**. ⭐⭐
 
 
    `Ans:` The F-beta score is a variant of the F1-score, where the beta value controls the trade-off between precision and recall. The F1-score is a harmonic mean of precision and recall and is calculated as `(2 * (precision * recall)) / (precision + recall).`
@@ -84,7 +84,7 @@
 ---
 
 
-6.  **What are the advantages & disadvantages of Linear Regression?**⭐
+6.  **What are the advantages & disadvantages of Linear Regression?**.⭐
 
 
    `Ans:`
@@ -103,55 +103,55 @@
 
 ---
 
-7.  **How do you handle categorical variables in a dataset?**⭐
+7.  **How do you handle categorical variables in a dataset?**.⭐
 
 
-   `Ans:`Handling categorical variables in a dataset is an important step in the preprocessing of data before applying machine learning models. Here are some common techniques for handling categorical variables:
-	- **One-Hot Encoding:** This method creates a new binary column for each unique category in a categorical variable. Each row is then encoded with a 1 or 0 in the corresponding column, depending on the category. *This method is useful when there is no ordinal relationship between categories.*
-	- **Ordinal Encoding:** This method assigns an integer value to each category in a categorical variable. This method is useful when there is an ordinal relationship between categories.
-	 - **Binary Encoding:** This method assigns a binary code to each category. *This method is useful when the number of categories is high and one-hot encoding creates too many columns.*
-	- **Count Encoding:** This method replaces each category with the number of times it appears in the dataset.
-	- **Target Encoding:** This method replaces each category with the mean of the target variable for that category.
-	- **Frequency Encoding:** This method replaces each category with the frequency of the category in the dataset.
+`Ans:`Handling categorical variables in a dataset is an important step in the preprocessing of data before applying machine learning models. Here are some common techniques for handling categorical variables:
+- **One-Hot Encoding:** This method creates a new binary column for each unique category in a categorical variable. Each row is then encoded with a 1 or 0 in the corresponding column, depending on the category. *This method is useful when there is no ordinal relationship between categories.*
+- **Ordinal Encoding:** This method assigns an integer value to each category in a categorical variable. This method is useful when there is an ordinal relationship between categories.
+- **Binary Encoding:** This method assigns a binary code to each category. *This method is useful when the number of categories is high and one-hot encoding creates too many columns.*
+- **Count Encoding:** This method replaces each category with the number of times it appears in the dataset.
+- **Target Encoding:** This method replaces each category with the mean of the target variable for that category.
+- **Frequency Encoding:** This method replaces each category with the frequency of the category in the dataset.
     It's important to note that some of the techniques, like One-Hot Encoding, Ordinal Encoding, and Binary Encoding, have the potential to introduce a new feature, which could affect the model performance. *Additionally, target encoding and count encoding could introduce a leakage from the target variable, which could lead to overfitting.
 
 ---
   
-8.  **What is the curse of dimensionality and how does it affect machine learning?**⭐
+8.  **What is the curse of dimensionality and how does it affect machine learning?**.⭐
 
 
-   `Ans:`The curse of dimensionality refers to the problem of increasing complexity and computational cost in high-dimensional spaces. In machine learning, the curse of dimensionality arises when the number of features in a dataset is large relative to the number of observations. This can cause problems for several reasons:
-	 - **Sparsity:** With a high number of features, most observations will have many missing or zero values for many of the features. This can make it difficult for models to learn from the data.
-	 - **Overfitting:** With a high number of features, models are more likely to fit the noise in the data rather than the underlying patterns. This can lead to poor performance on new, unseen data.
-	- **Computational cost:** High-dimensional spaces require more memory and computational power to store and process the data. This can make it difficult to train models and make predictions in real-world applications.
-
----
-9.  **What are the approaches to mitigate Dimensionality reduction?**⭐
-
-
-   `Ans:`These are some mechanisms to deal with Dimensionality reduction,
-   - Techniques like **principal component analysis (PCA), linear discriminant analysis (LDA), or t-distributed stochastic neighbor embedding (t-SNE)** can be used to reduce the number of features by combining or selecting a subset of the original features.
-	- **Regularization:** Techniques like L1 or L2 regularization can help prevent overfitting by adding a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
-	 - **Sampling:** With high-dimensional data, it is often infeasible to use all the data. In such cases, random sampling could be used to reduce the size of the data to work with.
-	- **Ensemble methods:** Ensemble methods like random forests and gradient boosting machines can be used to reduce overfitting and improve generalization performance in high-dimensional data.
+`Ans:`The curse of dimensionality refers to the problem of increasing complexity and computational cost in high-dimensional spaces. In machine learning, the curse of dimensionality arises when the number of features in a dataset is large relative to the number of observations. This can cause problems for several reasons:
+- **Sparsity:** With a high number of features, most observations will have many missing or zero values for many of the features. This can make it difficult for models to learn from the data.
+- **Overfitting:** With a high number of features, models are more likely to fit the noise in the data rather than the underlying patterns. This can lead to poor performance on new, unseen data.
+- **Computational cost:** High-dimensional spaces require more memory and computational power to store and process the data. This can make it difficult to train models and make predictions in real-world applications.
 
 ---
+9.  **What are the approaches to mitigate Dimensionality reduction?**.⭐
 
-10. **Can you explain the bias-variance tradeoff?**⭐
+
+`Ans:`These are some mechanisms to deal with Dimensionality reduction,
+- Techniques like **principal component analysis (PCA), linear discriminant analysis (LDA), or t-distributed stochastic neighbor embedding (t-SNE)** can be used to reduce the number of features by combining or selecting a subset of the original features.
+- **Regularization:** Techniques like L1 or L2 regularization can help prevent overfitting by adding a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
+- **Sampling:** With high-dimensional data, it is often infeasible to use all the data. In such cases, random sampling could be used to reduce the size of the data to work with.
+- **Ensemble methods:** Ensemble methods like random forests and gradient boosting machines can be used to reduce overfitting and improve generalization performance in high-dimensional data.
+
+---
+
+10. **Can you explain the bias-variance tradeoff?**.⭐
 
 
-   `Ans:`The bias-variance tradeoff is a fundamental concept in machine learning that describes the trade-off between how well a model fits the training data (bias) and how well the model generalizes to new, unseen data (variance). <br/>
+`Ans:`The bias-variance tradeoff is a fundamental concept in machine learning that describes the trade-off between how well a model fits the training data (bias) and how well the model generalizes to new, unseen data (variance). <br/>
 - Bias refers to the error introduced by approximating a real-world problem, which may be incredibly complex, with a much simpler model. High-bias models are typically considered to be "oversimplified" and will have a high error on the training set.
 - On the other hand, variance refers to the error introduced by the model's sensitivity to small fluctuations in the training data. High variance models are typically considered to be "overcomplicated" or "overfit" and will have a high error on the test set.
 		![bias-varinace_trade_off](https://user-images.githubusercontent.com/44112345/211999865-304f95fe-852b-42f0-b826-d827ebfad906.JPG)
 
 ---
 		
-11.  **How do you prevent overfitting in a model?**⭐
+11.  **How do you prevent overfitting in a model?**.⭐
 
 
-   `Ans:` Overfitting occurs when a model is too complex and captures the noise in the training data, instead of the underlying patterns. This can lead to poor performance on new, unseen data. Here are some common techniques for preventing overfitting: 
-   - **Regularization:** Techniques *like L1, L2 regularization, or dropout,* add a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
+`Ans:` Overfitting occurs when a model is too complex and captures the noise in the training data, instead of the underlying patterns. This can lead to poor performance on new, unseen data. Here are some common techniques for preventing overfitting: 
+- **Regularization:** Techniques *like L1, L2 regularization, or dropout,* add a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
 - **Early stopping:** This technique is used when training deep neural networks, it monitors the performance of the model on a validation set and stops the training process when the performance on the validation set starts to degrade.
 - **Cross-validation:** This technique involves *dividing the data into several subsets and training the model on different subsets while evaluating the model performance on the remaining subsets.* This technique helps to get a better estimate of the model's performance on unseen data.
 - **Ensemble methods:** Ensemble methods like random forests and gradient boosting machines can be used to reduce overfitting and improve generalization performance. Ensemble methods combine the outputs of multiple models to produce a more robust prediction.
@@ -160,7 +160,7 @@
 
 ---
 
-12.  **What is Hypothesis Testing. Explain with proper example.**⭐
+12.  **What is Hypothesis Testing. Explain with proper example.**.⭐
 
 
    `Ans:` 
@@ -178,7 +178,7 @@ Hypothesis testing is a statistical method used to determine whether a claim or 
 ---
 
 
-13. **What is Type 1 & Type 2 error?**⭐
+13. **What is Type 1 & Type 2 error?**.⭐
 
 
    `Ans:` *Type 1 error, **also known as a false positive, occurs when the null hypothesis is rejected, but it is actually true.** In other words, **it is a mistake of rejecting a null hypothesis that is true.** The probability of making a Type 1 error is represented by the level of significance (alpha) chosen before the hypothesis test. A common level of significance is 0.05, which means that there is a 5% chance of making a Type 1 error.
@@ -188,39 +188,38 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 ---
 
-14. **Explain some of the Statistical test's use cases (Ex- 2 Tail test, T-Test, Anona test, Chi-Squared test)**⭐
+14. **Explain some of the Statistical test's use cases (Ex- 2 Tail test, T-Test, Anona test, Chi-Squared test)**.⭐
 
 
-   `Ans:` The use cases of the tests are as follows,<br/>
-	- **t-test:** A t-test is used to determine if there is a significant difference between the means of two groups. There are several types of t-tests, including independent samples t-test, dependent samples t-test, and one-sample t-test. It is commonly used for comparing the means of two samples or for comparing a sample mean to a known population mean.
-	- **ANOVA (Analysis of Variance):** ANOVA is used to determine if there is a significant difference between the means of two or more groups. There are several types of ANOVA, including one-way ANOVA, two-way ANOVA, and repeated measures ANOVA. It is commonly used for comparing means of multiple samples or for comparing a sample mean to multiple known population means.
-	- **Chi-Square test:** A Chi-Square test is used to determine if there is a significant association between two categorical variables. It is commonly used for testing independence in contingency tables and for goodness of fit tests.
-
----
-
-15. **What do you mean when the p-values are high and low?**⭐
-
-
-   `Ans:`In hypothesis testing, the p-value is used to estimate the probability of obtaining a test statistic as extreme or more extreme than the one observed, assuming that the null hypothesis is true.
-   - A **low p-value (typically less than 0.05) indicates that the evidence against the null hypothesis is strong and that the null hypothesis is unlikely to be true given the data.** In other words, a low p-value suggests that the sample data is unlikely to have occurred by chance alone and that the observed difference is statistically significant.
-   - A **high p-value (typically greater than 0.05) indicates that the evidence against the null hypothesis is weak and that the null hypothesis is likely to be true given the data.** In other words, a high p-value suggests that the sample data is likely to have occurred by chance alone and that the observed difference is not statistically significant.
+`Ans:` The use cases of the tests are as follows,<br/>
+- **t-test:** A t-test is used to determine if there is a significant difference between the means of two groups. There are several types of t-tests, including independent samples t-test, dependent samples t-test, and one-sample t-test. It is commonly used for comparing the means of two samples or for comparing a sample mean to a known population mean.
+- **ANOVA (Analysis of Variance):** ANOVA is used to determine if there is a significant difference between the means of two or more groups. There are several types of ANOVA, including one-way ANOVA, two-way ANOVA, and repeated measures ANOVA. It is commonly used for comparing means of multiple samples or for comparing a sample mean to multiple known population means.
+- **Chi-Square test:** A Chi-Square test is used to determine if there is a significant association between two categorical variables. It is commonly used for testing independence in contingency tables and for goodness of fit tests.
 
 ---
 
-16. **What is the significance of KL Divergence in Machine Learning?**⭐⭐
+15. **What do you mean when the p-values are high and low?**.⭐
 
 
-
-   `Ans:` KL divergence (also known as Kullback-Leibler divergence) is a measure of the difference between two probability distributions. In machine learning, KL divergence is used to measure the similarity or dissimilarity between two probability distributions, usually between the estimated distribution and the true distribution.
-	- One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
-	- **KL divergence is a popular measure for comparing probability distributions because it is a non-symmetric measure, which means that the KL divergence between distribution P and Q is not the same as the KL divergence between Q and P.** This makes it useful for comparing distributions that have different support sets. Additionally, it is a computationally efficient measure, and it is easy to calculate the gradient of KL divergence, which makes it suitable for optimization.
+`Ans:`In hypothesis testing, the p-value is used to estimate the probability of obtaining a test statistic as extreme or more extreme than the one observed, assuming that the null hypothesis is true.
+- A **low p-value (typically less than 0.05) indicates that the evidence against the null hypothesis is strong and that the null hypothesis is unlikely to be true given the data.** In other words, a low p-value suggests that the sample data is unlikely to have occurred by chance alone and that the observed difference is statistically significant.
+- A **high p-value (typically greater than 0.05) indicates that the evidence against the null hypothesis is weak and that the null hypothesis is likely to be true given the data.** In other words, a high p-value suggests that the sample data is likely to have occurred by chance alone and that the observed difference is not statistically significant.
 
 ---
 
-17. **How could you deal with data skewness? What are the approaches to resolve the skewness in the data?**⭐
+16. **What is the significance of KL Divergence in Machine Learning?**.⭐⭐
 
 
-   `Ans:`Skewness is a measure of the asymmetry of a probability distribution. 
+`Ans:` KL divergence (also known as Kullback-Leibler divergence) is a measure of the difference between two probability distributions. In machine learning, KL divergence is used to measure the similarity or dissimilarity between two probability distributions, usually between the estimated distribution and the true distribution.
+- One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
+- **KL divergence is a popular measure for comparing probability distributions because it is a non-symmetric measure, which means that the KL divergence between distribution P and Q is not the same as the KL divergence between Q and P.** This makes it useful for comparing distributions that have different support sets. Additionally, it is a computationally efficient measure, and it is easy to calculate the gradient of KL divergence, which makes it suitable for optimization.
+
+---
+
+17. **How could you deal with data skewness? What are the approaches to resolve the skewness in the data?**.⭐
+
+
+`Ans:`Skewness is a measure of the asymmetry of a probability distribution. 
 - When the *skewness is positive, it indicates that the distribution has a long tail on the right side and the mode is less than the mean, which is also less than the median.* 
 - When *the skewness is negative, it indicates that the distribution has a long tail on the left side and the mode is greater than the mean, which is also greater than the median.*
 -  **There are several ways to deal with skewness in data:**
@@ -232,7 +231,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 18. **What is IQR? How it is been used to detect Outliers?**.⭐
 
 
-   `Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
+`Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
 	![IQR](https://user-images.githubusercontent.com/44112345/212009455-fe60d8b1-ed02-45d4-9ea0-da4f8e1baca8.JPG)
 - Outliers can be detected using the IQR method by calculating the lower and upper bounds of the data. The lower bound is defined as Q1 - 1.5 * IQR, and the upper bound is defined as Q3 + 1.5 * IQR. Any data points that fall outside of this range are considered to be outliers.
 - It is important to note that while the IQR method is a useful tool for identifying outliers, it is not always the best method to use, especially when the data has a non-normal distribution. Other methods such as the Z-score method should also be considered.
@@ -242,7 +241,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 19. **What are the algorithms that are sensitive & Robust to Outliers?**.⭐
 
 
-   `Ans:` There are several algorithms that are considered to be robust to outliers:
+`Ans:` There are several algorithms that are considered to be robust to outliers:
  - **The Median Absolute Deviation (MAD) method:** This is a robust measure of statistical dispersion that is based on the median of the absolute deviations from the median, rather than the mean.
  - **The Huber loss function:** This is a robust cost function that is less sensitive to outliers than the mean squared error (MSE) function.
  - **The RANSAC algorithm:** This is a robust estimation method that is designed to fit a model to a dataset that contains outliers.
@@ -255,7 +254,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 20. **Why Feature Scaling is important? What are the feature scaling techniques?**.⭐
 
 
-  `Ans:` Feature scaling is an important step in the preprocessing of data for machine learning algorithms because it helps to standardize the range of independent variables or features of the data.
+`Ans:` Feature scaling is an important step in the preprocessing of data for machine learning algorithms because it helps to standardize the range of independent variables or features of the data.
  - MinMaxScaler: This class provides a transformer to scale the data set in a given range, usually between 0 and 1.
  - StandardScaler: This class provides a transformer to standardize the data set, by centering and scaling.
  - RobustScaler: This class provides a transformer to scale the data set using statistics that are robust to outliers.
@@ -264,7 +263,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 21. **If we don't remove the highly correlated values in the dataset, how does it impact the model performance?**.⭐⭐
 
-   `Ans:` If you don't remove high correlated values from your dataset, it can have a negative impact on the performance of your model.
+`Ans:` If you don't remove high correlated values from your dataset, it can have a negative impact on the performance of your model.
  - **Overfitting:** The model will try to fit the noise in the data and this will result in poor generalization performance.
  - **Instability:** The model's parameters and coefficients may change dramatically with small changes in the training data.
  - **Difficulty in interpreting the model:** If two or more variables are highly correlated, it becomes difficult to interpret which variable is more important for the model.
@@ -286,7 +285,7 @@ Removing high correlated variables before training the model can help to improve
 23.  **What is the difference between Co-Variance & Correlation?**.⭐⭐
 
 
-   `Ans:` Covariance `is a measure of the degree to which two random variables change together. It can be positive, negative or zero.` A positive covariance means that the variables increase or decrease together, a negative covariance means that as one variable increases, the other variable decreases and a zero covariance means that there is no relationship between the two variables. The formula for covariance is:
+`Ans:` Covariance `is a measure of the degree to which two random variables change together. It can be positive, negative or zero.` A positive covariance means that the variables increase or decrease together, a negative covariance means that as one variable increases, the other variable decreases and a zero covariance means that there is no relationship between the two variables. The formula for covariance is:
 														Cov(X, Y) = (1/n) * Σ(x - x̄) * (y - ȳ)
 where X and Y are the two random variables, x̄ and ȳ are the means of X and Y, respectively, and n is the number of observations.
 - **Correlation, on the other hand,** is a standardized version of covariance. It is a value between -1 and 1 that indicates the strength and direction of the linear relationship between two variables.The formula for correlation is:
