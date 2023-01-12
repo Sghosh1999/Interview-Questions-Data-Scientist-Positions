@@ -50,7 +50,7 @@
 - A beta value less than 1 gives more weight to precision, which means it will increase the importance of precision over recall. 
 - A beta value greater than 1 gives more weight to recall, which means it will increase the importance of recall over precision.
 
-6. ### -   What are the advantages & disadvantages of Linear Regression?⭐
+6. ### What are the advantages & disadvantages of Linear Regression?⭐
    `Ans:`
 - Advantages:
 	- Linear regression is a simple and interpretable algorithm that is easy to understand and implement.
@@ -65,7 +65,7 @@
 	- Linear regression does not account for errors in the observations.
 	- Linear regression can be affected by multicollinearity, which occurs when input features are highly correlated with each other.
 
-7. ### -   How do you handle categorical variables in a dataset?⭐
+7. ### How do you handle categorical variables in a dataset?⭐
    `Ans:`Handling categorical variables in a dataset is an important step in the preprocessing of data before applying machine learning models. Here are some common techniques for handling categorical variables:
 	- **One-Hot Encoding:** This method creates a new binary column for each unique category in a categorical variable. Each row is then encoded with a 1 or 0 in the corresponding column, depending on the category. *This method is useful when there is no ordinal relationship between categories.*
 	- **Ordinal Encoding:** This method assigns an integer value to each category in a categorical variable. This method is useful when there is an ordinal relationship between categories.
@@ -75,14 +75,21 @@
 	- **Frequency Encoding:** This method replaces each category with the frequency of the category in the dataset.
     It's important to note that some of the techniques, like One-Hot Encoding, Ordinal Encoding, and Binary Encoding, have the potential to introduce a new feature, which could affect the model performance. *Additionally, target encoding and count encoding could introduce a leakage from the target variable, which could lead to overfitting.*
   
-8. ### -   What is the curse of dimensionality and how does it affect machine learning?⭐
+8. ### What is the curse of dimensionality and how does it affect machine learning?⭐
    `Ans:`The curse of dimensionality refers to the problem of increasing complexity and computational cost in high-dimensional spaces. In machine learning, the curse of dimensionality arises when the number of features in a dataset is large relative to the number of observations. This can cause problems for several reasons:
 	 - **Sparsity:** With a high number of features, most observations will have many missing or zero values for many of the features. This can make it difficult for models to learn from the data.
 	 - **Overfitting:** With a high number of features, models are more likely to fit the noise in the data rather than the underlying patterns. This can lead to poor performance on new, unseen data.
 	- **Computational cost:** High-dimensional spaces require more memory and computational power to store and process the data. This can make it difficult to train models and make predictions in real-world applications.
-9. ### -   What are the approaches to mitigate Dimensionality reduction?⭐
+9. ### What are the approaches to mitigate Dimensionality reduction?⭐
    `Ans:`These are some mechanisms to deal with Dimensionality reduction,
    - Techniques like **principal component analysis (PCA), linear discriminant analysis (LDA), or t-distributed stochastic neighbor embedding (t-SNE)** can be used to reduce the number of features by combining or selecting a subset of the original features.
 	- **Regularization:** Techniques like L1 or L2 regularization can help prevent overfitting by adding a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
 	 - **Sampling:** With high-dimensional data, it is often infeasible to use all the data. In such cases, random sampling could be used to reduce the size of the data to work with.
 	- **Ensemble methods:** Ensemble methods like random forests and gradient boosting machines can be used to reduce overfitting and improve generalization performance in high-dimensional data.
+
+10. ### Can you explain the bias-variance tradeoff?⭐
+   `Ans:`The bias-variance tradeoff is a fundamental concept in machine learning that describes the trade-off between how well a model fits the training data (bias) and how well the model generalizes to new, unseen data (variance). <br/>
+- Bias refers to the error introduced by approximating a real-world problem, which may be incredibly complex, with a much simpler model. High-bias models are typically considered to be "oversimplified" and will have a high error on the training set.
+- On the other hand, variance refers to the error introduced by the model's sensitivity to small fluctuations in the training data. High variance models are typically considered to be "overcomplicated" or "overfit" and will have a high error on the test set.
+		![bias-varinace_trade_off](https://user-images.githubusercontent.com/44112345/211999865-304f95fe-852b-42f0-b826-d827ebfad906.JPG)
+
