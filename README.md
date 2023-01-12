@@ -167,7 +167,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 ---
 
-16. What is the significance of KL Divergence in Machine Learning?⭐⭐
+16. ### What is the significance of KL Divergence in Machine Learning?⭐⭐
 
    `Ans:` KL divergence (also known as Kullback-Leibler divergence) is a measure of the difference between two probability distributions. In machine learning, KL divergence is used to measure the similarity or dissimilarity between two probability distributions, usually between the estimated distribution and the true distribution.
 	- One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
@@ -175,7 +175,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 ---
 
-17. How could you deal with data skewness? What are the approaches to resolve the skewness in the data?⭐
+17. ### How could you deal with data skewness? What are the approaches to resolve the skewness in the data?⭐
 
    `Ans:`Skewness is a measure of the asymmetry of a probability distribution. 
 - When the *skewness is positive, it indicates that the distribution has a long tail on the right side and the mode is less than the mean, which is also less than the median.* 
@@ -187,7 +187,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 ---
 
 
-18. What is IQR? How it is been used to detect Outliers?.⭐
+18. ### What is IQR? How it is been used to detect Outliers?.⭐
 
    `Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
 	![IQR](https://user-images.githubusercontent.com/44112345/212009455-fe60d8b1-ed02-45d4-9ea0-da4f8e1baca8.JPG)
@@ -196,7 +196,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 ---
 
-19. What are the algorithms that are sensitive & Robust to Outliers?⭐
+19. ### What are the algorithms that are sensitive & Robust to Outliers?⭐
 
    `Ans:` There are several algorithms that are considered to be robust to outliers:
 	- **The Median Absolute Deviation (MAD) method:** This is a robust measure of statistical dispersion that is based on the median of the absolute deviations from the median, rather than the mean.
@@ -208,7 +208,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 ---
 
-20. Why Feature Scaling is important? What are the feature scaling techniques?⭐
+20. ### Why Feature Scaling is important? What are the feature scaling techniques?⭐
 
   `Ans:` Feature scaling is an important step in the preprocessing of data for machine learning algorithms because it helps to standardize the range of independent variables or features of the data.
 	- MinMaxScaler: This class provides a transformer to scale the data set in a given range, usually between 0 and 1.
@@ -217,7 +217,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 
 ---
 
-21. If we don't remove the highly correlated values in the dataset, how does it impact the model performance?⭐⭐
+21. ### If we don't remove the highly correlated values in the dataset, how does it impact the model performance?⭐⭐
 
    `Ans:` If you don't remove high correlated values from your dataset, it can have a negative impact on the performance of your model.
 	- **Overfitting:** The model will try to fit the noise in the data and this will result in poor generalization performance.
@@ -230,13 +230,13 @@ Removing high correlated variables before training the model can help to improve
 
 ---
 
-22. What is Spearman Correlation? What do you mean by positive and negative Correlation?⭐
+22. ### What is Spearman Correlation? What do you mean by positive and negative Correlation?⭐
 `Ans:`Spearman correlation is a measure of the statistical dependence between two variables, it is also known as the Spearman rank correlation coefficient. *It is a non-parametric measure of correlation, which means that it does not assume that the underlying distribution of the data is normal. Instead, it calculates the correlation between the ranks of the data points.*
 	- Spearman correlation coefficient ranges from -1 to 1. **A coefficient of 1 indicates a perfect positive correlation, meaning that as one variable increases, the other variable also increases.** **A coefficient of -1 indicates a perfect negative correlation, meaning that as one variable increases, the other variable decreases.** A coefficient of 0 indicates no correlation between the two variables.
 
 ---
 
-23.  What is the difference between Co-Variance & Correlation?⭐⭐
+23.  ### What is the difference between Co-Variance & Correlation?⭐⭐
 
    `Ans:` Covariance `is a measure of the degree to which two random variables change together. It can be positive, negative or zero.` A positive covariance means that the variables increase or decrease together, a negative covariance means that as one variable increases, the other variable decreases and a zero covariance means that there is no relationship between the two variables. The formula for covariance is:
 														Cov(X, Y) = (1/n) * Σ(x - x̄) * (y - ȳ)
@@ -248,7 +248,7 @@ In summary, covariance is a measure of how two variables change together while c
 
 ---
 
-24. What is the difference between Multiclass Classification Models & Multilabel Classification Models?⭐
+24. ### What is the difference between Multiclass Classification Models & Multilabel Classification Models?⭐
 
 `Ans:` In multiclass classification, the goal is to classify instances into one of several predefined classes. For example, classifying images of animals into dog, cat, and horse classes. Each instance can only belong to one class, and the classes are mutually exclusive.
 
@@ -256,13 +256,13 @@ Multilabel classification, on the other hand, is a problem where each instance c
 
 ---
 
-25. Can you explain the concept of ensemble learning?⭐
+25. ### Can you explain the concept of ensemble learning?⭐
 
 `Ans:` Ensemble learning is a technique in machine learning where multiple models are combined to create a more powerful model. The idea behind ensemble learning is to combine the predictions of multiple models to create a final prediction that is more accurate and robust than the predictions of any individual model.
 
 ---
 
-26. What are the different ensembling Modeling Strategies in ML?⭐
+26. ###  What are the different ensembling Modeling Strategies in ML?⭐
 
 `Ans:` There are several ensemble learning techniques, including:
   - **Bagging:** This technique *involves training multiple models independently on different subsets of the data* and then averaging or voting on their predictions. This can be useful for reducing the variance of a model.
