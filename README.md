@@ -141,7 +141,7 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 	- One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
 	- **KL divergence is a popular measure for comparing probability distributions because it is a non-symmetric measure, which means that the KL divergence between distribution P and Q is not the same as the KL divergence between Q and P.** This makes it useful for comparing distributions that have different support sets. Additionally, it is a computationally efficient measure, and it is easy to calculate the gradient of KL divergence, which makes it suitable for optimization.
 
-18. How could you deal with data skewness? What are the approaches to resolve the skewness in the data?⭐
+17. How could you deal with data skewness? What are the approaches to resolve the skewness in the data?⭐
 `Ans:`Skewness is a measure of the asymmetry of a probability distribution. 
 - When the *skewness is positive, it indicates that the distribution has a long tail on the right side and the mode is less than the mean, which is also less than the median.* 
 - When *the skewness is negative, it indicates that the distribution has a long tail on the left side and the mode is greater than the mean, which is also greater than the median.*
@@ -149,7 +149,10 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 	1. Data Transformation: Data transformations like logarithmic, square root, and reciprocal can help to reduce skewness in the data. Logarithmic transformation is generally used for data that is positively skewed, square root and reciprocal for data that is negatively skewed.
 	2. Binning: Binning is a method of grouping continuous variables into a smaller number of categories. It can be used to reduce the effect of outliers and to make the data more symmetrical.
 
+
 18. What is IQR? How it is been used to detect Outliers.⭐
+`Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
+- Outliers can18. What is IQR? How it is been used to detect Outliers.⭐
 `Ans:` IQR stands for interquartile range. It is a measure of the spread of a dataset that is based on the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data. To calculate IQR, you first need to find the median (Q2) of the data and then subtract Q1 from Q3.
 	![IQR](https://user-images.githubusercontent.com/44112345/212009455-fe60d8b1-ed02-45d4-9ea0-da4f8e1baca8.JPG)
 - Outliers can be detected using the IQR method by calculating the lower and upper bounds of the data. The lower bound is defined as Q1 - 1.5 * IQR, and the upper bound is defined as Q3 + 1.5 * IQR. Any data points that fall outside of this range are considered to be outliers.
@@ -170,4 +173,25 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 	- StandardScaler: This class provides a transformer to standardize the data set, by centering and scaling.
 	- RobustScaler: This class provides a transformer to scale the data set using statistics that are robust to outliers.
 
+21. If we don't remove the highly correlated values in the dataset, how does it impact the model performance?
+`Ans:` If you don't remove high correlated values from your dataset, it can have a negative impact on the performance of your model.
+	- **Overfitting:** The model will try to fit the noise in the data and this will result in poor generalization performance.
+	- **Instability:** The model's parameters and coefficients may change dramatically with small changes in the training data.
+	- **Difficulty in interpreting the model:** If two or more variables are highly correlated, it becomes difficult to interpret which variable is more important for the model.
+	- **Difficulty in model optimization:** High correlation can lead to slow convergence of the model's optimization process, making it difficult to find the optimal solution.
+	- **Large variance and low bias:** High correlation can lead to large variance and low bias in the model, which may result in an over-complicated model that is prone to overfitting.
 
+Removing high correlated variables before training the model can help to improve the model's performance by removing multicollinearity and reducing the complexity of the model.
+
+22. What is Spearman Correlation? What do you mean by positive and negative Correlation?
+`Ans:`Spearman correlation is a measure of the statistical dependence between two variables, it is also known as the Spearman rank correlation coefficient. *It is a non-parametric measure of correlation, which means that it does not assume that the underlying distribution of the data is normal. Instead, it calculates the correlation between the ranks of the data points.*
+	- Spearman correlation coefficient ranges from -1 to 1. **A coefficient of 1 indicates a perfect positive correlation, meaning that as one variable increases, the other variable also increases.** **A coefficient of -1 indicates a perfect negative correlation, meaning that as one variable increases, the other variable decreases.** A coefficient of 0 indicates no correlation between the two variables.
+
+23.  What is the difference between Co-Variance & Correlation?
+`Ans` Covariance `is a measure of the degree to which two random variables change together. It can be positive, negative or zero.` A positive covariance means that the variables increase or decrease together, a negative covariance means that as one variable increases, the other variable decreases and a zero covariance means that there is no relationship between the two variables. The formula for covariance is:
+														Cov(X, Y) = (1/n) * Σ(x - x̄) * (y - ȳ)
+where X and Y are the two random variables, x̄ and ȳ are the means of X and Y, respectively, and n is the number of observations.
+- **Correlation, on the other hand,** is a standardized version of covariance. It is a value between -1 and 1 that indicates the strength and direction of the linear relationship between two variables.The formula for correlation is:
+														Corr(X, Y) = Cov(X, Y) / (σX * σY)
+where σX and σY are the standard deviations of X and Y, respectively.
+In summary, covariance is a measure of how two variables change together while correlation is a standardized version of covariance that describes the strength and direction of the linear relationship between two variables.
