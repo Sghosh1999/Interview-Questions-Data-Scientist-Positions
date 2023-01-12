@@ -564,7 +564,7 @@ Multilabel classification, on the other hand, is a problem where each instance c
 - t-Distributed Stochastic Neighbor Embedding (t-SNE)
 - UMAP (Uniform Manifold Approximation and Projection)
 - Autoencoder (AE)
-- Variational Autoencoder (VAE)
+		8.  Variational Autoencoder (VAE)
 These techniques are used to reduce the number of features in a dataset while preserving as much information as possible.
 
 ---
