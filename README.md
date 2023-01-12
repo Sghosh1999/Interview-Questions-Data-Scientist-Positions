@@ -92,4 +92,33 @@
 - Bias refers to the error introduced by approximating a real-world problem, which may be incredibly complex, with a much simpler model. High-bias models are typically considered to be "oversimplified" and will have a high error on the training set.
 - On the other hand, variance refers to the error introduced by the model's sensitivity to small fluctuations in the training data. High variance models are typically considered to be "overcomplicated" or "overfit" and will have a high error on the test set.
 		![bias-varinace_trade_off](https://user-images.githubusercontent.com/44112345/211999865-304f95fe-852b-42f0-b826-d827ebfad906.JPG)
+		
+11. ### How do you prevent overfitting in a model?⭐
+   `Ans:` Overfitting occurs when a model is too complex and captures the noise in the training data, instead of the underlying patterns. This can lead to poor performance on new, unseen data. Here are some common techniques for preventing overfitting: 
+   - **Regularization:** Techniques *like L1, L2 regularization, or dropout,* add a penalty term to the model's objective function that discourages the model from fitting to noise in the data.
+- **Early stopping:** This technique is used when training deep neural networks, it monitors the performance of the model on a validation set and stops the training process when the performance on the validation set starts to degrade.
+- **Cross-validation:** This technique involves *dividing the data into several subsets and training the model on different subsets while evaluating the model performance on the remaining subsets.* This technique helps to get a better estimate of the model's performance on unseen data.
+- **Ensemble methods:** Ensemble methods like random forests and gradient boosting machines can be used to reduce overfitting and improve generalization performance. Ensemble methods combine the outputs of multiple models to produce a more robust prediction.
+- **Feature selection or dimensionality reduction:** By reducing the number of features, it can decrease the complexity of the model and prevent overfitting.
+- **Simplifying the model:** By *simplifying the model architecture or reducing the number of parameters,* it can decrease the complexity of the model and prevent overfitting.
+
+12. ### What is Hypothesis Testing. Explain with proper example.⭐
+   `Ans:` 
+Hypothesis testing is a statistical method used to determine whether a claim or hypothesis about a population parameter is true or false. The process of hypothesis testing involves making an initial assumption or hypothesis about the population parameter and then using sample data to test the validity of that assumption.
+- There are two types of hypotheses in hypothesis testing: **the null hypothesis (H0)** and the **alternative hypothesis (H1).** The null hypothesis states that there is no difference or relationship between the population parameter of interest and the sample data, while the alternative hypothesis states that there is a difference or relationship.
+- The process of hypothesis testing involves several steps:
+1.  State the null and alternative hypotheses
+2.  Choose a level of significance (alpha)
+3.  Collect and analyze sample data
+4.  Calculate a test statistic and its corresponding p-value
+5.  Compare the p-value to the level of significance (alpha)
+6.  Make a decision and interpret the results. <br/>
+    `For example, let's say a company wants to know if the mean weight of their product is equal to 50 grams. The null hypothesis (H0) would be that the mean weight of the product is equal to 50 grams, and the alternative hypothesis (H1) would be that the mean weight of the product is not equal to 50 grams. The company would then take a sample of products and calculate the mean weight of the sample. Using statistical methods, they would determine if the sample mean is statistically significantly different from 50 grams. If the sample mean is statistically significantly different from 50 grams, the company would reject the null hypothesis and conclude that the mean weight of the product is not equal to 50 grams.`
+    
+13. ### What is Type 1 & Type 2 error?⭐
+   `Ans:` *Type 1 error, **also known as a false positive, occurs when the null hypothesis is rejected, but it is actually true.** In other words, **it is a mistake of rejecting a null hypothesis that is true.** The probability of making a Type 1 error is represented by the level of significance (alpha) chosen before the hypothesis test. A common level of significance is 0.05, which means that there is a 5% chance of making a Type 1 error.
+- For example, in a medical test to detect a disease, a Type 1 error would be a false positive, where the test says a patient has the disease, but they actually do not.
+Type 2 error, also known as a false negative, occurs ***when the null hypothesis is not rejected, but it is actually false.*** In other words, **it is a mistake of not rejecting a null hypothesis that is false.** The probability of making a Type 2 error is represented by the beta (beta). A common level of beta is 0.2, which means that there is a 20% chance of making a Type 2 error.
+- For example, in a medical test to detect a disease, a Type 2 error would be a false negative, where the test says a patient does not have the disease, but they actually do.
+
 
