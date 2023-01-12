@@ -412,3 +412,61 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 	- **LassoCV:** LassoCV is a variant of Lasso Regression that uses cross-validation to select the regularization parameter. It performs the grid search and cross-validation internally and returns the best regularization parameter.
 	- **RidgeCV:** RidgeCV is a variant of Ridge Regression that uses cross-validation to select the regularization parameter. It performs the grid search and cross-validation internally and returns the best regularization parameter.
 ---
+
+6. **Why don't we use Mean Squared Error as a cost function in Logistic Regression?**.⭐⭐
+
+`Ans:` 
+
+---
+7. **Why is Logistic Regression called a Linear Model?**.⭐
+
+`Ans:` 
+
+---
+8. **Can Logistic regression can be used in an Imbalanced dataset Problem?**.⭐⭐
+
+`Ans:` Logistic regression can be used in an imbalanced dataset problem, but it is important to be aware of the limitations and potential issues that can arise.
+- One potential issue with using logistic regression on imbalanced datasets is *that the model may be biased towards the majority class.* **This means that the model will have a higher accuracy, but it will not perform well on the minority class.** This can be addressed by using techniques such as oversampling the minority class, undersampling the majority class, or using a combination of both.
+- Another **potential issue with using logistic regression on imbalanced datasets is that the model may not be sensitive to the minority class.** This means that the model will have a low recall for the minority class. This can be addressed by adjusting the threshold for classifying an example as the minority class.
+
+Additionally, it's important to use different evaluation metrics other than accuracy such as precision, recall, F1-score, AUC, etc.
+
+---
+9. **Can you explain the concept of polynomial regression? How does it differ from linear regression?**.⭐⭐
+
+`Ans:` 
+
+---
+10. **Can you explain the concept of polynomial regression? How does it differ from linear regression?**.⭐⭐
+
+`Ans:` 
+
+---
+11. **How do you deal with outliers in linear regression? What are the most common techniques for identifying and dealing with outliers?**.⭐⭐
+
+`Ans:` 
+
+---
+12. **What are the most common evaluation metrics in Regression Problems?**.⭐
+
+`Ans:` There are several common evaluation metrics used in regression problems, some of the most popular include:
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE):
+- R-squared (R2):
+- Mean Absolute Percentage Error (MAPE):
+- Adjust R-squared (Adjusted R²)
+
+---
+
+12. **How R-squared is different with Adjusted R²? What is the main difference**.⭐
+
+`Ans:` R-squared (R²) and adjusted R-squared (adjusted R²) are both measures of the goodness of fit of a regression model, but they are slightly different.
+- **R-squared is a measure of the proportion of variance in the dependent variable that can be explained by the independent variable(s) in the model.** It ranges from 0 to 1, where a value of 1 indicates that the model perfectly explains the variance in the dependent variable. **R-squared is calculated as the ratio of the explained variance to the total variance.**
+- **Adjusted R-squared is an extension of R-squared that adjusts for the number of predictor variables in the model.** The main difference between R-squared and adjusted R-squared is that adjusted R-squared penalizes the model for the number of predictor variables that are not useful in explaining the variance in the dependent variable.
+- This makes *adjusted R-squared a more conservative measure of the goodness of fit of a regression model, as it penalizes models with a large number of predictor variables* that do not explain a significant amount of variance in the dependent variable.
+![r2](https://user-images.githubusercontent.com/44112345/212057791-5c0993d2-53d0-414b-b1e1-30b972ea888a.JPG) 
+![Adjustedr2](https://user-images.githubusercontent.com/44112345/212057510-cdcd90a9-a378-492b-b783-7e8c1cea1657.JPG)
+
+
+---
