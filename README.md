@@ -16,7 +16,7 @@
 | Topics (Ongoing) | No Of Questions |
 |--|--|
 | [Data Science & ML - General Topics](#data-science--ml---general-topics) | 29 |
-| [Regression Techniques ( Concepts )](#regression-techniques--concepts-) | 5* |
+| [Regression Techniques ( Concepts )](#regression-techniques--concepts-) | 15* |
 
 
 ### Data Science & ML - General Topics
