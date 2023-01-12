@@ -199,32 +199,32 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 19. ### What are the algorithms that are sensitive & Robust to Outliers?⭐
 
    `Ans:` There are several algorithms that are considered to be robust to outliers:
-	- **The Median Absolute Deviation (MAD) method:** This is a robust measure of statistical dispersion that is based on the median of the absolute deviations from the median, rather than the mean.
-	- **The Huber loss function:** This is a robust cost function that is less sensitive to outliers than the mean squared error (MSE) function.
-	- **The RANSAC algorithm:** This is a robust estimation method that is designed to fit a model to a dataset that contains outliers.
-	- **Random Forest:** Random Forest creates multiple decision trees, and each tree is trained on different random subset of features and observations, it is less sensitive to outliers than a single decision tree.
-	- **Gradient Boosting Machine (GBM):** GBM is also a collection of decision trees, it is less sensitive to outliers because it combines the decision of multiple weak learners.
-	- **Support Vector Machines (SVMs):** SVMs are robust to outliers because they try to find the largest margin between the classes, it is less affected by the presence of outliers.
+ - **The Median Absolute Deviation (MAD) method:** This is a robust measure of statistical dispersion that is based on the median of the absolute deviations from the median, rather than the mean.
+ - **The Huber loss function:** This is a robust cost function that is less sensitive to outliers than the mean squared error (MSE) function.
+ - **The RANSAC algorithm:** This is a robust estimation method that is designed to fit a model to a dataset that contains outliers.
+ - **Random Forest:** Random Forest creates multiple decision trees, and each tree is trained on different random subset of features and observations, it is less sensitive to outliers than a single decision tree.
+ - **Gradient Boosting Machine (GBM):** GBM is also a collection of decision trees, it is less sensitive to outliers because it combines the decision of multiple weak learners.
+ - **Support Vector Machines (SVMs):** SVMs are robust to outliers because they try to find the largest margin between the classes, it is less affected by the presence of outliers.
 
 ---
 
 20. ### Why Feature Scaling is important? What are the feature scaling techniques?⭐
 
   `Ans:` Feature scaling is an important step in the preprocessing of data for machine learning algorithms because it helps to standardize the range of independent variables or features of the data.
-	- MinMaxScaler: This class provides a transformer to scale the data set in a given range, usually between 0 and 1.
-	- StandardScaler: This class provides a transformer to standardize the data set, by centering and scaling.
-	- RobustScaler: This class provides a transformer to scale the data set using statistics that are robust to outliers.
+ - MinMaxScaler: This class provides a transformer to scale the data set in a given range, usually between 0 and 1.
+ - StandardScaler: This class provides a transformer to standardize the data set, by centering and scaling.
+ - RobustScaler: This class provides a transformer to scale the data set using statistics that are robust to outliers.
 
 ---
 
 21. ### If we don't remove the highly correlated values in the dataset, how does it impact the model performance?⭐⭐
 
    `Ans:` If you don't remove high correlated values from your dataset, it can have a negative impact on the performance of your model.
-	- **Overfitting:** The model will try to fit the noise in the data and this will result in poor generalization performance.
-	- **Instability:** The model's parameters and coefficients may change dramatically with small changes in the training data.
-	- **Difficulty in interpreting the model:** If two or more variables are highly correlated, it becomes difficult to interpret which variable is more important for the model.
-	- **Difficulty in model optimization:** High correlation can lead to slow convergence of the model's optimization process, making it difficult to find the optimal solution.
-	- **Large variance and low bias:** High correlation can lead to large variance and low bias in the model, which may result in an over-complicated model that is prone to overfitting.
+ - **Overfitting:** The model will try to fit the noise in the data and this will result in poor generalization performance.
+ - **Instability:** The model's parameters and coefficients may change dramatically with small changes in the training data.
+ - **Difficulty in interpreting the model:** If two or more variables are highly correlated, it becomes difficult to interpret which variable is more important for the model.
+ - **Difficulty in model optimization:** High correlation can lead to slow convergence of the model's optimization process, making it difficult to find the optimal solution.
+ - **Large variance and low bias:** High correlation can lead to large variance and low bias in the model, which may result in an over-complicated model that is prone to overfitting.
 
 Removing high correlated variables before training the model can help to improve the model's performance by removing multicollinearity and reducing the complexity of the model.
 
@@ -232,7 +232,7 @@ Removing high correlated variables before training the model can help to improve
 
 22. ### What is Spearman Correlation? What do you mean by positive and negative Correlation?⭐
 `Ans:`Spearman correlation is a measure of the statistical dependence between two variables, it is also known as the Spearman rank correlation coefficient. *It is a non-parametric measure of correlation, which means that it does not assume that the underlying distribution of the data is normal. Instead, it calculates the correlation between the ranks of the data points.*
-	- Spearman correlation coefficient ranges from -1 to 1. **A coefficient of 1 indicates a perfect positive correlation, meaning that as one variable increases, the other variable also increases.** **A coefficient of -1 indicates a perfect negative correlation, meaning that as one variable increases, the other variable decreases.** A coefficient of 0 indicates no correlation between the two variables.
+ - Spearman correlation coefficient ranges from -1 to 1. **A coefficient of 1 indicates a perfect positive correlation, meaning that as one variable increases, the other variable also increases.** **A coefficient of -1 indicates a perfect negative correlation, meaning that as one variable increases, the other variable decreases.** A coefficient of 0 indicates no correlation between the two variables.
 
 ---
 
