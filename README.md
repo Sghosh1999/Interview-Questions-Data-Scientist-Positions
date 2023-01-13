@@ -17,9 +17,9 @@
 |--|--|
 | [Data Science & ML - General Topics](#data-science--ml---general-topics) | 34 |
 | [Regression Techniques](#regression-techniques--concepts-) | 20 |
-| [Classification Techniques](#classification-techniques--concepts-) | 28 |
-| [Support Vector Machines](#support-vector-machine-svm) | 12 |
-| [Decision Tree](#decision-tree-concepts) | 16 |
+| 1. [Classification Techniques](#classification-techniques--concepts-) | 28 |
+| 1.1 [Support Vector Machines](#support-vector-machine-svm) | 12 |
+| 1.2 [Decision Tree](#decision-tree-concepts) | 16 |
 
 ### Data Science & ML - General Topics
 
