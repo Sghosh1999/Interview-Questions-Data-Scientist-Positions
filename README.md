@@ -15,7 +15,7 @@
 
 | Topics (Ongoing) | No Of Questions |
 |--|--|
-| [Data Science & ML - General Topics](#data-science--ml---general-topics) | 29 |
+| [Data Science & ML - General Topics](#data-science--ml---general-topics) | 30 |
 | [Regression Techniques](#regression-techniques--concepts-) | 20 |
 | [Classification Techniques](#classification-techniques--concepts-) | 10* |
 
@@ -357,6 +357,18 @@ These techniques are used to reduce the number of features in a dataset while pr
 - Eigenvalues and Eigenvectors: Calculate the eigenvalues and eigenvectors of the covariance matrix. Eigenvectors are the directions of maximum variation in the data, and eigenvalues are the corresponding magnitudes of this variation.
 - Principal Components: Select the top k eigenvectors that have the highest eigenvalues, where k is the number of dimensions you want to reduce to. These eigenvectors are the principal components of the data.
 - Dimensionality Reduction: The last step is to project the centered data onto the principal components using a dot product. This results in a new dataset with reduced dimensions (k dimensions) that captures the most variation in the original data.`
+---
+30. **What are the types of Cross Validation techniques?**.⭐⭐
+
+
+`Ans:`Cross-validation is a technique used to evaluate the performance of a machine learning model by dividing the data into training and testing sets and evaluating the model on the testing set. There are several types of cross-validation techniques that can be used, including:
+- **K-fold Cross-Validation:** This method involves dividing the data into k equally-sized "folds" and training the model on k-1 of the folds and testing it on the remaining fold. This process is repeated k times, with a different fold used as the testing set each time. The final performance measure is the average performance across all k iterations.
+- **Leave-One-Out Cross-Validation (LOOCV):** This method is similar to k-fold cross-validation, but it is a special case where k is equal to the number of observations in the dataset. This means that each observation is used once as the testing set and all other observations are used as the training set.
+- **Stratified K-fold Cross-Validation:** This method is used when the data is imbalanced in terms of the target variable. It preserves the class balance across the folds, which can be important for models that are sensitive to class imbalance.
+- **Time Series Cross-Validation:** This method is used when working with time-series data. It involves using a sliding window to split the data into training and testing sets. This technique is useful to evaluate the model's ability to make predictions for future time points.
+- **Repeated Random Subsampling:** This method is similar to k-fold cross-validation, but it is a non-exhaustive version where the data is randomly split into training and test sets multiple times. This method is useful when data is limited or expensive to acquire.
+
+
 ---
 
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
