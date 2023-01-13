@@ -553,3 +553,26 @@ It uses multinomial distributions for the likelihood estimates of the features, 
 -   **Multi-class classification:** *Logistic Regression can be easily extended to multi-class classification problems* by training multiple binary classifiers and combining them, while SVM requires a different approach for multi-class classification.
 
 ---
+2.   **Why would you use the Kernel Trick?**.⭐⭐⭐
+
+`Ans:`When it comes to  **classification**  problems, the goal is to establish a decision boundary that maximizes the margin between the classes. However, in the real world, this task can become difficult when we have to treat with  **non-linearly separable data**. One approach to solve this problem is to perform a data transformation process, in which we map all the data points to a  **higher dimension**  find the boundary and make the classification.
+That sounds alright, however, when there are more and more dimensions, computations within that space become more and more expensive. In such cases, the  **kernel trick allows us to operate in the original feature space without computing the coordinates of the data**  in a higher-dimensional space and therefore offers a more efficient and less expensive way to transform data into higher dimensions.
+There exist different kernel functions, such as:
+-   _linear_,
+-   _nonlinear_,
+-   _polynomial_,
+-   _radial basis function (RBF)_, and
+-   _sigmoid_.
+Each one of them can be suitable for a particular problem depending on the data.
+
+---
+3.   **What is the Hinge Loss in SVM?**.⭐⭐⭐
+
+`Ans:`In Support Vector Machines (SVMs), the hinge loss is a commonly used loss function that is used to train the model to classify the data points correctly. **The hinge loss is defined as the maximum of 0 and the difference between the true class label and the predicted class labe**l. It is represented by the following equation:
+    hinge loss = max(0, 1 - y*(wx+b))
+where y is the true class label (-1 or 1), wx+b is the predicted class label, and w and b are the model parameters.
+- **The hinge loss function is designed to penalize the model when it makes a classification error.** *When the true class label and the predicted class label are not the same, the hinge loss will be positive and will increase as the difference between the two increases.* 
+- When the *true class label and the predicted class label are the same, the hinge loss will be zero and there will be no penalty.*
+- The hinge loss is a convex function which makes the optimization problem in SVM a convex optimization problem, which can be solved efficiently.
+
+---
