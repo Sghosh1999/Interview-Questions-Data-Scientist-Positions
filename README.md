@@ -16,7 +16,8 @@
 | Topics (Ongoing) | No Of Questions |
 |--|--|
 | [Data Science & ML - General Topics](#data-science--ml---general-topics) | 29 |
-| [Regression Techniques ( Concepts )](#regression-techniques--concepts-) | 15* |
+| [Regression Techniques](#regression-techniques--concepts-) | 20 |
+| [Classification Techniques](#classification-techniques--concepts-) | 10* |
 
 
 ### Data Science & ML - General Topics
@@ -417,19 +418,18 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 	- **Grid Search:** Grid search is a technique that involves training the model with a range of different regularization parameter values and evaluating the performance of each one using a validation set. The regularization parameter value that results in the best performance is chosen as the final value.
 	- **LassoCV:** LassoCV is a variant of Lasso Regression that uses cross-validation to select the regularization parameter. It performs the grid search and cross-validation internally and returns the best regularization parameter.
 	- **RidgeCV:** RidgeCV is a variant of Ridge Regression that uses cross-validation to select the regularization parameter. It performs the grid search and cross-validation internally and returns the best regularization parameter.
----
-
-6. **Why don't we use Mean Squared Error as a cost function in Logistic Regression?**.⭐⭐
-
-`Ans:` 
 
 ---
-7. **Why is Logistic Regression called a Linear Model?**.⭐
+6. **Why is Logistic Regression called a Linear Model?**.⭐
 
-`Ans:` 
+`Ans:` Logistic Regression is called a linear model because the relationship between the input features and the output variable is linear. The model is represented by a linear equation of the form:
+
+    y = b0 + b1_x1 + b2_x2 + ... + bn*xn
+where y is the output variable (a probability between 0 and 1), x1, x2, ..., xn are the input features, and b0, b1, b2, ..., bn are the model coefficients. The coefficients represent the contribution of each feature to the output variable.
+However, it's important to note that the logistic regression model is used for classification problem, the output variable (y) is the probability of the input belongs to a certain class, and this probability is modeled by a logistic function (sigmoid function) which is non-linear.
 
 ---
-8. **Can Logistic regression can be used in an Imbalanced dataset Problem?**.⭐⭐
+7. **Can Logistic regression can be used in an Imbalanced dataset Problem?**.⭐⭐
 
 `Ans:` Logistic regression can be used in an imbalanced dataset problem, but it is important to be aware of the limitations and potential issues that can arise.
 - One potential issue with using logistic regression on imbalanced datasets is *that the model may be biased towards the majority class.* **This means that the model will have a higher accuracy, but it will not perform well on the minority class.** This can be addressed by using techniques such as oversampling the minority class, undersampling the majority class, or using a combination of both.
@@ -438,22 +438,29 @@ Where y is the target variable, x1, x2, ..., xn are the predictor variables, b0 
 Additionally, it's important to use different evaluation metrics other than accuracy such as precision, recall, F1-score, AUC, etc.
 
 ---
-9. **Can you explain the concept of polynomial regression? How does it differ from linear regression?**.⭐⭐
+8. **Can you explain the concept of polynomial regression? How does it differ from linear regression?**.⭐⭐
 
-`Ans:` 
+`Ans:` **Polynomial regression** is a type of regression analysis in which the relationship between the *independent variable x and the dependent variable y is modeled as an nth degree polynomial.*
+A polynomial regression model can be represented by an equation of the form:
 
----
-10. **Can you explain the concept of polynomial regression? How does it differ from linear regression?**.⭐⭐
+    y = b0 + b1x + b2x^2 + b3x^3 + ... + bnx^n
 
-`Ans:` 
-
----
-11. **How do you deal with outliers in linear regression? What are the most common techniques for identifying and dealing with outliers?**.⭐⭐
-
-`Ans:` 
+where y is the output variable, x is the input variable, and b0, b1, b2, ..., bn are the model coefficients. The coefficients represent the contribution of each degree of x to the output variable.
+- *The main difference between polynomial regression and linear regression is the form of the equation. Linear regression uses a linear equation of the form y = b0 + b1*x*, while polynomial regression uses a polynomial equation that can model non-linear relationships between the input and output variables.
 
 ---
-12. **What are the most common evaluation metrics in Regression Problems?**.⭐
+9. **How do you deal with outliers in linear regression? What are the most common techniques for identifying and dealing with outliers?**.⭐⭐
+
+`Ans:` Outliers in linear regression can have a significant impact on the model parameters and can lead to poor model performance. Here are some common techniques for identifying and dealing with outliers:
+- **Visualization:** One of the simplest ways to identify outliers is by visualizing the data using scatter plots, box plots, or histograms. Outliers will typically appear as points that are far away from the main cluster of data points.
+- **Z-score:** The Z-score is a measure of how many standard deviations an observation is from the mean. Observations with a Z-score greater than a certain threshold (usually 3) can be considered outliers.
+- **Cook's distance: Cook's distance is a measure of the influence of each observation on the model parameters. Observations with a high Cook's distance can be considered outliers.**
+- **Outlier removal:** Once the outliers are identified, they can be removed from the dataset. However, this method should be used with caution, as it can lead to loss of important information and can bias the model.
+- **Robust regression:** Robust regression is a technique that is less sensitive to outliers. The most common method of robust regression is the least median of squares (LMS) method.
+- **Winsorization:** Winsorization is a technique that replaces the outliers with a certain value. For example, replacing all the observations greater than 3 standard deviations from the mean with the value of 3 standard deviations from the mean.
+
+---
+10. **What are the most common evaluation metrics in Regression Problems?**.⭐
 
 `Ans:` There are several common evaluation metrics used in regression problems, some of the most popular include:
 - Mean Absolute Error (MAE)
@@ -465,7 +472,7 @@ Additionally, it's important to use different evaluation metrics other than accu
 
 ---
 
-12. **How R-squared is different with Adjusted R²? What is the main difference**.⭐
+11. **How R-squared is different with Adjusted R²? What is the main difference**.⭐
 
 `Ans:` R-squared (R²) and adjusted R-squared (adjusted R²) are both measures of the goodness of fit of a regression model, but they are slightly different.
 - **R-squared is a measure of the proportion of variance in the dependent variable that can be explained by the independent variable(s) in the model.** It ranges from 0 to 1, where a value of 1 indicates that the model perfectly explains the variance in the dependent variable. **R-squared is calculated as the ratio of the explained variance to the total variance.**
@@ -476,14 +483,73 @@ Additionally, it's important to use different evaluation metrics other than accu
 
 
 ---
-13. **Can you explain the concept of Elastic Net regression? How does it differ from Ridge and Lasso regression?**.⭐⭐
+12. **Can you explain the concept of Elastic Net regression? How does it differ from Ridge and Lasso regression?**.⭐⭐
 
 `Ans:`Elastic Net is a linear regression model that combines the properties of both Ridge and Lasso regression. Like Ridge, it adds a L2 regularization term to the cost function to prevent overfitting. Like Lasso, it adds a L1 regularization term to the cost function to perform feature selection. *The trade-off between the L1 and L2 regularization terms is controlled by a parameter, alpha, that ranges from 0 to 1. **When alpha = 0, the model becomes a Ridge regression, and when alpha = 1, it becomes a Lasso regression.***
 
 ---
-14. **-   In a sparse dataset where most of the values are 0, which supervised classification algorithm we should use?**.⭐⭐
+13. **In a sparse dataset where most of the values are 0, which supervised classification algorithm we should use?**.⭐⭐
 
 `Ans:`When dealing with a sparse dataset where most of the values are zero, a suitable supervised classification algorithm to use could be the **Naive Bayes Classifier, especially the variant called Multinomial Naive Bayes,** because **it can handle the large number of zero values and it relies on counting the occurrences of the features, this method can work well when a dataset is sparse** and the classifier can learn useful information from the occurrences of the features.
 It uses multinomial distributions for the likelihood estimates of the features, which models the occurrences which are robust to the sparse data.
+
+---
+
+14. **What are the regularization techniques other than L1 and l2 in machine learning?**.⭐
+
+`Ans:`**Elastic Net Regularization:** This is a combination of *L1 and L2 regularization, where a linear combination of the L1 and L2 penalties is used in the cost function.* It helps to balance the trade-off between sparsity and shrinkage.
+- **Bayesian Regularization:** This method is a Bayesian version of regularization, this method uses the probabilistic approach to regularize the model by assuming a prior distribution on the parameters, this will help to prevent overfitting by reducing the variance in the parameters.
+
+---
+
+15.   **Which evaluation metrics are sensitive to the Outliers?**.
+
+`Ans:`Some evaluation metrics that are sensitive to outliers include **mean absolute error, mean squared error.** These metrics can be greatly affected by the presence of outliers in the data, as they take into account the individual differences between the predicted and actual values. **On the other hand, median absolute error and coefficient of determination (R-squared) are resistant to the outliers.**
+
+---
+16.   **What is the difference between bagging and boosting?**.⭐
+
+`Ans:`Bagging and Boosting are two ensemble methods that are used to improve the performance of machine learning models.
+- **Bagging (Bootstrap Aggregating)** is a method that involves *training multiple models on different subsets of the training data, and then averaging (for regression) or voting (for classification) the predictions made by each model.* The subsets of the training data are created by randomly sampling the data with replacement. Bagging helps to reduce the variance of the model, making it less prone to overfitting.
+- **Boosting** is a method that involves training multiple models *in a sequential manner, where each model tries to correct the errors made by the previous model.* The idea is to give more weight to the data points that are misclassified by the previous models, so that the next model can focus on those points. Boosting helps to reduce the bias of the model, making it more accurate.
+
+---
+
+17.   **What is the difference between bagging and boosting?**.⭐
+
+`Ans:`Bagging and Boosting are two ensemble methods that are used to improve the performance of machine learning models.
+- **Bagging (Bootstrap Aggregating)** is a method that involves *training multiple models on different subsets of the training data, and then averaging (for regression) or voting (for classification) the predictions made by each model.* The subsets of the training data are created by randomly sampling the data with replacement. Bagging helps to reduce the variance of the model, making it less prone to overfitting.
+- **Boosting** is a method that involves training multiple models *in a sequential manner, where each model tries to correct the errors made by the previous model.* The idea is to give more weight to the data points that are misclassified by the previous models, so that the next model can focus on those points. Boosting helps to reduce the bias of the model, making it more accurate.
+
+---
+18.   **How does Decision Tree regressor works?**.⭐
+
+`Ans:`A Decision Tree Regressor is a supervised learning algorithm that is used to *predict a continuous target variable based on several input features.* The algorithm works by recursively splitting the data into subsets based on the values of the input features. **Each split is made in such a way as to maximize the reduction in impurity of the target variable.**
+
+---
+19.   **Why don’t we use Mean Squared Error as a cost function in Logistic Regression?**.⭐
+
+`Ans:`In summary, MSE is a cost function for linear regression and it's not a suitable cost function for logistic regression because *it's not a good measure of the difference between predicted probabilities (between 0 & 1) and true class labels.* The log loss or cross-entropy loss is more appropriate cost function for logistic regression because it penalizes predictions that are confident but incorrect.
+
+---
+20. **How can we avoid Over-fitting in Logistic Regression models?**
+
+`Ans:`Regularization, Pruning, Cross-validation, Early stopping, and Ensemble methods are some of the techniques that can be used to avoid overfitting in logistic regression models.
+
+---
+
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
+## Classification Techniques ( Concepts )
+
+1.   **When would you use SVM vs Logistic regression?**.⭐⭐⭐
+
+`Ans:`Support Vector Machine (SVM) and Logistic Regression are both supervised learning algorithms that can be used for classification tasks. However, there are some key differences between the two that may influence which one you choose to use for a given problem.
+-   **Linear vs Non-linear decision boundary:** *SVM can learn non-linear decision boundaries by using the kernel trick, while logistic regression can only learn linear decision boundaries.* This means that SVM is more suitable for problems where the data is not linearly separable, while logistic regression is more suitable for problems where the data is linearly separable. 
+-   **Outliers:** *SVM is less sensitive to outliers,* as it only depends on the support vectors (i.e., the data points that are closest to the decision boundary). *Logistic regression, on the other hand, is more sensitive to outliers,* as the model parameters are estimated based on the entire dataset.
+    
+-   **Large dataset:** *SVM can be less efficient when dealing with large dataset* because of the high computational cost of the algorithm. *Logistic regression is computationally cheaper and can handle large dataset.*
+    
+-   **Multi-class classification:** *Logistic Regression can be easily extended to multi-class classification problems* by training multiple binary classifiers and combining them, while SVM requires a different approach for multi-class classification.
 
 ---
