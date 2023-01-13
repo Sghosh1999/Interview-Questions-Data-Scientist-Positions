@@ -17,10 +17,12 @@
 |--|--|
 | [Data Science & ML - General Topics](#data-science--ml---general-topics) | 34 |
 | [Regression Techniques](#regression-techniques--concepts-) | 20 |
-| 1. [Classification Techniques](#classification-techniques--concepts-) | 34 |
+| 1. [Classification Techniques](#classification-techniques--concepts-) | 39 |
 | 1.1 [Support Vector Machines](#support-vector-machine-svm) | 12 |
 | 1.2 [Decision Tree](#decision-tree-concepts) | 16 |
 | 1.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
+| 1.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
+| [Stats & probabality](#stats--probablity-fundamentals) | 2* |
 
 ### Data Science & ML - General Topics
 
@@ -860,4 +862,72 @@ In Gradient Boosting, **the weak learners used are decision trees and the algori
 
 ---
 
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
+## Naive Bayes Classifier
+
+35.   **How does the assumption of independence between features affect the performance of Naive Bayes classifier?**.⭐
+
+`Ans:`The assumption of independence between features in the Naive Bayes classifier affects the performance of the classifier in two main ways:
+- **Simplifies the calculations:** By assuming independence between features, *the classifier can calculate the probability of a class given a set of features by simply multiplying the individual probabilities of each feature.* This simplifies the calculations and makes the classifier computationally efficient.
+- **Decreases accuracy:** However, assuming independence between features is often unrealistic, particularly in many real-world problems. *If the features are not truly independent, the classifier will make incorrect predictions.* For example, in text classification, the presence of certain words in a document may imply the presence of other words. Ignoring this relationship by assuming independence can lead to a decrease in accuracy.
+- **Overconfidence:** As the classifier is assuming independence between features, it may over-estimate the correlation between features and the class, leading to overconfidence in its predictions.
+
+---
+
+36.   **Why Naive Bayes Classifier is called "Naive"**.⭐
+
+`Ans:`Naive Bayes Classifier is called "naive" because it makes the assumption that the features are independent of each other, which is often unrealistic, but it allows the classifier to make predictions based on the individual probabilities of each feature, rather than considering the relationships between the features. This simplifies the calculations and makes the classifier computationally efficient, but it can lead to a decrease in accuracy if the features are not truly independent.
+
+---
+37. **How does the choice of prior probability distribution affect the performance of Naive Bayes classifier?**
+
+`Ans :`The choice of prior probability distribution in the Naive Bayes classifier can affect the performance of the model in several ways:
+- **Bias:** The prior probability distribution is used to estimate the probability of a class given a set of features. **If the prior probability distribution is biased, the classifier will make biased predictions.**
+- **Overfitting:** *If the prior probability distribution is set to be very high for a specific class,* the classifier may fit too well to the training data and may not generalize well to new data.
+- **Underfitting:** On the other hand, if the prior probability distribution is set to be very low for a specific class, the classifier may not fit well to the training data and may not capture the underlying patterns in the data.
+- **Data Imbalance:** If the data set has an imbalanced distribution of classes, the prior probability distribution can be set to reflect the class distribution in the data set in order to improve the classifier's performance.
+
+---
+
+38. **How does the Naive Bayes classifier perform in the presence of irrelevant features?**
+
+`Ans :`In summary, since the Naive Bayes classifier only considers the individual feature probabilities and not the relationships between features, irrelevant features will not affect its predictions. Irrelevant features will not change the prior probability of the class or the probability of the features given the class, and therefore will not affect the probability of the class given the features.
+
+---
+
+
+39. **1.  How does the concept of Laplace smoothing in Naive Bayes classifier improve the model's performance?**
+
+`Ans:`Laplace smoothing, also known as add-k smoothing, is a technique used in Naive Bayes classifier to improve the model's performance. The main idea behind Laplace smoothing is to avoid zero probabilities, which can cause the model to make incorrect predictions.
+- The problem with zero probabilities arises when the classifier encounters a new feature or class for which there is no training data.
+- Laplace smoothing solves this problem by adding a small constant k to the numerator and denominator of the probability estimates. This ensures that no probability is zero, and the classifier can still make predictions even when it encounters new features or classes.
+- For example, in the case of text classification, if a word is present in a document but not in the training set, the probability of that word given a class would be zero, by adding a small constant k to the numerator and denominator of the probability estimate. It ensures that no probability is zero and the classifier can still make predictions even when it encounters new features or classes.
+
+---
+
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
+## Stats & Probablity Fundamentals
+
+1. **In any 15-minute interval, there is a 20% chance that you see at least one shooting star, What is the probability that you see at least one shooting start in the next 60 minutes?**
+
+`Ans:`The probability of seeing at least one shooting star in the next 60 minutes can be found by using the complement rule. *The complement rule states that the probability of an event happening is equal to 1 minus the probability of it not happening.*
+- In this case, the **probability of not seeing a shooting star in any 15-minute interval is (1 - 0.20) = 0.80.** Therefore, the probability of not seeing a shooting star in the next 60 minutes, if we assume the intervals are independent, is (0.8)^4 = 0.4096.
+- Now, the probability of seeing at least one shooting star in the **next 60 minutes is 1 - 0.4096 = 0.5904.**
+
+---
+2. **Find the Probability of Getting 53 Sundays in a Non Leap Year.**.
+
+`Ans:`
+A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, there is one day left over that is not part of a full week. Since there are 7 days in a week, we can assume that the remaining day can be any one of the 7 days of the week.
+- As a result, there are 52 Sundays in a non-leap year. But one leftover day apart from those 52 weeks can be either a Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or a Sunday.
+- Probability = (Number of favourable outcomes /Total number of events)
+
+    Here, Numberfavorableable outcomes = 1
+    
+    And, Total number of events are = 7
+    
+    So, Probability = 1/7
+---
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
