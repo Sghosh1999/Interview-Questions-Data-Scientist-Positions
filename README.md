@@ -780,7 +780,7 @@ Decision tree pruning is a technique used to reduce the complexity of a decision
 - **Regularization (lambda, alpha):** These parameters control the trade-off between the complexity of the model and the risk of overfitting. Larger values of lambda and alpha will result in a simpler model, but it also reduces the risk of overfitting.
 
 ---
-23. How does the decision tree algorithm handle imbalanced datasets and what are the techniques to tackle it?⭐⭐⭐ 
+23. **How does the decision tree algorithm handle imbalanced datasets and what are the techniques to tackle it?**.⭐⭐⭐ 
 
 `Ans:` Decision tree algorithms can handle imbalanced datasets by modifying the criteria used for splitting the data. With imbalanced datasets, a majority class can easily dominate the decision tree and make it less sensitive to the minority class. There are several techniques that can be used to tackle imbalanced datasets in decision tree:
 - **Cost-sensitive learning:** This method assigns *different misclassification costs to different classes, so that the decision tree algorithm gives more importance to the minority class.*
