@@ -43,7 +43,7 @@
 
 ---
 
-3.  **Can you explain the difference between supervised and unsupervised learning?**. ⭐
+3.  **How do you handle missing data in your dataset? What are some common techniques for imputing missing values?**. ⭐
 
 
 `Ans:` There are several techniques for handling missing data in a dataset, some of the most common include: <br />
@@ -296,7 +296,7 @@ In summary, covariance is a measure of how two variables change together while c
 
 ---
 
-24. **What is the difference between Multiclass Classification Models & Multilabel Classification Models?.**⭐
+24. **What is the difference between Multiclass Classification Models & Multilabel Classification Models?**.⭐
 
 
 `Ans:` In multiclass classification, the goal is to classify instances into one of several predefined classes. For example, classifying images of animals into dog, cat, and horse classes. Each instance can only belong to one class, and the classes are mutually exclusive.
