@@ -17,9 +17,10 @@
 |--|--|
 | [Data Science & ML - General Topics](#data-science--ml---general-topics) | 34 |
 | [Regression Techniques](#regression-techniques--concepts-) | 20 |
-| 1. [Classification Techniques](#classification-techniques--concepts-) | 28 |
+| 1. [Classification Techniques](#classification-techniques--concepts-) | 34 |
 | 1.1 [Support Vector Machines](#support-vector-machine-svm) | 12 |
 | 1.2 [Decision Tree](#decision-tree-concepts) | 16 |
+| 1.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
 
 ### Data Science & ML - General Topics
 
@@ -796,5 +797,67 @@ Decision tree pruning is a technique used to reduce the complexity of a decision
 26. Can you discuss the interpretability of decision tree models and how it is related to the depth of the tree? ⭐⭐⭐
 27. How does the concept of margin maximization in SVM classifier relate to model interpretability?⭐⭐⭐
 28. How does the concept of kernel trick relate to the curse of dimensionality in SVM classifier?⭐⭐⭐
+
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
+## Boosting Algorithms (GBM, LightGBM, CatBoost)
+
+29.   **What are the key two principles of LightGBM?**.⭐
+
+`Ans:`
+LightGBM is a gradient boosting framework that uses tree-based learning algorithms. The key two principles of LightGBM are:
+- **Gradient-based One-Side Sampling (GOSS):** This principle involves only using a subset of the data to grow each tree, which reduces the computation time and memory usage. *The samples are selected based on the gradient of the loss function, where the data points that have a larger absolute gradient are given a higher probability of being selected.*
+- **Exclusive Feature Bundling (EFB)**: *This principle involves constructing a tree in a single pass, where all the splits are made on the same feature.* This *improves the speed of the algorithm by reducing the number of splits that need to be considered.* This can also increase the accuracy of the model by reducing the number of splits that are made on noisy features.
+
+---
+
+30.   **1.  How does Gradient Boosting algorithm differ from Random Forest algorithm?**.⭐
+
+`Ans:`Gradient Boosting and Random Forest are both ensemble learning techniques that combine multiple weak models to create a strong model. However, there are several key differences between the two algorithms:
+- **Learning Method:** Random Forest is an ensemble of decision trees that are independently grown, whereas Gradient Boosting is an ensemble of decision trees that are grown sequentially. Gradient Boosting trains each tree to correct the mistakes of the previous tree.
+- **Performance:** Gradient Boosting generally produces more accurate models than Random Forest, but it also tends to be more prone to overfitting. Random Forest is less prone to overfitting but the models it produces are less accurate.
+- **Feature Importance:** Random Forest calculates feature importance by averaging the decrease in impurity over all the trees in the forest, whereas Gradient Boosting does not have a built-in feature importance calculation method.
+
+---
+
+31.   **1.  How does the learning rate parameter in Gradient Boosting algorithm affect the performance of the model?**.⭐
+`Ans:`The learning rate parameter in Gradient Boosting algorithm affects the performance of the model by controlling the step size at which the algorithm moves in the direction of the negative gradient of the loss function. A smaller learning rate will result in more accurate model but it will take longer to train, while a larger learning rate will result in less accurate model but it will train faster. The best value of learning rate parameter is often found by using a grid search or by using a learning rate schedule, where the learning rate is decreased over time as the algorithm approaches convergence.
+
+---
+
+32.   **What are most important Hyperparameters in GBM**.⭐
+
+`Ans:`Gradient Boosting Machine (GBM) has several important hyperparameters that can affect the performance of the model. The most important hyperparameters in GBM are:<br/>
+1.  **min_samples_split** 
+    -   Defines the minimum number of samples (or observations) which are required in a node to be considered for splitting.
+2.  **min_samples_leaf**
+    -   Defines the minimum samples (or observations) required in a terminal node or leaf.
+    -   Generally lower values should be chosen for imbalanced class problems because the regions in which the minority class will be in majority will be very small.
+3.  **max_depth**
+    -   The maximum depth of a tree.
+    -   Used to control over-fitting as higher depth will allow model to learn relations very specific to a particular sample.
+    -   Should be tuned using CV.
+4. **learning_rate** (Boosting Hyperparameter)
+	- n_estimators
+
+---
+
+33.   **1.  How does the concept of Gradient Boosting relate to boosting theory and how it improves the performance of weak learners?**.⭐
+
+`Ans:`Gradient Boosting is a machine learning technique that is based on the concept of boosting, which is a method for combining multiple weak learners to create a strong learner. The key idea behind boosting is to iteratively train weak models and combine their predictions in a way that improves the overall performance of the model.<br />
+In Gradient Boosting, **the weak learners used are decision trees and the algorithm trains them in a sequence,** where each tree tries to correct the mistakes of the previous tree.
+
+---
+
+34.   **What are the key principles of Cat Boost Classifiers?**.⭐
+
+`Ans:`CatBoost is a gradient-boosting framework that is specifically designed to handle categorical variables. The key principles of CatBoost are:
+- **Categorical feature handling:** CatBoost can handle categorical variables without the need for one-hot encoding, which can decrease the dimensionality of the data and improve the model's performance.
+- **Handling missing values:** CatBoost can handle missing values in the data by creating a special "NA" category for each categorical feature.
+- **Handling overfitting:** CatBoost uses a technique called "**permutation importance"** to identify and remove features that are not informative or are causing overfitting.
+- **Handling data leakage:** CatBoost has a built-in mechanism to detect and prevent data leakage, which can occur when training data is used to make test predictions.
+- **Handling class imbalance:** CatBoost has a built-in mechanism to handle class imbalance, which can occur when one class is much more prevalent than the other.
+
+---
 
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
