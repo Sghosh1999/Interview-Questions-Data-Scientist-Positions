@@ -588,3 +588,75 @@ where y is the true class label (-1 or 1), wx+b is the predicted class label, an
 - The hinge loss is a convex function which makes the optimization problem in SVM a convex optimization problem, which can be solved efficiently.
 
 ---
+4.   **How would you use the Naive Bayes classifier for categorical features? What if some features are numerical?**.⭐⭐⭐
+
+`Ans:`Naive Bayes is a probabilistic classifier that is based on the Bayes theorem, which states that the probability of a hypothesis (in this case, a class label) given some observations (in this case, feature values) is proportional to the probability of the observations given the hypothesis multiplied by the prior probability of the hypothesis.
+- When using **Naive Bayes for categorical features, the feature values are treated as discrete, unordered values. For each feature, the model estimates the probability of each value given each class label.** These probabilities are typically estimated from the training data using the maximum likelihood principle.
+- **If some features are numerical, one common approach is to discretize the numerical features into bins, and then treat them as categorical features.** This can be done by dividing the range of the numerical feature into a fixed number of intervals (bins) and assigning each observation to the interval to which it belongs.
+
+---
+
+5.   **How does _ROC_ curve and _AUC_ value help measure how good a model is?**.⭐⭐
+
+`Ans:`
+The Receiver Operating Characteristic (ROC) curve and the Area Under the Curve (AUC) value are commonly used to evaluate the performance of binary classification models.
+- *The ROC curve is a plot of the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings.* The TPR is the proportion of true positive cases that are correctly identified as such, while the FPR is the proportion of false positive cases that are incorrectly identified as true positives. A good classifier will have a high TPR and a low FPR, which corresponds to a point in the upper left corner of the ROC space.
+- **The AUC value is the area under the ROC curve. It ranges from 0 to 1, with a value of 1 indicating a perfect classifier and a value of 0.5 indicating a random classifier.** AUC measures the trade-off between the TPR and the FPR of a classifier. A model with a higher AUC is considered to be better at distinguishing between the positive and negative classes.
+- **A ROC curve is useful when the distribution of the positive and negative classes is imbalanced.** **An AUC of 1, means that there is no overlap between the positive and negative distributions, while an AUC of 0.5 means that there's a perfect overlap between the two.** AUC is also independent of the classification threshold, this means that it *is insensitive to changes in the decision boundary of the classifier, making it a robust measure of model performance.*
+
+---
+6.   **What are the trade-offs between the different types of _Classification Algorithms_? How would do you choose the best one?**.⭐
+
+`Ans:`Different types of classification algorithms have different strengths and weaknesses. The choice of algorithm depends on the specific characteristics of the data and the goal of the analysis. Here are some trade-offs between some common classification algorithms:
+-   **Logistic Regression:** It's a simple and interpretable algorithm that works well for linearly separable data and can be extended to multi-class classification problems. However, it may not perform well on non-linearly separable data and it can be sensitive to outliers.
+-   **k-Nearest Neighbors (k-NN):** It's a simple algorithm that is easy to understand and implement, and it can handle non-linearly separable data. However, it can be computationally expensive and it may not perform well on high-dimensional data.
+-   **Decision Trees:** It's a simple and interpretable algorithm that can handle both numerical and categorical data, and it can also handle non-linearly separable data. However, it can be prone to overfitting and it may not perform well on high-dimensional data.
+-   **Random Forest:** It's an ensemble method that combines multiple decision trees to improve the accuracy and reduce overfitting. However, it can be computationally expensive and it may not perform well on high-dimensional data.
+-   **Support Vector Machines (SVMs):** It's a powerful algorithm that can handle non-linearly separable data and it is less sensitive to outliers. However, it can be computationally expensive and it may not perform well on high-dimensional data.
+
+---
+7.   **Can you choose a  classifier based on the size of the training set?**.⭐⭐
+
+`Ans:`
+The size of the training set can be a factor to consider when choosing a classifier, but it is not the only one. Here are some general guidelines on how the size of the training set can affect the choice of classifier:
+
+-   **Small training set:** When the training set is small, it can be challenging to train a model with a high degree of complexity. In this case, simple and interpretable models such as **logistic regression or decision trees** may be more appropriate. Additionally, techniques such as k-fold cross-validation or bootstrapping can be used to generate more training data.
+    
+-   **Large training set:** When the training set is large, more complex models such as **Random Forest, Neural Networks or Support Vector Machines (SVMs) can be used to take advantag**e of the additional data and improve the model's performance.
+    
+-   **High-dimensional data:** High-dimensional data can be challenging for some models such as k-Nearest Neighbors (k-NN) and decision trees, which may not perform well on high-dimensional data. In this case, models such as **linear discriminant analysis (LDA), logistic regression or SVMs may be more appropriate.**
+    
+-   **Class imbalance:** If the data set is imbalanced, models such as decision trees and random forests may be sensitive to class imbalance and perform poorly. In this case, models such as SVMs with appropriate kernel or cost-sensitive learning can be more appropriate.
+
+---
+8.   **What are the most common techniques for pruning a Decision Tree?**.⭐⭐
+
+`Ans:`
+Decision tree pruning is a technique used to reduce the complexity of a decision tree and prevent overfitting. Here are some common techniques for pruning a decision tree:
+- **Reduced Error Pruning:** This technique starts at the leaves of the tree and works its way up, removing branches that do not improve the accuracy of the tree. The tree is pruned by removing branches that do not decrease the classification error when removed.
+- **Cost Complexity Pruning:** This technique uses a parameter called complexity parameter (alpha) to control the trade-off between the tree's size and its accuracy. The tree is pruned by removing branches that do not decrease the classification error by more than a certain threshold.
+- **Minimum Description Length (MDL) Pruning:** This technique *uses the principle of Occam's razor, which states that the simplest explanation is usually the best. The tree is pruned by removing branches that do not decrease the description length of the tree (a measure of the tree's complexity)*
+- **Pre-pruning:** It is a technique that stops the tree-building process before it perfectly fits the training data. It prevents the tree from growing too deep and overfitting.
+- **Post-pruning:** It is a technique that starts with a fully grown tree and removes branches that do not improve the accuracy of the tree.
+
+---
+9.   **Can you explain the concept of the kernel trick and how it relates to SVM?**.⭐⭐⭐
+
+`Ans:`
+The kernel trick is a technique used in Support Vector Machines (SVMs) to **transform the input data into a higher-dimensional space, where a linear decision boundary can be found.** This allows SVMs to model non-linear decision boundaries even though the optimization problem is solved in a linear space.
+- **The kernel trick works by defining a kernel function, which is a mathematical function that takes in two input vectors and returns a scalar value.** The kernel function is used to compute the inner product of the input vectors in a higher-dimensional space, without explicitly computing the coordinates of the input vectors in that space. This is why it is called the "kernel trick."
+
+	- The most common kernel functions used in SVMs are:
+		- **Iinear kernel:** It is defined as a simple inner product of two input vectors, which corresponds to a linear decision boundary.
+		- **Polynomial kernel:** It is defined as the inner product of two input vectors raised to a power, which corresponds to a polynomial decision boundary.
+		- **Radial basis function (RBF) kernel:** It is defined as the exponential of the negative Euclidean distance between two input vectors, which corresponds to a non-linear decision boundary.
+
+---
+10.   **Can you explain the concept of the soft-margin SVM and how it differs from the hard-margin SVM?**.⭐⭐⭐
+
+`Ans:`
+Support Vector Machines (SVMs) are a powerful algorithm for binary classification problems. **The standard SVM algorithm is known as the hard-margin SVM, which aims to find the maximum-margin hyperplane, which is a decision boundary that separates the two classes with the greatest possible margin.** A margin is defined as the distance between the decision boundary and the closest data points from each class, known as support vectors.
+- The **soft-margin SVM allows for some misclassifications by introducing a slack variable for each data point that measures the degree of misclassification.** *This slack variable is controlled by a parameter called the regularization parameter.* The goal of the soft-margin SVM is to find a decision boundary that maximizes the margin while minimizing the sum of the slack variables.
+- In the hard-margin SVM, all observations must be classified correctly, while in the soft-margin SVM, a certain number of observations can be misclassified, which is determined by the regularization parameter. **If the regularization parameter is set to zero, the soft-margin SVM becomes a hard-margin SVM,while if the regularization parameter is set to a large value, the decision boundary becomes less sensitive to outliers.**
+
+---
