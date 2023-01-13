@@ -603,6 +603,7 @@ The Receiver Operating Characteristic (ROC) curve and the Area Under the Curve (
 - *The ROC curve is a plot of the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings.* The TPR is the proportion of true positive cases that are correctly identified as such, while the FPR is the proportion of false positive cases that are incorrectly identified as true positives. A good classifier will have a high TPR and a low FPR, which corresponds to a point in the upper left corner of the ROC space.
 - **The AUC value is the area under the ROC curve. It ranges from 0 to 1, with a value of 1 indicating a perfect classifier and a value of 0.5 indicating a random classifier.** AUC measures the trade-off between the TPR and the FPR of a classifier. A model with a higher AUC is considered to be better at distinguishing between the positive and negative classes.
 - **A ROC curve is useful when the distribution of the positive and negative classes is imbalanced.** **An AUC of 1, means that there is no overlap between the positive and negative distributions, while an AUC of 0.5 means that there's a perfect overlap between the two.** AUC is also independent of the classification threshold, this means that it *is insensitive to changes in the decision boundary of the classifier, making it a robust measure of model performance.*
+![roc](https://user-images.githubusercontent.com/44112345/212262589-c16ba30f-ecdf-4511-a756-b2a3fa57db35.JPG)
 
 ---
 6.   **What are the trade-offs between the different types of _Classification Algorithms_? How would do you choose the best one?**.⭐
@@ -650,6 +651,7 @@ The kernel trick is a technique used in Support Vector Machines (SVMs) to **tran
 		- **Iinear kernel:** It is defined as a simple inner product of two input vectors, which corresponds to a linear decision boundary.
 		- **Polynomial kernel:** It is defined as the inner product of two input vectors raised to a power, which corresponds to a polynomial decision boundary.
 		- **Radial basis function (RBF) kernel:** It is defined as the exponential of the negative Euclidean distance between two input vectors, which corresponds to a non-linear decision boundary.
+![kernel](https://user-images.githubusercontent.com/44112345/212262509-eff8456f-4e63-40b3-8b9f-a2587ea807e8.JPG)
 
 ---
 10.   **Can you explain the concept of the soft-margin SVM and how it differs from the hard-margin SVM?**.⭐⭐⭐
@@ -658,5 +660,6 @@ The kernel trick is a technique used in Support Vector Machines (SVMs) to **tran
 Support Vector Machines (SVMs) are a powerful algorithm for binary classification problems. **The standard SVM algorithm is known as the hard-margin SVM, which aims to find the maximum-margin hyperplane, which is a decision boundary that separates the two classes with the greatest possible margin.** A margin is defined as the distance between the decision boundary and the closest data points from each class, known as support vectors.
 - The **soft-margin SVM allows for some misclassifications by introducing a slack variable for each data point that measures the degree of misclassification.** *This slack variable is controlled by a parameter called the regularization parameter.* The goal of the soft-margin SVM is to find a decision boundary that maximizes the margin while minimizing the sum of the slack variables.
 - In the hard-margin SVM, all observations must be classified correctly, while in the soft-margin SVM, a certain number of observations can be misclassified, which is determined by the regularization parameter. **If the regularization parameter is set to zero, the soft-margin SVM becomes a hard-margin SVM,while if the regularization parameter is set to a large value, the decision boundary becomes less sensitive to outliers.**
+![svm](https://user-images.githubusercontent.com/44112345/212262451-499f4215-53a0-4212-978c-3a13c95314ca.JPG)
 
 ---
