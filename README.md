@@ -931,3 +931,55 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
     So, Probability = 1/7
 ---
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
+## Deep Learning Fundamentals
+
+### CNN Fundamentals ( Cost Function, Backpropagation)
+
+1. **How do you handle overfitting in deep learning models? Can you discuss various techniques such as early stopping, dropout, and regularization, and when it would be appropriate to use each?**.⭐
+
+`Ans:`Overfitting in deep learning models occurs when a model is trained too well on the training data, and as a result, it performs poorly on unseen data. This happens because the model has learned the noise in the training data, rather than the underlying pattern.
+- There are several techniques that can be used to handle overfitting in deep learning models, including:
+- **Early stopping:** This technique involves monitoring the performance of the model on a validation set during training, and stopping the training process when the performance on the validation set starts to decrease. This helps to prevent the model from continuing to overfit to the training data.
+- **Dropout:** This technique involves randomly setting some of the neurons in the network to zero during each iteration of training. This helps to prevent the model from relying too heavily on any one neuron or feature, which can reduce overfitting.
+- **Regularization:** This technique involves adding a penalty term to the loss function that the model is trying to optimize. This penalty term discourages the model from having large weights, which can help to reduce overfitting. Some examples of regularization techniques include L1 and L2 regularization, and weight decay.
+
+---
+
+2. **How do Neural Networks get the optimal  Weights  and  Bias  values?**.⭐
+
+`Ans:`
+-   The neural networks get the optimal  _weights_  and  _bias_  values through an  **Error Gradient**.
+-   To decide whether to  _increase_  or  _decrease_  the current weights and bias, it needs to be compared to the  _optimal_  value. This is found by the  _gradients of error_  with respect to weights and bias:
+-   The gradient value is calculated from a selected algorithm called  **backpropagation**.
+-   An  _optimization algorithm_  utilizes the gradient to improve the weight values and bias.
+---
+
+3. **What is the difference between loss and cost function in Deep Learning?**.⭐
+
+`Ans:`   
+- **Loss Function :** A loss function is a function *that measures the difference between the predicted output of a model and the true output.* The goal of training a deep learning model is to minimize the loss, so that the predicted output of the model is as close as possible to the true output.
+- **A cost function**, on the other hand, is a function that measures the performance of a model, taking into account both the loss and any additional constraints or regularization. The cost function is used to optimize the model's parameters during training. The cost function can be represented as the sum of the loss function and the regularization term. **The cost function measures the model’s error on a group of objects, whereas the loss function deals with a single data instance.**
+
+---
+
+4. **What are the roles of an Activation Function?**.⭐
+
+`Ans:`
+-   **Activation Functions**  help in keeping the value of the output from the neuron restricted to a certain limit as per the requirement. If the limit is not set then the output will reach very high magnitudes. Most activation functions convert the output from `-1`  to  `1`  or to  `0`  to  `1`.
+-   The most  _important_  role of the activation function is the ability to add  **non-linearity**  to the neural network. Most of the models in real-life are non-linear so the activation functions help to create a non-linear model.
+-   The *activation function is responsible for deciding whether a neuron should be activated or not.*
+---
+
+5. **What's the difference between Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN) and in which cases would use each one?**.⭐
+
+`Ans:
+**Convolutional neural nets**  apply a convolution to the data before using it in fully connected layers.
+
+-   They are best used in cases where you want  _positional invariance_, that is to say, you want features to be captured regardless of where they are in the input sample.
+- CNNs are used primarily for image and video processing tasks, such as image recognition, object detection, and image segmentation. They are designed to take advantage of the spatial structure of image data by using convolutional layers, which scan the image with small filters to detect patterns and features.
+
+**
+RNNs, on the other hand, are used for tasks involving sequential data, such as natural language processing and speech recognition. They are designed to handle data with temporal dependencies by using recurrent layers, which allow information to be passed from one time step to the next. RNNs can also be used in tasks such as language modeling, machine translation, and image captioning.
+
+---
