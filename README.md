@@ -23,8 +23,8 @@
 | 3.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
 | 3.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
 | 4. [Stats & probabality](#stats--probablity-fundamentals) | 4 |
-| 5. [Deep Learning Fundamentals](#deep-learning-fundamentals)| 5 |
-| 5.1 [CNN](#cnn-fundamentals--cost-function-backpropagation) | 5 |
+| 5. [Deep Learning Fundamentals](#deep-learning-fundamentals)| 15* |
+| 5.1 [CNN](#cnn-fundamentals--cost-function-backpropagation) | 14 |
 
 ### Data Science & ML - General Topics
 
@@ -1100,4 +1100,39 @@ Activation functions are used in the neurons of a convolutional neural network (
 	- **Another cost function used for multiclass classification is the sparse categorical cross-entropy loss.** It is used when the classes are mutually exclusive, and only one class can be the correct one.
 ![cross_entropy](https://user-images.githubusercontent.com/44112345/212646410-7ca1e75c-ddd4-49a2-a586-a8b154130e1b.JPG)
 
+---
+
+11. **What is Vanishing & Exploding Gradient problem in CNN**.⭐
+
+`Ans: ` The vanishing and exploding gradient problem is a common issue that can occur in deep neural networks, including convolutional neural networks (CNNs).
+- **The vanishing gradient problem occurs when the gradients of the parameters become very small during the training process**. This can happen when the activation function used in the network is a saturating function, such as the sigmoid or hyperbolic tangent, which can squash the gradients to very small values.
+- **The exploding gradient problem occurs when the gradients of the parameters become very large during the training process.** *This can happen when the parameters are not properly initialized, or when the gradients are not properly scaled.* When the gradients become very large, the optimization algorithm can make large updates to the parameters, causing the network to become unstable and diverge.
+---
+
+12. **How do you approach transfer learning in deep learning, and when would you use a pre-trained model versus training from scratch?**.⭐
+
+`Ans:`**Transfer learning is a technique in deep learning that allows a model that has been trained on one task to be used as a starting point for a new task.** This can be done by using the pre-trained weights of a model that has already been trained on a large dataset, and then fine-tuning the model on the new task using a smaller dataset.
+- There are several ways to approach transfer learning in deep learning, depending on the specific task and the available resources. Some common approaches include:
+	- **Using a pre-trained model as a feature extractor:** In this approach, the pre-trained model is used to extract features from the new task data, and a new classifier is trained on top of the extracted features. This is useful when the new task data is small and there is not enough data to train a model from scratch.
+	- **Fine-tuning a pre-trained model:** *In this approach, the pre-trained model is used as a starting point, and the weights of the model are further trained on the new task data.* This is useful when the new task data is similar to the data that the pre-trained model was trained on, and there is enough data to fine-tune the model.
+	- **Using a pre-trained model as an initialization**: In this approach, the pre-trained model is used as an initialization for training a new model from scratch. This is useful when the new task data is different from the data that the pre-trained model was trained on, but still has some similarities, and there is enough data to train a new model.
+---
+
+13. **What are the weight initialization techniques in Deep Learning?**.⭐
+
+`Ans:`
+
+Weight initialization is an important step in training deep neural networks, as it can have a significant impact on the network's performance and ability to converge. There are several weight initialization techniques that can be used, each with its own advantages and disadvantages. Some commonly used weight initialization techniques include:
+- 1.  **Random initialization:** In this technique, *the weights are initialized to random values drawn from a normal or uniform distribution.* This is a simple and widely used technique, but **it can lead to slow convergence or getting stuck in a suboptimal solution.**
+- 2.  **Xavier initialization:** This technique is used to initialize the weights for the layers with saturating activation functions, such as sigmoid and tanh. **It uses a normal distribution with a standard deviation of sqrt(1/(number of input neurons)) to initialize the weights.** This initialization method helps to balance the scale of the input and output of each neuron and can speed up convergence.
+- 3.  **He initialization:** **This technique is used to initialize the weights for the layers with non-saturating activation functions, such as ReLU and its variants.** **It uses a normal distribution with a standard deviation of sqrt(2/(number of input neurons)) to initialize the weights.** This initialization method helps *to prevent the vanishing gradient problem* and can speed up the convergence.
+- 4.  **LeCun initialization:** This technique is similar to the He initialization, but it uses a uniform distribution with a range of sqrt(3/(number of input neurons)) to initialize the weights. It is specifically designed for the layers with non-saturating activation functions, such as sigmoid.
+---
+
+14. **How do Neural Networks get the optimal  Weights  and  Bias  values?**.⭐
+
+`Ans:`
+- **A multi-headed CNN is a type of neural network architecture that uses multiple parallel branches, each with its own set of layers, to process different aspects of the input data.** These parallel branches are also known as "heads" and they are typically combined at the end of the network to make a final prediction. Multi-headed CNNs are useful for tasks that involve multiple types of data, such as image and text data.
+- **A multi-channel CNN** is a type of neural network architecture that uses multiple parallel branches, each with its own set of filters, to process different channels of the input data. *Each channel of the input data corresponds to a different type of feature, such as different color channels in an image.*
+- **Multi-headed CNNs** are used to process multiple types of data, such as image and text, while **multi-channel CNN**s are used to process different channels of a single type of data, such as different color channels in an image. Both architectures can improve the performance of the network by learning different features from the data.
 ---
