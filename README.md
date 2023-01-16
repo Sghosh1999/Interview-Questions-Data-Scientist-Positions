@@ -15,14 +15,15 @@
 
 | Topics (Ongoing) | No Of Questions |
 |--|--|
-| [Data Science & ML - General Topics](#data-science--ml---general-topics) | 34 |
-| [Regression Techniques](#regression-techniques--concepts-) | 20 |
-| 1. [Classification Techniques](#classification-techniques--concepts-) | 39 |
-| 1.1 [Support Vector Machines](#support-vector-machine-svm) | 12 |
-| 1.2 [Decision Tree](#decision-tree-concepts) | 16 |
-| 1.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
-| 1.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
-| [Stats & probabality](#stats--probablity-fundamentals) | 2* |
+| 1. [Data Science & ML - General Topics](#data-science--ml---general-topics) | 34 |
+| 2. [Regression Techniques](#regression-techniques--concepts-) | 20 |
+| 3. [Classification Techniques](#classification-techniques--concepts-) | 39 |
+| 3.1 [Support Vector Machines](#support-vector-machine-svm) | 12 |
+| 3.2 [Decision Tree](#decision-tree-concepts) | 16 |
+| 3.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
+| 3.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
+| 4. [Stats & probabality](#stats--probablity-fundamentals) | 5 |
+| 5. [Stats & probabality](#deep-learning-fundamentals) | 5 |
 
 ### Data Science & ML - General Topics
 
@@ -992,16 +993,23 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 
 `Ans:`
 -   The neural networks get the optimal  _weights_  and  _bias_  values through an  **Error Gradient**.
+![error_gradient](https://user-images.githubusercontent.com/44112345/212636045-56a9146e-aab0-4caa-8a08-f067870145ac.JPG)
+
 -   To decide whether to  _increase_  or  _decrease_  the current weights and bias, it needs to be compared to the  _optimal_  value. This is found by the  _gradients of error_  with respect to weights and bias:
 -   The gradient value is calculated from a selected algorithm called  **backpropagation**.
 -   An  _optimization algorithm_  utilizes the gradient to improve the weight values and bias.
+![backpropagation](https://user-images.githubusercontent.com/44112345/212636081-2015ffed-e098-4c05-89b3-e8309f3da37c.JPG)
+
 ---
 
 3. **What is the difference between loss and cost function in Deep Learning?**.⭐
 
 `Ans:`   
 - **Loss Function :** A loss function is a function *that measures the difference between the predicted output of a model and the true output.* The goal of training a deep learning model is to minimize the loss, so that the predicted output of the model is as close as possible to the true output.
+![loss_function](https://user-images.githubusercontent.com/44112345/212635948-f802a931-65e5-48f0-b414-941aa2f5ff8c.JPG)
+
 - **A cost function**, on the other hand, is a function that measures the performance of a model, taking into account both the loss and any additional constraints or regularization. The cost function is used to optimize the model's parameters during training. The cost function can be represented as the sum of the loss function and the regularization term. **The cost function measures the model’s error on a group of objects, whereas the loss function deals with a single data instance.**
+![cost_function](https://user-images.githubusercontent.com/44112345/212635974-332d3093-47d4-454f-81a7-ab8aba9663db.JPG)
 
 ---
 
@@ -1021,7 +1029,6 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 -   They are best used in cases where you want  _positional invariance_, that is to say, you want features to be captured regardless of where they are in the input sample.
 - CNNs are used primarily for image and video processing tasks, such as image recognition, object detection, and image segmentation. They are designed to take advantage of the spatial structure of image data by using convolutional layers, which scan the image with small filters to detect patterns and features.
 
-**
-RNNs, on the other hand, are used for tasks involving sequential data, such as natural language processing and speech recognition. They are designed to handle data with temporal dependencies by using recurrent layers, which allow information to be passed from one time step to the next. RNNs can also be used in tasks such as language modeling, machine translation, and image captioning.
+**RNNs, on the other hand, are used for tasks involving sequential data, such as natural language processing and speech recognition. They are designed to handle data with temporal dependencies by using recurrent layers, which allow information to be passed from one time step to the next. RNNs can also be used in tasks such as language modeling, machine translation, and image captioning.**
 
 ---
