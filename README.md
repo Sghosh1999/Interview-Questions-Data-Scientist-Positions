@@ -23,8 +23,8 @@
 | 3.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
 | 3.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
 | 4. [Stats & probabality](#stats--probablity-fundamentals) | 4 |
-| 5. [Deep Learning Fundamentals](#deep-learning-fundamentals| 5 |
-| 5. [CNN](#cnn-fundamentals--cost-function-backpropagation) | 5 |
+| 5. [Deep Learning Fundamentals](#deep-learning-fundamentals)| 5 |
+| 5.1 [CNN](#cnn-fundamentals--cost-function-backpropagation) | 5 |
 
 ### Data Science & ML - General Topics
 
