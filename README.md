@@ -1020,3 +1020,84 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 **RNNs, on the other hand, are used for tasks involving sequential data, such as natural language processing and speech recognition. They are designed to handle data with temporal dependencies by using recurrent layers, which allow information to be passed from one time step to the next. RNNs can also be used in tasks such as language modeling, machine translation, and image captioning.**
 
 ---
+
+
+6. **What are the steps in CNN and explain the significance of each steps.**.⭐
+
+`Ans:`
+The steps in a Convolutional Neural Network (CNN) typically include the following:
+- **Convolution:** *This is the process of scanning the input image with small filters (also known as kernels) to detect patterns and features in the image.* The filters are typically smaller than the input image and are moved across the image in a sliding window fashion. This step is significant as it allows the network to learn the important features from the input image, which can be used for image classification or other tasks.
+- **Non-Linearity (Activation Function):** After the convolution step, *the output is passed through an activation function such as ReLU, which adds non-linearity to the network.* This step is significant as it allows the network to learn complex, non-linear relationships in the data.
+- **Pooling:** *This step is used to reduce the spatial dimensions of the data while preserving important features.* The most common types of pooling are max pooling and average pooling. This step is significant as it helps to reduce the computation cost and prevent overfitting.
+- **Normalization:** This step is used to standardize the data and helps to improve the overall performance of the network. Batch normalization is a common technique used for this purpose.
+- **Fully Connected Layers:** After the convolutional, pooling and normalization layers, *the output is passed through one or more fully connected layers. This step is significant as it allows the network to make a final prediction based on the learned features.*
+- **Softmax function:** In the case of classification problem the output of the fully connected layers is passed through a softmax function to obtain the final class probabilities.
+- **Backpropagation:** After the forward pass, the error is calculated and backpropagated through the network to update the weights.
+- **Training:** The network is trained using a dataset, and the weights are updated using an optimization algorithm such as Gradient Descent.
+- **Evaluation:** The performance of the network is evaluated on a test set to measure the overall accuracy of the network on unseen data.
+![cnn](https://user-images.githubusercontent.com/44112345/212645955-ee7957cb-0b32-4a22-bff4-b00131c70a75.JPG)
+
+---
+
+7. **Types of optimization Algorithms in CNN and their pros and cons.**.⭐
+
+`Ans:`
+There are several types of optimization algorithms that can be used to train a convolutional neural network (CNN), each with its own pros and cons. Some commonly used optimization algorithms include:
+
+1.  **Stochastic Gradient Descent (SGD):** This is a simple and widely used optimization algorithm that updates the weights by taking the gradient of the loss function with respect to the weights. One of the main advantages of SGD is that it is computationally efficient and easy to implement. However, it can be sensitive to the learning rate and may get stuck in local minima.
+    
+2.  **Momentum:** This is an extension of SGD that incorporates a momentum term to help the algorithm overcome local minima and converge faster. Momentum helps the optimization to continue in the direction of the previous steps, reducing the chances of getting stuck in a local minimum.
+    
+3.  **Nesterov Accelerated Gradient (NAG):** This is another variation of SGD that uses the momentum to estimate the next position of the weights, and then corrects it. This method is less sensitive to the learning rate and allows to reach the optimal solution faster than SGD and Momentum.
+    
+4.  **Adagrad:** *This algorithm adapts the learning rate for each parameter individually, which can lead to faster convergence for some problems.* However, since it uses a different learning rate for each parameter, it can lead to some parameters being updated more frequently than others, which can cause issues in some cases.
+    
+5.  **Adadelta:** This algorithm is an extension of Adagrad that tries to overcome its issue by using an average of the historical gradient updates to determine the learning rate for each parameter.
+    
+6.  **Adam: Adaptive Moment Estimation (Adam)** *is an optimization algorithm that combines the advantages of Adagrad and Momentum.* It uses moving averages of the parameters to provide a running estimate of the second raw moments of the gradients; the term adaptive in the name refers to the fact that the algorithm adapts the learning rates of each parameter based on the historical gradient information.
+    
+7.  **RMSprop**: This algorithm is similar to Adadelta and Adam, it also uses moving averages of the gradient updates to determine the learning rate for each parameter, but it uses the root mean square of the gradients instead of the sum of the gradients.
+    
+8.  **Nadam:** This algorithm is an extension of Adam and Nesterov Momentum.
+---
+
+8. **Types of Activation Function and their output range in CNN.**.⭐
+
+`Ans:`
+Activation functions are used in the neurons of a convolutional neural network (CNN) to introduce non-linearity into the network. There are several types of activation functions, each with its own properties and output range, some commonly used activation functions include:
+
+1.  **Sigmoid:** **This function maps any input value to a value between 0 and 1.** It's mostly used in the output layer of binary classification problems. 
+    
+2.  **ReLU (Rectified Linear Unit):** **This function maps any input value less than 0 to 0 and any input value greater than 0 to the same value.** It's widely used in the hidden layers of the network. 
+    
+3.  **Tanh (Hyperbolic Tangent):** This function maps any input value to a value between -1 and 1. It's similar to the sigmoid function but outputs values in a wider range. 
+    
+4.  **Leaky ReLU:** This function is similar to ReLU, but instead of mapping negative input values to 0, it maps them to a small positive value (e.g. 0.01). This helps to avoid the "dying ReLU" problem, where a neuron can become "dead" and output zero for all input values.
+    
+5.  **ELU (Exponential Linear Unit):** This function is similar to Leaky ReLU, but the negative part of the function has a slope of alpha, where alpha is a hyperparameter. This helps to avoid the "dying ReLU" problem and also helps to speed up the convergence.
+    
+6.  **Softmax:** This function is used in the output layer of multi-class classification problems. It maps any input values to a probability distribution over n classes, where n is the number of classes. 
+![sigmoid](https://user-images.githubusercontent.com/44112345/212647078-9a2ebf2b-5ae4-4634-95ab-8e8c217dfaa3.JPG)
+
+
+---
+
+9. **What is dying ReLu Problem?**.⭐
+
+`Ans:`
+*The "dying ReLU" problem is a phenomenon that can occur in convolutional neural networks (CNNs) when using the rectified linear unit (ReLU) activation function.* The ReLU activation function maps any input value less than 0 to 0, which can cause some neurons to "die" and output zero for all input values. *This happens because if the weights in the network are not properly initialized or if the learning rate is too high, it is possible for the weights to update in such a way that the input to the ReLU activation function becomes negative* for all training examples.
+
+---
+
+10. **What are the different cost functions for binary and multiclass classification problem?**.⭐
+
+`Ans:`
+- **Binary Classification**
+	- **In binary classification, a common cost function used is the binary cross-entropy loss.** It is also known as log loss. The binary cross-entropy loss measures the dissimilarity between predicted probability and the true label.
+	- **Another cost function used for binary classification is the hinge los**s or the maximum-margin loss.
+- **Multiclass Classification**
+	- **In multiclass classification, a common cost function used is the categorical cross-entropy loss**. It is also known as the negative log likelihood loss. It measures the dissimilarity between the predicted probability and the true label.
+	- **Another cost function used for multiclass classification is the sparse categorical cross-entropy loss.** It is used when the classes are mutually exclusive, and only one class can be the correct one.
+![cross_entropy](https://user-images.githubusercontent.com/44112345/212646410-7ca1e75c-ddd4-49a2-a586-a8b154130e1b.JPG)
+
+---
