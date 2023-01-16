@@ -930,6 +930,48 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
     
     So, Probability = 1/7
 ---
+
+3. **Types of Selection bias**.
+
+`Ans:`
+- **Sampling bias:** occurs when a sample is not representative of the population it is intended to represent.
+- **Time interval bias:** occurs when the study population is not observed for the same amount of time.
+- **Location bias:** occurs when the study population is not selected from the same geographic location.
+- **Recruitment bias:** occurs when the study population is not recruited in the same way.
+- **Information bias:** occurs when the data collected is not accurate or complete.
+- **Confirmation bias:** occurs when the researcher only looks for data that confirms their preconceived notions.
+- **Survivorship bias:** occurs when only the individuals who survive or succeed are studied, while those who fail or drop out are ignored.
+- **Observer bias:** occurs when the researcher's own beliefs or expectations influence the results of the study.
+
+---
+
+4. **How many types of probability distributions are there with examples?**.
+
+`Ans:` There are many types of probability distributions, and the specific types and examples can vary depending on the field or context in which they are being used. Some common types of probability distributions includd:
+- **Bernoulli distribution:** describes _the probability of a binary outcome, such as the outcome of a coin flip._
+- **Binomial distribution:** describes _the probability of a certain number of successes in a fixed number of trials,_ such as the probability of getting 4 heads in 8 coin flips.
+- **Poisson distribution:** describes the probability of a given number of events occurring in a fixed interval of time or space, such as the number of car accidents on a particular stretch of road in a given month.
+- **Normal distribution (or Gaussian distribution):** describes _the probability of a continuous variable, such as a person's height or intelligence,_ taking on different values.
+- **Exponential distribution:** describes _the probability of the time between events in a Poisson process,_ such as the time between customers arriving at a store.
+- **Uniform distribution:** describes _the probability of a variable taking on any value within a given range, such as the probability of rolling a number between 1 and 6 on a fair die._
+- **Log-normal distribution:** a _continuous probability distribution of a random variable whose logarithm is normally distributed._
+- **Chi-square distribution:** a probability distribution that is used in the common chi-square goodness of fit test and in confidence interval estimation for a population standard deviation of a normal distribution from a sample
+
+---
+
+2. **Find the Probability of Getting 53 Sundays in a Non Leap Year.**.
+
+`Ans:`
+A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, there is one day left over that is not part of a full week. Since there are 7 days in a week, we can assume that the remaining day can be any one of the 7 days of the week.
+- As a result, there are 52 Sundays in a non-leap year. But one leftover day apart from those 52 weeks can be either a Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or a Sunday.
+- Probability = (Number of favourable outcomes /Total number of events)
+
+    Here, Numberfavorableable outcomes = 1
+    
+    And, Total number of events are = 7
+    
+    So, Probability = 1/7
+---
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
 
 ## Deep Learning Fundamentals
