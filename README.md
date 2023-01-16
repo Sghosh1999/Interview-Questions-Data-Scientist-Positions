@@ -22,8 +22,9 @@
 | 3.2 [Decision Tree](#decision-tree-concepts) | 16 |
 | 3.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
 | 3.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
-| 4. [Stats & probabality](#stats--probablity-fundamentals) | 5 |
-| 5. [Stats & probabality](#deep-learning-fundamentals) | 5 |
+| 4. [Stats & probabality](#stats--probablity-fundamentals) | 4 |
+| 5. [Deep Learning Fundamentals](#deep-learning-fundamentals| 5 |
+| 5. [CNN](#cnn-fundamentals--cost-function-backpropagation) | 5 |
 
 ### Data Science & ML - General Topics
 
@@ -960,19 +961,6 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 
 ---
 
-2. **Find the Probability of Getting 53 Sundays in a Non Leap Year.**.
-
-`Ans:`
-A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, there is one day left over that is not part of a full week. Since there are 7 days in a week, we can assume that the remaining day can be any one of the 7 days of the week.
-- As a result, there are 52 Sundays in a non-leap year. But one leftover day apart from those 52 weeks can be either a Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or a Sunday.
-- Probability = (Number of favourable outcomes /Total number of events)
-
-    Here, Numberfavorableable outcomes = 1
-    
-    And, Total number of events are = 7
-    
-    So, Probability = 1/7
----
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
 
 ## Deep Learning Fundamentals
