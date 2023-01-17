@@ -1002,6 +1002,15 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 
 ---
 
+6. **Difference between sample size and margin of error.**.
+
+`Ans:` **Sample size and margin of error are two important concepts in statistical sampling.**
+- **Sample size refers to the number of observations or individuals that are included in a sample.** A larger sample size generally leads to a more precise estimate of the population parameter of interest, as it reduces the variability of the sample estimate. However, increasing the sample size also increases the cost and resources required to collect the data.
+- **Margin of error, on the other hand, refers to the amount of error or uncertainty that is associated with a sample estimate.** It is often reported as a percentage or a decimal and it represents the range of values that is likely to include the true population parameter with a certain level of confidence. The margin of error is affected by the sample size, the level of confidence, and the variability of the population. A smaller margin of error indicates a more precise estimate.
+- In summary, sample size is the number of observations in a sample, while margin of error is the level of precision or uncertainty of the sample estimate. **The relationship between sample size and margin of error is inversely proportional, meaning as the sample size increases, the margin of error decreases.**
+
+---
+
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
 
 ## Deep Learning Fundamentals
