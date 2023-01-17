@@ -604,6 +604,28 @@ It uses multinomial distributions for the likelihood estimates of the features, 
 
 ---
 
+21. **Explain Significance of Log Odds in Logistic regression with example.**
+
+`Ans:`In logistic regression, the log odds (also known as the logit) is a measure of the relationship between the independent variables and the dependent binary variable. The log odds is the natural logarithm (ln) of the odds of the dependent variable being a 1 (success) versus a 0 (failure).
+
+For example, let's say we are trying to predict the likelihood of a customer purchasing a product based on their age and income. The log odds for a customer with an age of 30 and an income of $50,000 purchasing the product would be calculated as:
+
+ln(P(purchase=1)/(1-P(purchase=1))) = ln(odds of purchasing)
+
+Where P(purchase=1) is the probability of purchasing the product.
+
+The significance of the log odds in logistic regression is that it allows us to model the probability of the binary outcome as a linear function of the independent variables. The log odds is a linear function of the independent variables in logistic regression, so it allows us to make predictions about the probability of the binary outcome (e.g., purchase or no purchase) based on the values of the independent variables (e.g., age and income).
+
+---
+
+22. **Between Linear regression and Random forest regression which model will perform better in Airbnb House price prediction and why?**
+
+`Ans:`It depends on the specific characteristics of the data and the problem at hand. Both linear regression and random forest regression can be used to predict house prices on Airbnb, but they have different strengths and weaknesses.
+- Linear regression is a simple and interpretable model that makes assumptions about the linearity of the relationship between the independent and dependent variables and the normality of the errors. It is a good choice when the relationship between the independent and dependent variables is linear and there are not too many independent variables or outliers in the data. Linear regression also assumes no multicollinearity, which means that independent variables should be independent of each other.
+- On the other hand, Random Forest is an ensemble method, which means it combines the predictions of multiple decision trees to improve the overall predictive performance. Random Forest is a good choice when the relationship between the independent and dependent variables is non-linear or when there are many independent variables or outliers in the data. Random Forest also handles well the multicollinearity.
+
+---
+
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
 
 ## Classification Techniques ( Concepts )
