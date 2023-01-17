@@ -25,6 +25,7 @@
 | 4. [Stats & probabality](#stats--probablity-fundamentals) | 4 |
 | 5. [Deep Learning Fundamentals](#deep-learning-fundamentals)| 15* |
 | 5.1 [CNN](#cnn-fundamentals--cost-function-backpropagation) | 14 |
+| 6 [Attention & Transformers](#deep-learning---nlp) | 10* |
 
 ### Data Science & ML - General Topics
 
@@ -123,6 +124,8 @@
     It's important to note that some of the techniques, like One-Hot Encoding, Ordinal Encoding, and Binary Encoding, have the potential to introduce a new feature, which could affect the model performance. *Additionally, target encoding and count encoding could introduce a leakage from the target variable, which could lead to overfitting.
 
 ---
+
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
   
 8.  **What is the curse of dimensionality and how does it affect machine learning?**.⭐
 
@@ -257,6 +260,8 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
  - **Support Vector Machines (SVMs):** SVMs are robust to outliers because they try to find the largest margin between the classes, it is less affected by the presence of outliers.
 
 ---
+
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
 
 20. **Why Feature Scaling is important? What are the feature scaling techniques?**.⭐
 
@@ -1137,6 +1142,8 @@ Weight initialization is an important step in training deep neural networks, as 
 - **Multi-headed CNNs** are used to process multiple types of data, such as image and text, while **multi-channel CNN**s are used to process different channels of a single type of data, such as different color channels in an image. Both architectures can improve the performance of the network by learning different features from the data.
 ---
 
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
+
 ## Deep Learning - NLP
 
 1. **Explain every block of Attention Networks and working principles.**.⭐
@@ -1171,7 +1178,7 @@ In summary, Attention Networks are a neural network architecture that allows the
     
 -   **Multi-head Attention**: Multi-head attention is an extension of the basic attention mechanism, where multiple attention mechanisms are used in parallel. Each attention mechanism is applied to the same input using a different query vector, and the results are concatenated together. This allows the model to attend to multiple parts of the input simultaneously, and can improve performance on certain tasks.
 
-![Attention Blog](https://www.analyticsvidhya.com/blog/2019/11/comprehensive-guide-attention-mechanism-deep-learning/)
+[Attention Blog](https://www.analyticsvidhya.com/blog/2019/11/comprehensive-guide-attention-mechanism-deep-learning/)
 ---
 
 2. **Explain every block of transformers and its working taking an input sequence string as an example.**.⭐
@@ -1261,3 +1268,5 @@ In a RoBERTa-based question answering system, confidence scores are calculated t
     
 -   **MLM score**: Another way to calculate the confidence score is by using the scores of the masked language modeling task. The MLM task is the task of predicting a token given its surrounding context, this score indicates how likely is that the predicted answer is a valid word in the language.
 ---
+
+📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
