@@ -1136,3 +1136,128 @@ Weight initialization is an important step in training deep neural networks, as 
 - **A multi-channel CNN** is a type of neural network architecture that uses multiple parallel branches, each with its own set of filters, to process different channels of the input data. *Each channel of the input data corresponds to a different type of feature, such as different color channels in an image.*
 - **Multi-headed CNNs** are used to process multiple types of data, such as image and text, while **multi-channel CNN**s are used to process different channels of a single type of data, such as different color channels in an image. Both architectures can improve the performance of the network by learning different features from the data.
 ---
+
+## Deep Learning - NLP
+
+1. **Explain every block of Attention Networks and working principles.**.⭐
+
+`Ans:`Attention networks are a type of neural network architecture that allows the model to focus on specific parts of the input while processing it. They are commonly used in natural language processing tasks such as machine translation and text summarization.
+Here are the main components of attention networks and their working principles:
+-   **Encoder**: The encoder is responsible for processing the input and creating a representation of it. This can be done using a recurrent neural network (RNN) or a transformer network. The encoder creates a sequence of hidden states, which are then used as the input for the attention mechanism.
+    
+-   **Attention Mechanism**: The attention mechanism is responsible for determining which parts of the input are most important for the task at hand. It takes in the hidden states created by the encoder, as well as a query vector that represents the task-specific information. The attention mechanism then calculates a weight for each hidden state, indicating how important it is for the task. These weights are then used to create a weighted sum of the hidden states, which is used as the input for the decoder.
+    
+-   **Decoder**: The decoder is responsible for generating the output based on the attention-weighted input from the attention mechanism. The decoder can also be implemented using an RNN or a transformer network. It generates an output sequence one step at a time, using the attention-weighted input and its own hidden state to make decisions about what to generate next.
+    
+-   **Attention Weights**: Attention weights are the values that are calculated by the attention mechanism to indicate how important each input is for the task at hand. They are calculated by comparing the query vector to the hidden states created by the encoder. The attention weights are then used to create a weighted sum of the hidden states, which is used as the input for the decoder.
+-   **Multi-head Attention**: Multi-head attention is an extension of the basic attention mechanism, where multiple attention mechanisms are used in parallel. Each attention mechanism is applied to the same input using a different query vector, and the results are concatenated together. This allows the model to attend to multiple parts of the input simultaneously, and can improve performance on certain tasks.
+    
+
+In summary, Attention Networks are a neural network architecture that allows the model to focus on specific parts of the input while processing it. They use an encoder to process the input, an attention mechanism to determine which parts of the input are most important for the task at hand, and a decoder to generate the output. Attention weights are used to indicate how important each input is for the task, and Multi-head Attention is used to attend to multiple parts of the input simultaneously.
+
+
+---
+
+2. **Explain Attention with real-time example.**.⭐
+
+`Ans:`Sure, let's take an example of a sentence as input to the attention network: **"I want to order pizza with extra cheese."**
+
+-   **Encoder**: The encoder takes in the input sentence and processes it to create a representation of it. This can be done using an RNN or a transformer network. In the case of an RNN, the encoder creates a sequence of hidden states, one for each word in the sentence. For example, the hidden states for the input sentence might be [h1, h2, h3, h4, h5, h6].
+    
+-   **Attention Mechanism**: The attention mechanism takes in the hidden states created by the encoder, as well as a query vector that represents the task-specific information. For example, the query vector might represent the task of translation, and it's used to compare the hidden states with the query to calculate the attention weights for each hidden state. These attention weights indicate how important each hidden state is for the task of translation.
+    
+-   **Decoder**: The decoder takes the attention-weighted input from the attention mechanism, which is a weighted sum of the hidden states, and generates an output sequence one step at a time. The decoder can be implemented using an RNN or a transformer network. In the case of a machine translation task, the decoder generates a translated sentence one word at a time, using the attention-weighted input and its own hidden state to make decisions about what to generate next.
+- -   **Attention Weights**: Attention weights are the values that are calculated by the attention mechanism to indicate how important each hidden state is for the task at hand. For example, the word "pizza" might have a high attention weight, because it is a key concept in the task of ordering food, whereas the word "I" might have a low attention weight.
+    
+-   **Multi-head Attention**: Multi-head attention is an extension of the basic attention mechanism, where multiple attention mechanisms are used in parallel. Each attention mechanism is applied to the same input using a different query vector, and the results are concatenated together. This allows the model to attend to multiple parts of the input simultaneously, and can improve performance on certain tasks.
+
+![Attention Blog](https://www.analyticsvidhya.com/blog/2019/11/comprehensive-guide-attention-mechanism-deep-learning/)
+---
+
+2. **Explain every block of transformers and its working taking an input sequence string as an example.**.⭐
+
+`Ans: ` Transformers are a type of neural network architecture that are commonly used in natural language processing tasks such as machine translation and text summarization. They were introduced in the paper "Attention Is All You Need" by Google researchers in 2017. Here are the main components of transformers and their working principles:
+
+-   **Embedding Layer**: The input sequence, such as a sentence, is passed through an embedding layer, which converts each word in the sentence into a dense vector representation. This embedding is learned during the training process, and it captures the semantic and syntactic information of the words in the sentence.
+    
+-   **Multi-Head Self-Attention Layer**: The transformer uses self-attention to determine which parts of the input are most important for the task at hand. Multi-head attention is used to apply multiple attention mechanisms in parallel, with each attention mechanism using a different query, key, and value. The attention mechanism calculates the dot product between the query, key, and value matrices, and applies a softmax function to the result to obtain the attention weights. These attention weights are then used to weight the value matrix and create the output of the multi-head self-attention layer.
+    
+-   **Position-wise Feed-forward Layer**: This layer is applied to the output of the multi-head self-attention layer, and it consists of two linear transformations with a ReLU activation in between. This layer is responsible for learning the more complex relationships between the words in the sentence.
+-  **Add & Norm Layer**: The output of the position-wise feed-forward layer is added to the output of the multi-head self-attention layer, and then passed through a normalization layer. This normalization is used to ensure the stability of the model during training.
+    
+-   **Decoder**: The decoder takes the output of the add & norm layer, and generates the final output, such as a translated sentence or a summary of the input sentence
+
+
+![tarnsformers](https://user-images.githubusercontent.com/44112345/212841770-36a77f82-8e6d-452b-ba38-5ccd16dda610.JPG)
+
+
+[Transformer Blog](https://www.analyticsvidhya.com/blog/2019/06/understanding-transformers-nlp-state-of-the-art-models/)
+---
+
+3. **What is the need of Self Attention Layer in the transformer?**.⭐
+
+`Ans:`The self-attention layer **in the transformer is used to determine which parts of the input are most important for the task at hand.** It allows the model to focus on specific parts of the input while processing it, rather than processing the entire input in a sequential manner. This is particularly useful in natural language processing tasks, where the meaning of a sentence can depend on the relationships between words that are far apart in the sentence.
+- The **self-attention mechanism in the transformer uses dot product attention, which calculates the dot product between the query, key, and value matrices for each position in the input sequence. This dot product is then used to calculate attention weights,** which indicate how important each position in the input sequence is for the task at hand. These attention weights are then used to weight the value matrix, creating the output of the self-attention layer.
+- The **multi-head attention mechanism in the transformer applies multiple attention mechanisms in parallel, with each attention mechanism using a different query, key, and value.** This allows the model to attend to multiple parts of the input simultaneously, and can improve performance on certain tasks.
+---
+
+4. **Explain every component of BERT transformer in detail with a suitable example.**.⭐
+
+`Ans:
+BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model developed by Google that is trained on a large corpus of text data. Here are the main components of BERT and their working principles:
+
+-   **Embedding Layer**: Like any transformer, BERT starts with an embedding layer that converts each token (word or subword) in the input sentence into a dense vector representation. These representations are learned during the training process, and they capture the semantic and syntactic information of the tokens.
+    
+-   **Encoder**: BERT uses a multi-layer transformer encoder to process the input sentence. Each layer in the encoder consists of a multi-head self-attention mechanism and a position-wise feed-forward neural network. The self-attention mechanism allows the model to attend to different parts of the input sentence simultaneously and the feed-forward network is used to learn complex relationships between the tokens.
+    
+-   **Bidirectional context**: BERT is pre-trained on a large corpus of text data with a bidirectional context, which means that it is able to understand the context of a word based on the words that come before and after it in a sentence. This is done by training the model on a task where it has to predict a word based on its surrounding context, this task is called "masked language modeling" or MLM.
+    
+-   **Pre-training and Fine-Tuning**: BERT is pre-trained on a large corpus of text data, which allows it to learn general-purpose representations of language. These representations can then be fine-tuned on specific tasks, such as named entity recognition, question answering, and sentiment analysis, by training the model on a smaller dataset for the specific task.
+---
+
+5. **What are the evaluation metrics in question-answering system using Transformers?**.⭐
+
+`Ans:`
+There are several evaluation metrics that can be used to evaluate the performance of a question-answering system using Transformers, some of the most common ones are:
+
+-   **Exact match accuracy**: This metric measures the proportion of questions for which the model's predicted answer exactly matches the ground truth answer. This is a simple and straightforward metric, but it may not take into account variations in wording or synonyms.
+    
+-   **F1 score**: This is the harmonic mean of precision and recall. It is commonly used when the dataset has an imbalanced distribution of positive and negative examples. In question answering, the precision is calculated as the number of correctly predicted answers divided by the total number of predicted answers, and recall is calculated as the number of correctly predicted answers divided by the total number of ground truth answers.
+    
+-   **Mean Reciprocal Rank (MRR)**: This metric is a measure of how quickly the model finds the correct answer. It is calculated as the average of the reciprocal ranks of the correct answers for all the questions. The reciprocal rank is the reciprocal of the rank of the first correct answer, so the MRR is a measure of the average rank of the first correct answer.
+    
+-   **Mean Average Precision (MAP)**: This metric is similar to the mean reciprocal rank but it is a measure of the overall quality of the answers returned by the model. It is calculated as the mean of the average precision scores for each question, where the average precision is the average of the precision scores calculated at the position of each relevant answer.
+    
+-   **EM/F1 on SQuAD 2.0**: SQuAD 2.0 is a widely used question answering dataset, and EM/F1 scores are commonly used as evaluation metrics for it. Exact match (EM) is a binary score that measures whether the predicted answer exactly matches one of the ground-truth answers, whereas F1 is the harmonic mean of precision and recall.
+---
+
+6. **How is RoBERTa different from BERT transformer?**.⭐
+
+`Ans:`**RoBERTa (Robustly Optimized BERT Pretraining Approach) is a variation of the BERT** transformer that was developed by researchers at Facebook AI. RoBERTa is similar to BERT in that it is a transformer-based language model that is trained on a large corpus of text data, but there are several key differences between the two models:
+
+-   **Training data**: RoBERTa is trained on a much larger corpus of text data than BERT. RoBERTa uses a combination of the BooksCorpus and English Wikipedia dataset, which is over 1.5 times larger than the dataset used to train BERT.
+    
+-   **Training objective**: BERT is trained on two objectives, masked language modeling, and next sentence prediction. RoBERTa, on the other hand, is only trained on the masked language modeling task.
+    
+-   **Batch size**: RoBERTa uses a larger batch size during training than BERT, which allows the model to learn from more data at once and achieve higher performance.
+    
+-   **Learning rate schedule**: RoBERTa uses a different learning rate schedule than BERT. RoBERTa uses a linear warmup schedule and a constant learning rate throughout the training process.
+    
+-   **Number of training steps**: RoBERTa is trained for more steps than BERT, which allows the model to learn more from the larger dataset and achieve higher performance.
+    
+-   **Dropout rate**: RoBERTa uses a lower dropout rate than BERT, which allows the model to retain more information during training and achieve higher performance.
+---
+
+7. **How Confidence score is calculated in Roberta transformer based Question Answering System.**.⭐
+
+`Ans:`
+In a RoBERTa-based question answering system, confidence scores are calculated to indicate how confident the model is in its predicted answer. The exact method of calculating the confidence score can vary depending on the specific implementation of the model, but some common methods include:
+
+-   **Softmax probability**: One way to calculate the confidence score is to use the softmax probability of the predicted answer. This is calculated by taking the exponential of the predicted logit for the answer, and normalizing it by the sum of the exponentials of the logits for all possible answers. The softmax probability ranges from 0 to 1 and represents the likelihood of the answer being correct.
+    
+-   **Max-pooling**: Another way to calculate the confidence score is to use max-pooling over the attention scores for the predicted answer. This is calculated by taking the maximum attention score from all the attention heads for the predicted answer. The max-pooled score ranges from 0 to 1 and represents the degree of alignment between the question and the answer.
+    
+-   **Mean-pooling**: Similar to max-pooling, another way to calculate the confidence score is to use mean-pooling over the attention scores for the predicted answer. This is calculated by taking the average attention score from all the attention heads for the predicted answer.
+    
+-   **MLM score**: Another way to calculate the confidence score is by using the scores of the masked language modeling task. The MLM task is the task of predicting a token given its surrounding context, this score indicates how likely is that the predicted answer is a valid word in the language.
+---
