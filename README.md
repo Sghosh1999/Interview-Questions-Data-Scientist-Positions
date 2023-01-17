@@ -966,6 +966,20 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 
 ---
 
+5. **What are the types of sampling?**.
+
+`Ans:` There are several types of sampling techniques, including:
+- **Simple Random Sampling:** Every member of the population has an equal chance of being selected.
+- **Systematic Sampling:** Members of the population are selected at regular intervals.
+- **Stratified Sampling:** The population is divided into subgroups (strata) and a random sample is taken from each subgroup.
+- **Cluster Sampling:** The population is divided into groups (clusters) and a random sample of clusters is selected.
+- **Multistage Sampling:** A combination of any of the above sampling methods is used.
+- **Convenience Sampling:** Participants are selected based on their willingness and availability.
+- **Quota Sampling:** Sampling is done based on predefined quotas for different subgroups within the population.
+- **Snowball Sampling:** Participants recruit other participants that meet certain criteria.
+
+---
+
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
 
 ## Deep Learning Fundamentals
