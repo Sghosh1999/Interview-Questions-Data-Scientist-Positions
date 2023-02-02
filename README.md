@@ -224,6 +224,18 @@ Type 2 error, also known as a false negative, occurs ***when the null hypothesis
 - One of the **main uses of KL divergence in machine learning is in the field of unsupervised learning, particularly in the training of generative models.** For example, Variational Autoencoder(VAE) and Generative Adversarial Networks(GANs) use KL divergence as a loss function to measure the difference between the estimated distribution and the true distribution of the data.
 - **KL divergence is a popular measure for comparing probability distributions because it is a non-symmetric measure, which means that the KL divergence between distribution P and Q is not the same as the KL divergence between Q and P.** This makes it useful for comparing distributions that have different support sets. Additionally, it is a computationally efficient measure, and it is easy to calculate the gradient of KL divergence, which makes it suitable for optimization.
 
+- Some of the common use cases of KL Divergence include:
+
+	- **Compression**: KL Divergence is used to determine the best compression scheme for a dataset by minimizing the information loss.
+
+	- **Machine learning**: KL Divergence is used in variational inference for approximating posterior distributions in Bayesian models.
+
+	- **Reinforcement learning**: KL Divergence is used to measure the difference between the current policy and the optimal policy.
+
+	- **Clustering**: KL Divergence is used to compare different cluster assignments and evaluate the quality of clustering algorithms.
+
+	- **Model evaluation**: KL Divergence can be used to compare different models and determine the best fit for a given dataset.
+
 ---
 
 17. **How could you deal with data skewness? What are the approaches to resolve the skewness in the data?**.⭐
