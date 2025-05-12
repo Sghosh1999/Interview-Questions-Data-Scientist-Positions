@@ -126,7 +126,7 @@ $$
 
 ---
 
-## 📌 Ridge Regression
+## Ridge Regression
 
 > `from sklearn.linear_model import Ridge`
 
@@ -156,7 +156,7 @@ Where $\lambda$ is the regularization parameter.
 
 ---
 
-## 📌 Lasso Regression
+## Lasso Regression
 
 > `from sklearn.linear_model import Lasso`
 
@@ -183,7 +183,7 @@ Lasso Regression is a linear model that uses **L1 regularization**, which can sh
 
 ---
 
-## 📌 Elastic Net Regression
+## Elastic Net Regression
 
 > `from sklearn.linear_model import ElasticNet`
 
@@ -209,7 +209,7 @@ Elastic Net combines both **L1 (Lasso)** and **L2 (Ridge)** regularizations, aim
 
 ---
 
-## 📌 Polynomial Regression
+## Polynomial Regression
 
 > `from sklearn.preprocessing import PolynomialFeatures` > `from sklearn.linear_model import LinearRegression`
 
@@ -239,46 +239,104 @@ Use `PolynomialFeatures(degree=n)` to transform the input features.
 
 ---
 
-## 📌 Support Vector Regression (SVR)
+## Support Vector Regression (SVR)
 
 > `from sklearn.svm import SVR`
 
-Support Vector Regression uses the principles of Support Vector Machines for regression, fitting the best line within a margin of tolerance.
+Support Vector Regression (SVR) is the regression counterpart of Support Vector Machines (SVM), which aims to find a function that approximates data points within a certain error tolerance (ε) while being as flat as possible.
+
+---
 
 ### 🧠 When to Use:
 
 - When you need robust performance with **non-linear data**.
-- Effective for **small to medium datasets** with complex relationships.
+- Effective for **small to medium datasets** with complex, high-dimensional relationships.
+- Suitable when you want to **ignore small errors** within a threshold but penalize larger deviations.
 
-### ✅ Pros:
+---
 
-- Works well in high-dimensional space.
-- Flexible kernel functions (linear, RBF, etc.).
-- Robust to outliers.
+### 🔍 Key Concepts
 
-### ❌ Cons:
+#### **Support Vectors**
 
-- Slow on large datasets.
-- Requires careful tuning of hyperparameters.
+Only a subset of the training points (the “support vectors”) determine the final model. These are the points that **lie on or outside the ε-tube** (margin) and directly affect the decision boundary.
 
-### 🧮 Objective:
+#### **Hard Margin vs Soft Margin**
 
-Minimize:
+- **Hard Margin**: Assumes all data can be fitted **without any error**, i.e., perfectly within the ε-tube. Rarely practical in regression tasks.
+- **Soft Margin**: Introduces **slack variables** ξ and ξ\* to allow some violations of the margin. This adds flexibility and robustness to noise and outliers.
+
+#### **The ε-Insensitive Tube**
+
+SVR tries to fit a tube of width **2ε** around the data where **no penalty is given** to errors falling inside the tube. Only errors **outside the tube** are penalized.
+
+---
+
+### 🧮 Objective Function
+
+SVR solves the following **optimization problem**:
+
+**Minimize:**
 
 $$
 \frac{1}{2} \|w\|^2 + C \sum_{i=1}^n (\xi_i + \xi_i^*)
 $$
 
-Subject to:
+**Subject to:**
 
 $$
 y_i - w^T x_i - b \leq \varepsilon + \xi_i \\
-w^T x_i + b - y_i \leq \varepsilon + \xi_i^*
+w^T x_i + b - y_i \leq \varepsilon + \xi_i^* \\
+\xi_i, \xi_i^* \geq 0
 $$
+
+- \$C\$ = regularization parameter that balances margin flatness and tolerance for margin violations.
+- \$ε\$ = tube size (no penalty within this range).
+- \$ξ_i, ξ_i^\*\$ = slack variables to allow tolerance beyond ε.
 
 ---
 
-## 📌 Decision Tree Regression
+### 🌐 Types of Kernels in SVR
+
+Kernels transform input data into higher-dimensional space to make it linearly separable.
+
+- 🔹 **Linear Kernel**: Works when the data is linearly correlated.
+  $K(x_i, x_j) = x_i^T x_j$
+
+- 🔹 **Polynomial Kernel**: Maps input features into a higher-dimensional polynomial space.
+  $K(x_i, x_j) = (x_i^T x_j + r)^d$
+
+- 🔹 **RBF (Radial Basis Function / Gaussian)**: Popular for non-linear data. Emphasizes the similarity between points.
+
+  $$
+  K(x_i, x_j) = \exp\left(-\gamma \|x_i - x_j\|^2\right)
+  $$
+
+---
+
+### 🧠 What is the Kernel Trick?
+
+The **Kernel Trick** allows SVR to operate in **high-dimensional feature spaces** **without explicitly computing the transformation**. Instead of transforming inputs and then calculating their dot product, the kernel function directly computes the dot product in the transformed space, saving computation and enabling complex decision boundaries.
+
+---
+
+### ✅ Pros:
+
+- Works well in **high-dimensional feature spaces**.
+- **Kernel flexibility** makes it powerful for non-linear regression.
+- **Robust to outliers** due to ε-insensitive loss.
+
+---
+
+### ❌ Cons:
+
+- Computationally **expensive on large datasets** (time complexity is cubic in training size).
+- Requires **careful tuning** of \$C\$, \$ε\$, and kernel parameters (e.g., \$\gamma\$ in RBF).
+- Not as interpretable as simpler models like Linear Regression.
+
+---
+
+## Decision Tree Regression
 
 > `from sklearn.tree import DecisionTreeRegressor`
 
@@ -326,7 +384,7 @@ Random Forest Regression is an **ensemble method** that builds multiple decision
 
 ---
 
-## 📌 Gradient Boosting Regression
+## Gradient Boosting Regression
 
 > `from sklearn.ensemble import GradientBoostingRegressor`
 
