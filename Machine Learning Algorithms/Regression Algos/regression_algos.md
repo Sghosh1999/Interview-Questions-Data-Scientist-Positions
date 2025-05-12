@@ -150,7 +150,7 @@ Ridge Regression is a type of linear regression that includes **L2 regularizatio
 
 ### 🧮 Mathematical Formulation:
 
-![Ridge Regression Loss Function](../images/ridge.jpg)
+![Ridge Regression Loss Function](../images/ride.jpg)
 
 Where $\lambda$ is the regularization parameter.
 
