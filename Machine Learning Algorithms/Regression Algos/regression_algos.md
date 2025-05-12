@@ -1,17 +1,20 @@
-# Regression Algorithms
+# 📘 Regression Algorithms
 
-This document contains an overview of various regression algorithms commonly used in machine learning.
+This document contains an overview of various regression algorithms commonly used in machine learning, including when to use them, their assumptions, pros and cons, mathematical formulation (where applicable), and example imports.
 
-## Table of Contents
+---
+
+## 📚 Table of Contents
 
 1. [Linear Regression](#linear-regression)
 2. [Ridge Regression](#ridge-regression)
 3. [Lasso Regression](#lasso-regression)
-4. [Polynomial Regression](#polynomial-regression)
-5. [Support Vector Regression (SVR)](#support-vector-regression-svr)
-6. [Decision Tree Regression](#decision-tree-regression)
-7. [Random Forest Regression](#random-forest-regression)
-8. [Gradient Boosting Regression](#gradient-boosting-regression)
+4. [Elastic Net Regression](#elastic-net-regression)
+5. [Polynomial Regression](#polynomial-regression)
+6. [Support Vector Regression (SVR)](#support-vector-regression-svr)
+7. [Decision Tree Regression](#decision-tree-regression)
+8. [Random Forest Regression](#random-forest-regression)
+9. [Gradient Boosting Regression](#gradient-boosting-regression)
 
 ---
 
@@ -126,79 +129,244 @@ $$
 
 ---
 
-## Ridge Regression
+## 📌 Ridge Regression
 
-Ridge regression adds a penalty term to the linear regression cost function to reduce overfitting.
+> `from sklearn.linear_model import Ridge`
 
-**Key Points:**
+Ridge Regression is a type of linear regression that includes **L2 regularization** to prevent overfitting and handle multicollinearity.
 
-- Uses L2 regularization.
-- Helps in handling multicollinearity.
+### 🧠 When to Use:
 
----
+- When predictors are highly correlated.
+- To prevent overfitting in high-dimensional data.
 
-## Lasso Regression
+### ✅ Pros:
 
-Lasso regression introduces L1 regularization, which can shrink some coefficients to zero.
+- Reduces model variance and overfitting.
+- Keeps all features (no coefficient becomes zero).
+- Handles multicollinearity well.
 
-**Key Points:**
+### ❌ Cons:
 
-- Performs feature selection.
-- Useful for sparse models.
+- Less interpretable due to coefficient shrinkage.
+- Doesn't perform feature selection.
 
----
+### 🧮 Mathematical Formulation:
 
-## Polynomial Regression
+$$
+J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{n} \beta_j^2
+$$
 
-Polynomial regression extends linear regression by fitting a polynomial equation to the data.
-
-**Key Points:**
-
-- Captures non-linear relationships.
-- Prone to overfitting with high-degree polynomials.
-
----
-
-## Support Vector Regression (SVR)
-
-SVR uses the principles of Support Vector Machines for regression tasks.
-
-**Key Points:**
-
-- Effective in high-dimensional spaces.
-- Can use different kernel functions.
+Where $\lambda$ is the regularization parameter.
 
 ---
 
-## Decision Tree Regression
+## 📌 Lasso Regression
 
-Decision tree regression splits the data into regions and fits a constant value in each region.
+> `from sklearn.linear_model import Lasso`
 
-**Key Points:**
+Lasso Regression is a linear model that uses **L1 regularization**, which can shrink some coefficients entirely to zero, effectively performing feature selection.
+
+### 🧠 When to Use:
+
+- When feature selection is desired.
+- When dataset has many irrelevant or correlated variables.
+
+### ✅ Pros:
+
+- Can eliminate irrelevant features.
+- Reduces complexity of the model.
+
+### ❌ Cons:
+
+- Can behave erratically when predictors are highly correlated.
+- May underperform when all variables are important.
+
+### 🧮 Mathematical Formulation:
+
+$$
+J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{n} |\beta_j|
+$$
+
+---
+
+## 📌 Elastic Net Regression
+
+> `from sklearn.linear_model import ElasticNet`
+
+Elastic Net combines both **L1 (Lasso)** and **L2 (Ridge)** regularizations, aiming to enjoy benefits from both.
+
+### 🧠 When to Use:
+
+- When there are multiple correlated features.
+- When you want feature selection and coefficient shrinkage.
+
+### ✅ Pros:
+
+- Works well when predictors are highly correlated.
+- Balances Ridge and Lasso benefits.
+
+### ❌ Cons:
+
+- More complex due to two hyperparameters: $\alpha$ and $l1\_ratio$.
+
+### 🧮 Mathematical Formulation:
+
+$$
+J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 + \lambda_1 \sum |\beta_j| + \lambda_2 \sum \beta_j^2
+$$
+
+---
+
+## 📌 Polynomial Regression
+
+> `from sklearn.preprocessing import PolynomialFeatures` > `from sklearn.linear_model import LinearRegression`
+
+Polynomial Regression is an extension of linear regression where the relationship between the variables is modeled as an $n$-th degree polynomial.
+
+### 🧠 When to Use:
+
+- When data shows **non-linear** patterns but you want to stay within the linear modeling framework.
+
+### ✅ Pros:
+
+- Can fit non-linear patterns.
+- Easy to implement and interpret (for low-degree polynomials).
+
+### ❌ Cons:
+
+- High-degree polynomials can lead to overfitting.
+- Sensitive to outliers.
+
+### 🧮 Mathematical Formulation:
+
+$$
+y = \beta_0 + \beta_1 x + \beta_2 x^2 + \cdots + \beta_n x^n + \varepsilon
+$$
+
+Use `PolynomialFeatures(degree=n)` to transform the input features.
+
+---
+
+## 📌 Support Vector Regression (SVR)
+
+> `from sklearn.svm import SVR`
+
+Support Vector Regression uses the principles of Support Vector Machines for regression, fitting the best line within a margin of tolerance.
+
+### 🧠 When to Use:
+
+- When you need robust performance with **non-linear data**.
+- Effective for **small to medium datasets** with complex relationships.
+
+### ✅ Pros:
+
+- Works well in high-dimensional space.
+- Flexible kernel functions (linear, RBF, etc.).
+- Robust to outliers.
+
+### ❌ Cons:
+
+- Slow on large datasets.
+- Requires careful tuning of hyperparameters.
+
+### 🧮 Objective:
+
+Minimize:
+
+$$
+\frac{1}{2} \|w\|^2 + C \sum_{i=1}^n (\xi_i + \xi_i^*)
+$$
+
+Subject to:
+
+$$
+y_i - w^T x_i - b \leq \varepsilon + \xi_i \\
+w^T x_i + b - y_i \leq \varepsilon + \xi_i^*
+$$
+
+---
+
+## 📌 Decision Tree Regression
+
+> `from sklearn.tree import DecisionTreeRegressor`
+
+Decision Tree Regression splits the data into hierarchical intervals and fits simple prediction models in each.
+
+### 🧠 When to Use:
+
+- When data has **non-linear and complex relationships**.
+- When **interpretability** and **visualization** are desired.
+
+### ✅ Pros:
 
 - Easy to interpret.
-- Prone to overfitting without pruning.
+- Handles non-linear data without transformation.
+- No need for feature scaling.
+
+### ❌ Cons:
+
+- Prone to overfitting.
+- Sensitive to small data changes.
 
 ---
 
-## Random Forest Regression
+## 📌 Random Forest Regression
 
-Random forest regression is an ensemble method that combines multiple decision trees.
+> `from sklearn.ensemble import RandomForestRegressor`
 
-**Key Points:**
+Random Forest Regression is an **ensemble method** that builds multiple decision trees and averages their results.
+
+### 🧠 When to Use:
+
+- When you want better generalization and accuracy over a single tree.
+- Suitable for both linear and non-linear data patterns.
+
+### ✅ Pros:
 
 - Reduces overfitting.
-- Handles missing data well.
+- Handles missing values well.
+- Works well with both numerical and categorical data.
+
+### ❌ Cons:
+
+- Less interpretable than individual trees.
+- Slower and more memory-intensive.
 
 ---
 
-## Gradient Boosting Regression
+## 📌 Gradient Boosting Regression
 
-Gradient boosting regression builds models sequentially to minimize errors.
+> `from sklearn.ensemble import GradientBoostingRegressor`
 
-**Key Points:**
+Gradient Boosting builds trees sequentially, where each new tree attempts to correct errors from the previous ones.
 
-- Highly accurate.
+### 🧠 When to Use:
+
+- When **accuracy is a priority** and you can afford computational cost.
+- Excellent for **tabular data** with non-linear relationships.
+
+### ✅ Pros:
+
+- High predictive accuracy.
+- Handles mixed data types and missing values.
+
+### ❌ Cons:
+
 - Computationally expensive.
+- Prone to overfitting if not tuned properly.
+
+### 🧮 Conceptual Objective:
+
+Minimizes a loss function $L(y, \hat{y})$ by adding weak learners (e.g., shallow trees) using:
+
+$$
+\hat{y}^{(t)} = \hat{y}^{(t-1)} + \eta \cdot h_t(x)
+$$
+
+Where:
+
+- $h_t(x)$ is the t-th weak learner
+- $\eta$ is the learning rate
 
 ---
