@@ -114,9 +114,7 @@ Where:
 
 Linear regression minimizes the **Mean Squared Error (MSE)**:
 
-$$
-J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} \left( y_i - \hat{y}_i \right)^2 = \frac{1}{m} \sum_{i=1}^{m} \left( y_i - (\mathbf{x}_i^T \boldsymbol{\beta}) \right)^2
-$$
+![Linear Regression Loss Function](../images/linear-loss.jpg)
 
 ### 4. **Normal Equation Solution**
 
@@ -152,9 +150,7 @@ Ridge Regression is a type of linear regression that includes **L2 regularizatio
 
 ### 🧮 Mathematical Formulation:
 
-$$
-J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{n} \beta_j^2
-$$
+![Ridge Regression Loss Function](../images/ridge.jpg)
 
 Where $\lambda$ is the regularization parameter.
 
@@ -183,9 +179,7 @@ Lasso Regression is a linear model that uses **L1 regularization**, which can sh
 
 ### 🧮 Mathematical Formulation:
 
-$$
-J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^{n} |\beta_j|
-$$
+![Ridge Regression Loss Function](../images/lasso-1.jpg)
 
 ---
 
@@ -211,9 +205,7 @@ Elastic Net combines both **L1 (Lasso)** and **L2 (Ridge)** regularizations, aim
 
 ### 🧮 Mathematical Formulation:
 
-$$
-J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i)^2 + \lambda_1 \sum |\beta_j| + \lambda_2 \sum \beta_j^2
-$$
+![Ridge Regression Loss Function](../images/enet.jpg)
 
 ---
 
