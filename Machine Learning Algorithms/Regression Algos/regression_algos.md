@@ -115,8 +115,7 @@ Where:
 Linear regression minimizes the **Mean Squared Error (MSE)**:
 
 $$
-J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} \left( y_i - \hat{y}_i \right)^2
-= \frac{1}{m} \sum_{i=1}^{m} \left( y_i - (\mathbf{x}_i^T \boldsymbol{\beta}) \right)^2
+J(\boldsymbol{\beta}) = \frac{1}{m} \sum_{i=1}^{m} \left( y_i - \hat{y}_i \right)^2 = \frac{1}{m} \sum_{i=1}^{m} \left( y_i - (\mathbf{x}_i^T \boldsymbol{\beta}) \right)^2
 $$
 
 ### 4. **Normal Equation Solution**
