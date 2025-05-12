@@ -181,14 +181,10 @@ Lasso Regression is a linear model that uses **L1 regularization**, which can sh
 
 Lasso minimizes the following objective function:
 
-$$
-\text{Loss} = \frac{1}{2n} \sum_{i=1}^n (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^p |\beta_j|
-$$
+![Ridge Regression Loss Function](../images/ride.jpg)
 
 Where:
 
-- $n$ is the number of samples.
-- $p$ is the number of features.
 - $\lambda$ is the regularization parameter controlling the strength of the penalty.
 - $\beta_j$ are the model coefficients.
 
