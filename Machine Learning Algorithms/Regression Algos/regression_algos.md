@@ -281,7 +281,7 @@ Only a subset of the training points (the “support vectors”) determine the f
 - **Hard Margin**: Assumes all data can be fitted **without any error**, i.e., perfectly within the ε-tube. Rarely practical in regression tasks.
 - **Soft Margin**: Introduces **slack variables** ξ and ξ\* to allow some violations of the margin. This adds flexibility and robustness to noise and outliers.
 
-![Hard & Soft Margin](../images/hard_soft_margin.jpg)
+![Hard & Soft Margin](../images/hard_soft_svm.jpg)
 
 #### **The ε-Insensitive Tube**
 
