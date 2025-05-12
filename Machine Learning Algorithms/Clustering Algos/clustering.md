@@ -16,8 +16,8 @@
 
 **K-Means++ Improvement**:
 
-* Improves centroid initialization to spread them out in feature space.
-* Leads to faster convergence and more stable results.
+- Improves centroid initialization to spread them out in feature space.
+- Leads to faster convergence and more stable results.
 
 **Algorithm**:
 
@@ -35,24 +35,24 @@ kmeans = KMeans(n_clusters=3, init='k-means++', n_init=10).fit(X)
 
 **Pros**:
 
-* More accurate than random init
-* Fewer iterations to converge
+- More accurate than random init
+- Fewer iterations to converge
 
 ---
 
 ### 🔹 K-Median Clustering
 
-* **Centroid**: Median
-* **Distance**: Manhattan (L1)
-* **Robust to outliers**
+- **Centroid**: Median
+- **Distance**: Manhattan (L1)
+- **Robust to outliers**
 
 ---
 
 ### 🔹 K-Mode Clustering
 
-* **Centroid**: Mode
-* **Use**: Categorical data only
-* **Distance**: Matching dissimilarity
+- **Centroid**: Mode
+- **Use**: Categorical data only
+- **Distance**: Matching dissimilarity
 
 ```python
 from kmodes.kmodes import KModes
@@ -65,12 +65,12 @@ km = KModes(n_clusters=3, init='Huang').fit(X)
 
 **Definition**: Recursively merges closest clusters until a single cluster (tree-like structure).
 
-* **Linkage Criteria**:
+- **Linkage Criteria**:
 
-  * Single: min distance
-  * Complete: max distance
-  * Average: average distance
-  * Ward: minimizes total variance
+  - Single: min distance
+  - Complete: max distance
+  - Average: average distance
+  - Ward: minimizes total variance
 
 **Dendrogram** used to visualize the cluster tree.
 
@@ -85,9 +85,9 @@ clustering = AgglomerativeClustering(n_clusters=3, linkage='ward').fit(X)
 
 **Key Concepts**:
 
-* **Core Point**: At least `minPts` in $\varepsilon$-neighborhood
-* **Border Point**: Close to a core, but not core itself
-* **Noise**: Not reachable from any core point
+- **Core Point**: At least `minPts` in $\varepsilon$-neighborhood
+- **Border Point**: Close to a core, but not core itself
+- **Noise**: Not reachable from any core point
 
 ```python
 from sklearn.cluster import DBSCAN
@@ -98,9 +98,9 @@ db = DBSCAN(eps=0.5, min_samples=5).fit(X)
 
 ## IV. Self-Organizing Maps (SOM)
 
-* Neural grid maps high-dimensional data to 2D.
-* Competitive learning (nodes “win” to update weights)
-* Used for clustering + visualization
+- Neural grid maps high-dimensional data to 2D.
+- Competitive learning (nodes “win” to update weights)
+- Used for clustering + visualization
 
 ```python
 from minisom import MiniSom
@@ -112,8 +112,8 @@ som.train_random(X, 100)
 
 ## V. Singular Value Decomposition (SVD)
 
-* Matrix Factorization: $A = U \Sigma V^T$
-* Used to reduce dimensionality before clustering
+- Matrix Factorization: $A = U \Sigma V^T$
+- Used to reduce dimensionality before clustering
 
 ```python
 from sklearn.decomposition import TruncatedSVD
@@ -125,21 +125,21 @@ X_reduced = svd.fit_transform(X)
 
 ## VI. Elbow Method
 
-* Plot $K$ vs Inertia (WCSS)
-* "Elbow" is where adding clusters has diminishing returns
+- Plot $K$ vs Inertia (WCSS)
+- "Elbow" is where adding clusters has diminishing returns
 
 ---
 
 ## VII. Gap Statistic
 
-* Compares clustering performance to a reference null dataset
-* Choose $K$ with largest **gap**
+- Compares clustering performance to a reference null dataset
+- Choose $K$ with largest **gap**
 
 ---
 
 ## VIII. Silhouette Method
 
-* Measures cohesion vs separation
+- Measures cohesion vs separation
 
 $$
 s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
@@ -154,8 +154,8 @@ score = silhouette_score(X, labels)
 
 ## IX. K-Prototypes Clustering
 
-* Combines K-Means (numerical) + K-Modes (categorical)
-* Mixed data types
+- Combines K-Means (numerical) + K-Modes (categorical)
+- Mixed data types
 
 ```python
 from kmodes.kprototypes import KPrototypes
@@ -167,8 +167,8 @@ clusters = kproto.fit_predict(X, categorical=[1,2])
 
 ## X. Gaussian Mixture Models (GMM)
 
-* Soft clustering: points belong to multiple clusters with probabilities
-* Fit using Expectation-Maximization
+- Soft clustering: points belong to multiple clusters with probabilities
+- Fit using Expectation-Maximization
 
 ```python
 from sklearn.mixture import GaussianMixture
