@@ -165,12 +165,12 @@ Lasso Regression is a linear model that uses **L1 regularization**, which can sh
 ### 🧠 When to Use:
 
 - When feature selection is desired.
-- When dataset has many irrelevant or correlated variables.
+- When the dataset has many irrelevant or correlated variables.
 
 ### ✅ Pros:
 
 - Can eliminate irrelevant features.
-- Reduces complexity of the model.
+- Reduces the complexity of the model.
 
 ### ❌ Cons:
 
@@ -179,7 +179,26 @@ Lasso Regression is a linear model that uses **L1 regularization**, which can sh
 
 ### 🧮 Mathematical Formulation:
 
-![Ridge Regression Loss Function](../images/lasso-1.jpg)
+Lasso minimizes the following objective function:
+
+$$
+\text{Loss} = \frac{1}{2n} \sum_{i=1}^n (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^p |\beta_j|
+$$
+
+Where:
+
+- $n$ is the number of samples.
+- $p$ is the number of features.
+- $\lambda$ is the regularization parameter controlling the strength of the penalty.
+- $\beta_j$ are the model coefficients.
+
+---
+
+### 🔍 How Lasso Does Feature Selection
+
+Lasso performs feature selection by shrinking some coefficients ($\beta_j$) to exactly zero during training. This happens because the **L1 penalty** adds a constraint that encourages sparsity in the model. Features with zero coefficients are effectively removed, leaving only the most relevant predictors in the final model.
+
+This property makes Lasso particularly useful when dealing with high-dimensional datasets where many features may be irrelevant or redundant.
 
 ---
 
@@ -265,6 +284,8 @@ Only a subset of the training points (the “support vectors”) determine the f
 
 - **Hard Margin**: Assumes all data can be fitted **without any error**, i.e., perfectly within the ε-tube. Rarely practical in regression tasks.
 - **Soft Margin**: Introduces **slack variables** ξ and ξ\* to allow some violations of the margin. This adds flexibility and robustness to noise and outliers.
+
+![Hard & Soft Margin](../images/hard_soft_margin.jpg)
 
 #### **The ε-Insensitive Tube**
 
@@ -360,7 +381,7 @@ Decision Tree Regression splits the data into hierarchical intervals and fits si
 
 ---
 
-## 📌 Random Forest Regression
+## Random Forest Regression
 
 > `from sklearn.ensemble import RandomForestRegressor`
 
