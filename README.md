@@ -22,7 +22,7 @@
 | 3.2 [Decision Tree](#decision-tree-concepts) | 16 |
 | 3.2 [Boosting( GBM, Light GBM, CatBoost)](#boosting-algorithms-gbm-lightgbm-catboost) | 5 |
 | 3.2 [Naive Bayes Classifier](#naive-bayes-classifier) | 5* |
-| 4. [Stats & probabality](#stats--probablity-fundamentals) | 5 |
+| 4. [Stats & probabality](#stats--probablity-fundamentals) | 21* |
 | 5. [Deep Learning Fundamentals](#deep-learning-fundamentals)| 15* |
 | 5.1 [CNN](#cnn-fundamentals--cost-function-backpropagation) | 14 |
 | 6 [Attention & Transformers](#deep-learning---nlp) | 10* |
@@ -1021,6 +1021,262 @@ A non-leap year has 365 days, and 52 full weeks, which is 364 days. Therefore, t
 - **Margin of error, on the other hand, refers to the amount of error or uncertainty that is associated with a sample estimate.** It is often reported as a percentage or a decimal and it represents the range of values that is likely to include the true population parameter with a certain level of confidence. The margin of error is affected by the sample size, the level of confidence, and the variability of the population. A smaller margin of error indicates a more precise estimate.
 - In summary, sample size is the number of observations in a sample, while margin of error is the level of precision or uncertainty of the sample estimate. **The relationship between sample size and margin of error is inversely proportional, meaning as the sample size increases, the margin of error decreases.**
 
+7.  **What is sampling error?**.
+
+`Ans:` Sampling error is the difference between a sample statistic (e.g., sample mean, sample proportion) and the true population parameter (e.g., population mean, population proportion) that arises because the sample is not a perfect representation of the population. This discrepancy occurs due to the random chance involved in selecting a subset of individuals from the population rather than observing the entire population. It's an inherent aspect of statistical inference based on samples.
+
+---
+
+8.  **What are the main types of errors in sampling?**.
+
+`Ans:`
+-   **Sampling Error (Random Error):** This error occurs due to random chance when selecting a sample. Even with a perfectly random selection process, the sample is unlikely to be an exact replica of the population. It can be quantified and is generally reduced by increasing the sample size.
+-   **Non-Sampling Error (Systematic Error/Bias):** These errors are not due to the sampling process itself but arise from other factors during the data collection, processing, or analysis stages. Examples include:
+	-   **Coverage Error:** When the sampling frame does not accurately represent the target population (e.g., excluding certain groups).
+	-   **Non-response Bias:** When individuals who do not respond to a survey differ significantly from those who do.
+	-   **Measurement Error:** Inaccuracies in how data is measured or recorded (e.g., poorly worded questions, faulty equipment).
+	-   **Processing Error:** Mistakes made during data entry, coding, or analysis.
+	Increasing sample size does not necessarily reduce non-sampling errors and can sometimes exacerbate them if quality control is poor.
+
+---
+
+9.  **How can sampling error be reduced?**.
+
+`Ans:`
+-   **Increase Sample Size:** Generally, a larger sample size leads to a smaller sampling error because the sample is more likely to be representative of the population, and the sample statistics will have less variability.
+-   **Use Appropriate Sampling Methods:**
+	-   **Stratified Sampling:** Dividing the population into homogeneous subgroups (strata) and then taking a simple random sample from each stratum can reduce sampling error, especially if the strata are very different from each other.
+	-   **Cluster Sampling:** While it can sometimes increase sampling error compared to simple random sampling for the same number of individuals, a well-designed cluster sample can be more efficient.
+-   **Improve Sample Design and Execution:** Ensuring the sampling frame is accurate and that the selection process is truly random helps minimize biases that can contribute to overall error.
+-   **Reduce Population Variability (if possible):** Though often not controllable, if the population itself is very homogeneous, any sample will likely have less error.
+
+---
+
+10. **Differentiate between sampling error and non-sampling error.**.
+
+`Ans:`
+-   **Sampling Error:**
+	-   **Cause:** Arises from the inherent randomness of selecting a sample rather than observing the entire population.
+	-   **Nature:** Due to chance variation.
+	-   **Impact of Sample Size:** Can be estimated and generally decreases as sample size increases.
+	-   **Example:** The difference between the average height calculated from a random sample of students and the true average height of all students in a university, purely due to which students were selected.
+-   **Non-Sampling Error:**
+	-   **Cause:** Arises from sources other than the sampling process itself, such as flaws in study design, data collection, measurement, or processing.
+	-   **Nature:** Can be systematic (bias) or random, but systematic errors are a major concern.
+	-   **Impact of Sample Size:** Not necessarily reduced by increasing sample size; poor procedures can lead to larger non-sampling errors even with large samples.
+	-   **Examples:** Leading questions in a survey (measurement error), data entry mistakes (processing error), people refusing to participate (non-response bias), using an outdated phone directory for sampling (coverage error).
+
+---
+
+11. **What is Maximum Likelihood Estimation (MLE)?**.
+
+`Ans:` Maximum Likelihood Estimation (MLE) is a statistical method used to estimate the parameters of a probability distribution or a statistical model. Given a set of observed data and a chosen statistical model, MLE finds the parameter values that make the observed data "most likely" or "most probable" under that model. It does this by maximizing the likelihood function, which expresses the probability of observing the given data as a function of the model parameters.
+
+---
+
+12. **Briefly explain the steps involved in Maximum Likelihood Estimation.**
+
+`Ans:`
+1.  **Choose a Model and Write the Likelihood Function:** Select an appropriate probability distribution (e.g., Normal, Bernoulli, Poisson) that is assumed to have generated the data. The likelihood function, L(θ|data), is the joint probability (or probability density for continuous data) of observing the data, expressed as a function of the unknown model parameter(s) θ. For independent and identically distributed (i.i.d.) data, this is the product of the individual probabilities (or densities).
+2.  **Take the Log-Likelihood (Optional but Common):** It is often mathematically simpler to work with the natural logarithm of the likelihood function, called the log-likelihood, ll(θ|data) = log(L(θ|data)). Since the logarithm is a monotonically increasing function, maximizing the log-likelihood is equivalent to maximizing the likelihood. This step converts products into sums, which are easier to differentiate.
+3.  **Maximize the Log-Likelihood Function:** Find the parameter value(s) θ that maximize the log-likelihood function. This is typically done by:
+	-   Taking the partial derivative(s) of the log-likelihood function with respect to each parameter.
+	-   Setting these derivative(s) to zero.
+	-   Solving the resulting equation(s) for the parameter(s). These solutions are the Maximum Likelihood Estimates (MLEs).
+4.  **Verify the Maximum:** Ensure that the solution corresponds to a maximum (and not a minimum or saddle point), often by checking that the second derivative(s) are negative (for a single parameter) or that the Hessian matrix is negative definite (for multiple parameters).
+
+---
+
+13. **What are some desirable properties of Maximum Likelihood Estimators?**.
+
+`Ans:` Under certain regularity conditions and for sufficiently large sample sizes, Maximum Likelihood Estimators (MLEs) possess several desirable asymptotic properties:
+-   **Consistency:** As the sample size (n) increases, the MLE converges in probability to the true value of the parameter. (lim P(|θ̂_MLE - θ| < ε) = 1 as n → ∞).
+-   **Asymptotic Normality:** The distribution of the MLE approaches a normal distribution as the sample size increases. Specifically, √n(θ̂_MLE - θ) → N(0, 1/I(θ)), where I(θ) is the Fisher information.
+-   **Asymptotic Efficiency:** MLEs are asymptotically efficient, meaning they achieve the Cramér-Rao Lower Bound for large samples. This implies that among all asymptotically unbiased estimators, MLEs have the smallest asymptotic variance.
+-   **Invariance Property:** If θ̂ is the MLE of θ, then for any function g(θ), the MLE of g(θ) is g(θ̂). This is a very useful property for deriving MLEs of functions of parameters.
+
+---
+
+14. **Provide a simple example of MLE for the parameter λ of a Poisson distribution.**
+
+`Ans:` Suppose we have a random sample x₁, x₂, ..., xₙ from a Poisson distribution with an unknown parameter λ. The probability mass function (PMF) of a Poisson distribution is P(X=k | λ) = (e⁻ˡ λᵏ) / k!.
+1.  **Likelihood Function:**
+	L(λ | x₁, ..., xₙ) = Πᵢ P(X=xᵢ | λ) = Πᵢ (e⁻ˡ λˣᵢ) / xᵢ!
+	L(λ | x₁, ..., xₙ) = (e⁻ⁿˡ λ^(Σxᵢ)) / (Πᵢ xᵢ!)
+2.  **Log-Likelihood Function:**
+	ll(λ | x₁, ..., xₙ) = log(L(λ | x₁, ..., xₙ))
+	ll(λ | x₁, ..., xₙ) = -nλ + (Σxᵢ)log(λ) - log(Πᵢ xᵢ!)
+3.  **Maximize the Log-Likelihood:**
+	Take the derivative with respect to λ and set it to zero:
+	d(ll)/dλ = -n + (Σxᵢ)/λ = 0
+	(Σxᵢ)/λ = n
+	λ̂ = (Σxᵢ)/n
+	The MLE for λ is the sample mean, λ̂ = x̄.
+4.  **Verify Maximum:**
+	The second derivative is d²(ll)/dλ² = -(Σxᵢ)/λ². Since λ > 0 and Σxᵢ ≥ 0, this is negative (or zero if all xᵢ are zero, a trivial case), confirming a maximum.
+
+---
+
+15. **What are some potential disadvantages or challenges of using MLE?**.
+
+`Ans:`
+-   **Computational Complexity:** For complex models or likelihood functions, finding the maximum can be analytically intractable, requiring numerical optimization methods which can be computationally intensive and may not always converge to the global maximum.
+-   **Dependence on Model Specification:** MLE assumes the chosen statistical model is correct. If the model is misspecified (i.e., it doesn't accurately represent the data-generating process), the MLEs can be biased and inconsistent.
+-   **Local Maxima:** The likelihood function can have multiple local maxima, especially in high-dimensional parameter spaces. Optimization algorithms might converge to a local maximum instead of the true global maximum.
+-   **Small Sample Sizes:** The desirable asymptotic properties (consistency, normality, efficiency) are guaranteed only for large sample sizes. For small samples, MLEs can be biased, and their distributions may not be well-approximated by a normal distribution.
+-   **Boundary Issues:** The MLE might occur at the boundary of the parameter space (e.g., a variance estimate being zero). This can complicate inference and the application of standard asymptotic theory.
+-   **Existence and Uniqueness:** An MLE may not always exist, or it may not be unique.
+
+---
+
+16. **A clinic tests for a certain disease. The test is 99% accurate if a person has the disease (sensitivity) and 95% accurate if a person does not have the disease (specificity). If 1% of the population has the disease (prevalence), what is the probability that a person who tests positive actually has the disease?**.
+
+`Ans:` Let D be the event that a person has the disease, and D' be the event they do not have the disease.
+Let + be the event of a positive test, and - be the event of a negative test.
+We are given:
+-   P(+|D) = 0.99 (Sensitivity: probability of testing positive if you have the disease)
+-   P(-|D') = 0.95 (Specificity: probability of testing negative if you don't have the disease)
+	-   Therefore, P(+|D') = 1 - P(-|D') = 1 - 0.95 = 0.05 (False Positive Rate)
+-   P(D) = 0.01 (Prevalence: probability of having the disease)
+	-   Therefore, P(D') = 1 - P(D) = 1 - 0.01 = 0.99
+
+We want to find P(D|+), the probability that a person actually has the disease given that they tested positive.
+Using Bayes' Theorem:
+P(D|+) = [P(+|D) * P(D)] / P(+)
+
+First, we need to calculate P(+), the overall probability of testing positive. Using the law of total probability:
+P(+) = P(+|D) * P(D) + P(+|D') * P(D')
+P(+) = (0.99 * 0.01) + (0.05 * 0.99)
+P(+) = 0.0099 + 0.0495
+P(+) = 0.0594
+
+Now, substitute P(+) back into Bayes' Theorem:
+P(D|+) = (0.99 * 0.01) / 0.0594
+P(D|+) = 0.0099 / 0.0594
+P(D|+) ≈ 0.166667
+
+So, the probability that a person who tests positive actually has the disease is approximately 0.1667 or 16.67%.
+
+---
+
+17. **Consider a dataset for classifying emails as spam (S) or not spam (NS). We have the following probabilities based on training data:
+P(S) = 0.3, P(NS) = 0.7
+P("free"|S) = 0.6, P("money"|S) = 0.4
+P("free"|NS) = 0.1, P("money"|NS) = 0.05
+An email contains the words "free money". Using Naive Bayes, what is the probability it is spam, P(S | "free", "money")? (Assume conditional independence of words given the class).**.
+
+`Ans:` We want to calculate P(S | W₁, W₂) where W₁="free" and W₂="money".
+According to the Naive Bayes assumption of conditional independence:
+P(W₁, W₂ | S) = P(W₁ | S) * P(W₂ | S)
+P(W₁, W₂ | NS) = P(W₁ | NS) * P(W₂ | NS)
+
+Using Bayes' Theorem:
+P(S | W₁, W₂) ∝ P(W₁, W₂ | S) * P(S)
+P(S | W₁, W₂) ∝ P("free"|S) * P("money"|S) * P(S)
+P(S | W₁, W₂) ∝ 0.6 * 0.4 * 0.3
+P(S | W₁, W₂) ∝ 0.24 * 0.3 = 0.072
+
+Similarly for Not Spam (NS):
+P(NS | W₁, W₂) ∝ P(W₁, W₂ | NS) * P(NS)
+P(NS | W₁, W₂) ∝ P("free"|NS) * P("money"|NS) * P(NS)
+P(NS | W₁, W₂) ∝ 0.1 * 0.05 * 0.7
+P(NS | W₁, W₂) ∝ 0.005 * 0.7 = 0.0035
+
+To find the actual probabilities, we normalize these values:
+Denominator (Evidence P(W₁, W₂)) = P(S | W₁, W₂) + P(NS | W₁, W₂)
+Denominator = 0.072 + 0.0035 = 0.0755
+
+P(S | "free", "money") = 0.072 / 0.0755 ≈ 0.9536
+P(NS | "free", "money") = 0.0035 / 0.0755 ≈ 0.0464
+
+So, the probability that the email is spam given it contains "free money" is approximately 0.9536 or 95.36%.
+
+---
+
+18. **In a Naive Bayes classifier for text, if a word in a test document has never been seen in the training data for a particular class, what problem arises and how is it typically handled?**.
+
+`Ans:`
+-   **Problem (Zero-Frequency Problem):** If a word in a test document was not encountered in the training data for a specific class (e.g., P("new_word" | Spam) = 0), its conditional probability for that class will be zero. Since Naive Bayes calculates the posterior probability by multiplying these conditional probabilities, a single zero probability will cause the entire posterior probability for that class to become zero, regardless of the evidence from other words. This can lead to incorrect classifications and an overly brittle model.
+-   **Solution (Smoothing Techniques):** This issue is typically handled using smoothing techniques, with **Laplace Smoothing (or Additive Smoothing)** being the most common.
+	-   **Laplace Smoothing (Add-1 Smoothing):** A small count (typically 1) is added to every word count for each class. To ensure probabilities sum to 1, the denominator (total word count for the class) is also adjusted by adding `k * V`, where `k` is the smoothing parameter (1 for add-1 smoothing) and `V` is the size of the vocabulary (total number of unique words across all classes).
+		The smoothed probability becomes:
+		P(word | class) = (count(word, class) + k) / (total_words_in_class + k * V)
+	-   This ensures that no conditional probability is exactly zero, making the classifier more robust to unseen words. Other smoothing techniques like Lidstone smoothing (generalizing Laplace with k ≠ 1) or Good-Turing smoothing also exist.
+
+---
+
+19. **Two factories, A and B, produce light bulbs. Factory A produces 60% of the bulbs, and Factory B produces 40%. 2% of bulbs from Factory A are defective, and 5% from Factory B are defective. If a randomly selected bulb is defective, what is the probability it came from Factory A?**.
+
+`Ans:` Let A be the event that a bulb is from Factory A.
+Let B be the event that a bulb is from Factory B.
+Let D be the event that a bulb is defective.
+
+We are given the following probabilities:
+-   P(A) = 0.60 (Probability a bulb is from Factory A)
+-   P(B) = 0.40 (Probability a bulb is from Factory B)
+-   P(D|A) = 0.02 (Probability a bulb is defective given it's from Factory A)
+-   P(D|B) = 0.05 (Probability a bulb is defective given it's from Factory B)
+
+We want to find P(A|D), the probability that a bulb came from Factory A given that it is defective.
+Using Bayes' Theorem:
+P(A|D) = [P(D|A) * P(A)] / P(D)
+
+First, we need to calculate P(D), the overall probability that a randomly selected bulb is defective. Using the law of total probability:
+P(D) = P(D|A) * P(A) + P(D|B) * P(B)
+P(D) = (0.02 * 0.60) + (0.05 * 0.40)
+P(D) = 0.012 + 0.020
+P(D) = 0.032
+
+Now, substitute P(D) back into Bayes' Theorem:
+P(A|D) = (0.02 * 0.60) / 0.032
+P(A|D) = 0.012 / 0.032
+P(A|D) = 0.375
+
+So, the probability that a defective bulb came from Factory A is 0.375 or 37.5%.
+
+---
+
+20. **What is the likelihood function, and how does it differ from a probability function?**.
+
+`Ans:`
+-   **Probability Function (or Probability Mass Function/Probability Density Function):**
+	-   Denoted as P(data | θ) or f(data | θ).
+	-   It describes the probability (for discrete data) or probability density (for continuous data) of observing a particular dataset *given that the model parameters θ are fixed and known*.
+	-   Here, the **parameters θ are considered fixed**, and the **data is considered variable**.
+	-   The sum (for discrete PMFs) or integral (for continuous PDFs) over all possible data outcomes equals 1.
+	-   Example: For a fair coin (θ=p=0.5 fixed), P(Heads | p=0.5) = 0.5.
+
+-   **Likelihood Function:**
+	-   Denoted as L(θ | data).
+	-   It takes the same mathematical form as the probability function, i.e., L(θ | data) = P(data | θ).
+	-   However, it is interpreted as a function of the model parameters θ, *given that the dataset is fixed (observed)*.
+	-   Here, the **data is considered fixed**, and the **parameters θ are considered variable**.
+	-   The likelihood function measures how "likely" different parameter values are, given the observed data. It quantifies how well the model (with specific parameter values) explains the data.
+	-   It is **not** a probability distribution over θ; its sum or integral over all possible θ values does not necessarily equal 1.
+	-   Example: If we observe 3 heads in 5 coin flips (data fixed), L(p | data=3H,2T) = (⁵₃)p³(1-p)². We can vary p to see which value of p makes this observed data most likely.
+
+-   **Key Difference:** The primary difference lies in what is held fixed and what is considered variable.
+	-   **Probability:** Parameters fixed, data varies. Answers "What is the chance of this data, given these parameters?"
+	-   **Likelihood:** Data fixed, parameters vary. Answers "How well do these parameters explain the data we saw?"
+	Maximum Likelihood Estimation (MLE) aims to find the parameter values θ that maximize L(θ | data).
+
+---
+
+21. **What is the Cramér-Rao Lower Bound (CRLB)?**.
+
+`Ans:` The Cramér-Rao Lower Bound (CRLB) is a fundamental concept in statistical estimation theory that provides a theoretical lower limit on the variance of any unbiased estimator of a deterministic (non-random) parameter.
+-   **Statement:** If θ̂ is an unbiased estimator of a parameter θ (i.e., E[θ̂] = θ), then its variance must satisfy:
+	Var(θ̂) ≥ 1 / I(θ)
+	where I(θ) is the **Fisher Information** for the parameter θ based on the observed data.
+-   **Fisher Information (I(θ)):** It measures the amount of information that the observable random variable X carries about the unknown parameter θ. For a single parameter, it can be calculated as:
+	I(θ) = E [ (∂/∂θ log f(X; θ))² ] = -E [ ∂²/∂θ² log f(X; θ) ]
+	where f(X; θ) is the probability density function (or probability mass function) of the data.
+-   **Significance:**
+	1.  **Benchmark for Estimator Precision:** The CRLB sets a benchmark for how precise an unbiased estimator can be. No unbiased estimator can have a variance smaller than this bound.
+	2.  **Efficiency:** An unbiased estimator that achieves the CRLB (i.e., its variance equals 1/I(θ)) is called an **efficient estimator** or a Minimum Variance Unbiased Estimator (MVUE).
+	3.  **Asymptotic Property of MLE:** Maximum Likelihood Estimators (MLEs) are asymptotically efficient, meaning that as the sample size grows, their variance approaches the CRLB.
+-   **Limitations:** The CRLB applies only to unbiased estimators. Biased estimators might sometimes achieve a lower mean squared error (MSE) than the CRLB. Also, an efficient estimator achieving the bound may not always exist.
+
 ---
 
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
@@ -1325,5 +1581,13 @@ In a RoBERTa-based question answering system, confidence scores are calculated t
     
 -   **MLM score**: Another way to calculate the confidence score is by using the scores of the masked language modeling task. The MLM task is the task of predicting a token given its surrounding context, this score indicates how likely is that the predicted answer is a valid word in the language.
 ---
+
+8. **How is RoBERTa different from BERT transformer?**.⭐
+
+`Ans:`**RoBERTa (Robustly Optimized BERT Pretraining Approach) is a variation of the BERT** transformer that was developed by researchers at Facebook AI. RoBERTa is similar to BERT in that it is a transformer-based language model that is trained on a large corpus of text data, but there are several key differences between the two models:
+
+-   **Training data**: RoBERTa is trained on a much larger corpus of text data than BERT. RoBERTa uses a combination of the BooksCorpus and English Wikipedia dataset, which is over 1.5 times larger than
+
+
 
 📙 [Back to Top Section ](#interview-questions---data-scientist-positions--entry-mid--senior)
