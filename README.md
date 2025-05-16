@@ -20,7 +20,7 @@
 | 4. [Stats & probabality](#stats--probablity-fundamentals)                             | 21\*            |
 | 5. [Deep Learning Fundamentals](#deep-learning-fundamentals)                          | 15\*            |
 | 5.1 [CNN](#cnn-fundamentals--cost-function-backpropagation)                           | 14              |
-| 6 [Attention & Transformers](#deep-learning---nlp)                                    | 10\*            |
+| 6 [Attention & Transformers](#deep-learning---nlp)                                    | 22\*            |
 
 ### Data Science & ML - General Topics
 
@@ -1955,19 +1955,6 @@ Cross-attention enables decoding to be informed by the source sequence:
 $$
 \text{Attention}(Q_{dec}, K_{enc}, V_{enc})
 $$
-
----
-
-### 15. **What’s the difference between fine-tuning and prompt tuning?** ⭐⭐⭐
-
-**Answer:**
-
-| Aspect            | Fine-Tuning                        | Prompt Tuning                           |                                  |                                           |
-| ----------------- | ---------------------------------- | --------------------------------------- | -------------------------------- | ----------------------------------------- |
-| Params Updated    | Entire model or subset (LoRA/PEFT) | Only soft prompts                       |                                  |                                           |
-| Memory Usage      | High                               | Low                                     |                                  |                                           |
-| Flexibility       | High task performance              | Better for many tasks / few-shot setups |                                  |                                           |
-| Example Objective | ( \mathcal{L}\_{FT} = - \log p(y   | x) )                                    | ( \mathcal{L}\_{PT} = - \log p(y | \[p; x]) ) where $p$ is the prompt vector |
 
 ---
 
