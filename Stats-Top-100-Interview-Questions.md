@@ -1,75 +1,75 @@
 # Top Statistics Interview Questions
 
-1. [What’s the difference between independent and mutually exclusive events?](#q1)
-2. Explain Bayes' theorem and provide an example of its use.
-3. How do you calculate the probability of at least one event occurring?
-4. Describe the concept of conditional probability with an example.
-5. What is the probability of getting at least one head when flipping two coins?
-6. Define and differentiate between discrete and continuous probability distributions.
-7. How would you calculate the probability of independent events occurring together?
-8. What is a joint probability, and how is it different from conditional probability?
-9. What is an expected value, and how do you calculate it?
-10. Define cumulative distribution function (CDF).
-11. Explain what a probability density function (PDF) is.
-12. What is the difference between a permutation and a combination?
-13. What is a Markov chain, and where is it used?
-14. How does probability differ from likelihood?
-15. Explain the Monty Hall problem and its solution.
-16. What’s the expected value of a random variable?
-17. What is the difference between a t-test and a z-test?
-18. Explain the central limit theorem and its significance.
-19. How do you interpret a p-value?
-20. Describe the properties of a normal distribution.
-21. What is a Type I and Type II error?
-22. Explain the Poisson distribution and a scenario where it's applicable.
-23. How do you interpret a confidence interval?
-24. How is an ANOVA test conducted, and what does it test?
-25. What is the F-test, and when would you use it?
-26. Explain homoscedasticity and heteroscedasticity.
-27. How do you test if a dataset follows a normal distribution?
-28. What are some limitations of p-values in hypothesis testing?
-29. What are joint, marginal, and conditional probabilities?
-30. How do you interpret the slope in a linear regression?
-31. What’s the difference between correlation and causation?
-32. Explain multicollinearity and how to detect it.
-33. Difference between Pearson and Spearman correlation.
-34. What’s the difference between R-squared and adjusted R-squared?
-35. How do you handle outliers in a regression analysis?
-36. What’s the difference between stratified and cluster sampling?
-37. How do you minimize sampling bias?
-38. Explain the concept of statistical power.
-39. What is an A/B test, and how do you interpret the results?
-40. Describe the difference between observational and experimental studies.
-41. Explain the bias-variance tradeoff.
-42. What is cross-validation, and why is it important?
-43. How do you handle imbalanced datasets in classification problems?
-44. Explain the use of ROC curves and AUC.
-45. How would you calculate the sample size needed for an experiment?
-46. What is a placebo effect, and why is it important in experimental design?
-47. Describe the purpose of a power analysis.
-48. How would you perform dimensionality reduction on a dataset?
-49. How do you handle missing data in a dataset?
-50. What is a time series, and how is it different from other data types?
-51. Describe the components of a time series.
-52. How do you decompose a time series?
-53. Explain the concept of seasonality in time series.
-54. What is a trend, and how do you identify it in data?
-55. What is an ARIMA model, and when is it used?
-56. Define autocorrelation and partial autocorrelation.
-57. Explain the purpose of differencing in time series analysis.
-58. How do you handle missing values in a time series?
-59. What is the Box-Jenkins methodology?
-60. Describe exponential smoothing and its applications.
-61. How do you perform a stationarity test in time series?
-62. What is a moving average, and why is it useful?
-63. Explain the concept of a lag in time series.
-64. Describe the purpose of a seasonal decomposition of time series (STL).
-65. How do you select the best model for time series forecasting?
-66. Explain the difference between additive and multiplicative models.
-67. What is the purpose of a rolling window in time series analysis?
-68. How do you evaluate a time series forecasting model?
-69. Describe the Holt-Winters model and its applications.
-70. How do you handle imbalanced datasets in a classification problem?
+1. [What's the difference between independent and mutually exclusive events?](#q1-whats-the-difference-between-independent-and-mutually-exclusive-events)
+2. [Explain Bayes' theorem and provide an example of its use.](#q2-explain-bayes-theorem-and-provide-an-example-of-its-use)
+3. [How do you calculate the probability of at least one event occurring?](#q3-how-do-you-calculate-the-probability-of-at-least-one-event-occurring)
+4. [Describe the concept of conditional probability with an example.](#q4-describe-the-concept-of-conditional-probability-with-an-example)
+5. [What is the probability of getting at least one head when flipping two coins?](#q5-what-is-the-probability-of-getting-at-least-one-head-when-flipping-two-coins)
+6. [Define and differentiate between discrete and continuous probability distributions.](#q6-define-and-differentiate-between-discrete-and-continuous-probability-distributions)
+7. [How would you calculate the probability of independent events occurring together?](#q7-how-would-you-calculate-the-probability-of-independent-events-occurring-together)
+8. [What is a joint probability, and how is it different from conditional probability?](#q8-what-is-a-joint-probability-and-how-is-it-different-from-conditional-probability)
+9. [What is an expected value, and how do you calculate it?](#q9-what-is-an-expected-value-and-how-do-you-calculate-it)
+10. [Define cumulative distribution function (CDF).](#q10-define-cumulative-distribution-function-cdf)
+11. [Explain what a probability density function (PDF) is.](#q11-explain-what-a-probability-density-function-pdf-is)
+12. [What is the difference between a permutation and a combination?](#q12-what-is-the-difference-between-a-permutation-and-a-combination)
+13. [What is a Markov chain, and where is it used?](#q13-what-is-a-markov-chain-and-where-is-it-used)
+14. [How does probability differ from likelihood?](#q14-how-does-probability-differ-from-likelihood)
+15. [Explain the Monty Hall problem and its solution.](#q15-explain-the-monty-hall-problem-and-its-solution)
+16. [What's the expected value of a random variable?](#q16-whats-the-expected-value-of-a-random-variable)
+17. [What is the difference between a t-test and a z-test?](#q17-what-is-the-difference-between-a-t-test-and-a-z-test)
+18. [Explain the central limit theorem and its significance.](#q18-explain-the-central-limit-theorem-and-its-significance)
+19. [How do you interpret a p-value?](#q19-how-do-you-interpret-a-p-value)
+20. [Describe the properties of a normal distribution.](#q20-describe-the-properties-of-a-normal-distribution)
+21. [What is a Type I and Type II error?](#q21-what-is-a-type-i-and-type-ii-error)
+22. [Explain the Poisson distribution and a scenario where it's applicable.](#q22-explain-the-poisson-distribution-and-a-scenario-where-its-applicable)
+23. [How do you interpret a confidence interval?](#q23-how-do-you-interpret-a-confidence-interval)
+24. [How is an ANOVA test conducted, and what does it test?](#q24-how-is-an-anova-test-conducted-and-what-does-it-test)
+25. [What is the F-test, and when would you use it?](#q25-what-is-the-f-test-and-when-would-you-use-it)
+26. [Explain homoscedasticity and heteroscedasticity.](#q26-explain-homoscedasticity-and-heteroscedasticity)
+27. [How do you test if a dataset follows a normal distribution?](#q27-how-do-you-test-if-a-dataset-follows-a-normal-distribution)
+28. [What are some limitations of p-values in hypothesis testing?](#q28-what-are-some-limitations-of-p-values-in-hypothesis-testing)
+29. [What are joint, marginal, and conditional probabilities?](#q29-what-are-joint-marginal-and-conditional-probabilities)
+30. [How do you interpret the slope in a linear regression?](#q30-how-do-you-interpret-the-slope-in-a-linear-regression)
+31. [What's the difference between correlation and causation?](#q31-whats-the-difference-between-correlation-and-causation)
+32. [Explain multicollinearity and how to detect it.](#q32-explain-multicollinearity-and-how-to-detect-it)
+33. [Difference between Pearson and Spearman correlation.](#q33-difference-between-pearson-and-spearman-correlation)
+34. [What's the difference between R-squared and adjusted R-squared?](#q34-whats-the-difference-between-r-squared-and-adjusted-r-squared)
+35. [How do you handle outliers in a regression analysis?](#q35-how-do-you-handle-outliers-in-a-regression-analysis)
+36. [What's the difference between stratified and cluster sampling?](#q36-whats-the-difference-between-stratified-and-cluster-sampling)
+37. [How do you minimize sampling bias?](#q37-how-do-you-minimize-sampling-bias)
+38. [Explain the concept of statistical power.](#q38-explain-the-concept-of-statistical-power)
+39. [What is an A/B test, and how do you interpret the results?](#q39-what-is-an-ab-test-and-how-do-you-interpret-the-results)
+40. [Describe the difference between observational and experimental studies.](#q40-describe-the-difference-between-observational-and-experimental-studies)
+41. [Explain the bias-variance tradeoff.](#q41-explain-the-bias-variance-tradeoff)
+42. [What is cross-validation, and why is it important?](#q42-what-is-cross-validation-and-why-is-it-important)
+43. [How do you handle imbalanced datasets in classification problems?](#q43-how-do-you-handle-imbalanced-datasets-in-classification-problems)
+44. [Explain the use of ROC curves and AUC.](#q44-explain-the-use-of-roc-curves-and-auc)
+45. [How would you calculate the sample size needed for an experiment?](#q45-how-would-you-calculate-the-sample-size-needed-for-an-experiment)
+46. [What is a placebo effect, and why is it important in experimental design?](#q46-what-is-a-placebo-effect-and-why-is-it-important-in-experimental-design)
+47. [Describe the purpose of a power analysis.](#q47-describe-the-purpose-of-a-power-analysis)
+48. [How would you perform dimensionality reduction on a dataset?](#q48-how-would-you-perform-dimensionality-reduction-on-a-dataset)
+49. [How do you handle missing data in a dataset?](#q49-how-do-you-handle-missing-data-in-a-dataset)
+50. [What is a time series, and how is it different from other data types?](#q50-what-is-a-time-series-and-how-is-it-different-from-other-data-types)
+51. [Describe the components of a time series.](#q51-describe-the-components-of-a-time-series)
+52. [How do you decompose a time series?](#q52-how-do-you-decompose-a-time-series)
+53. [Explain the concept of seasonality in time series.](#q53-explain-the-concept-of-seasonality-in-time-series)
+54. [What is a trend, and how do you identify it in data?](#q54-what-is-a-trend-and-how-do-you-identify-it-in-data)
+55. [What is an ARIMA model, and when is it used?](#q55-what-is-an-arima-model-and-when-is-it-used)
+56. [Define autocorrelation and partial autocorrelation.](#q56-define-autocorrelation-and-partial-autocorrelation)
+57. [Explain the purpose of differencing in time series analysis.](#q57-explain-the-purpose-of-differencing-in-time-series-analysis)
+58. [How do you handle missing values in a time series?](#q58-how-do-you-handle-missing-values-in-a-time-series)
+59. [What is the Box-Jenkins methodology?](#q59-what-is-the-box-jenkins-methodology)
+60. [Describe exponential smoothing and its applications.](#q60-describe-exponential-smoothing-and-its-applications)
+61. [How do you perform a stationarity test in time series?](#q61-how-do-you-perform-a-stationarity-test-in-time-series)
+62. [What is a moving average, and why is it useful?](#q62-what-is-a-moving-average-and-why-is-it-useful)
+63. [Explain the concept of a lag in time series.](#q63-explain-the-concept-of-a-lag-in-time-series)
+64. [Describe the purpose of a seasonal decomposition of time series (STL).](#q64-describe-the-purpose-of-a-seasonal-decomposition-of-time-series-stl)
+65. [How do you select the best model for time series forecasting?](#q65-how-do-you-select-the-best-model-for-time-series-forecasting)
+66. [Explain the difference between additive and multiplicative models.](#q66-explain-the-difference-between-additive-and-multiplicative-models)
+67. [What is the purpose of a rolling window in time series analysis?](#q67-what-is-the-purpose-of-a-rolling-window-in-time-series-analysis)
+68. [How do you evaluate a time series forecasting model?](#q68-how-do-you-evaluate-a-time-series-forecasting-model)
+69. [Describe the Holt-Winters model and its applications.](#q69-describe-the-holt-winters-model-and-its-applications)
+70. [How do you handle imbalanced datasets in a classification problem?](#q70-how-do-you-handle-imbalanced-datasets-in-a-classification-problem)
 
 **Q1: What’s the difference between independent and mutually exclusive events?**
 Answer:
