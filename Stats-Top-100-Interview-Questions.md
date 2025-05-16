@@ -1,19 +1,19 @@
 # Top Statistics Interview Questions
 
-1. [What's the difference between independent and mutually exclusive events?](#q1-whats-the-difference-between-independent-and-mutually-exclusive-events)
-2. [Explain Bayes' theorem and provide an example of its use.](#q2-explain-bayes-theorem-and-provide-an-example-of-its-use)
+# Top Statistics Interview Questions
+
+1. [What's the difference between independent and mutually exclusive events?](#q1:-whats-the-difference-between-independent-and-mutually-exclusive-events)
+2. [Explain Bayes' theorem and provide an example of its use](#q2:-explain-bayes-theorem-and-provide-an-example-of-its-use)
 3. [How do you calculate the probability of at least one event occurring?](#q3-how-do-you-calculate-the-probability-of-at-least-one-event-occurring)
-4. [Describe the concept of conditional probability with an example.](#q4-describe-the-concept-of-conditional-probability-with-an-example)
+4. [Describe the concept of conditional probability with an example](#q4-describe-the-concept-of-conditional-probability-with-an-example)
 5. [What is the probability of getting at least one head when flipping two coins?](#q5-what-is-the-probability-of-getting-at-least-one-head-when-flipping-two-coins)
-6. [Define and differentiate between discrete and continuous probability distributions.](#q6-define-and-differentiate-between-discrete-and-continuous-probability-distributions)
+6. [Define and differentiate between discrete and continuous probability distributions](#q6-define-and-differentiate-between-discrete-and-continuous-probability-distributions)
 7. [How would you calculate the probability of independent events occurring together?](#q7-how-would-you-calculate-the-probability-of-independent-events-occurring-together)
 8. [What is a joint probability, and how is it different from conditional probability?](#q8-what-is-a-joint-probability-and-how-is-it-different-from-conditional-probability)
 9. [What is an expected value, and how do you calculate it?](#q9-what-is-an-expected-value-and-how-do-you-calculate-it)
-10. [Define cumulative distribution function (CDF).](#q10-define-cumulative-distribution-function-cdf)
-11. [Explain what a probability density function (PDF) is.](#q11-explain-what-a-probability-density-function-pdf-is)
+10. [Define cumulative distribution function (CDF)](#q10-define-cumulative-distribution-function-cdf)
+11. [Explain what a probability density function (PDF) is](#q11-explain-what-a-probability-density-function-pdf-is)
 12. [What is the difference between a permutation and a combination?](#q12-what-is-the-difference-between-a-permutation-and-a-combination)
-13. [What is a Markov chain, and where is it used?](#q13-what-is-a-markov-chain-and-where-is-it-used)
-14. [How does probability differ from likelihood?](#q14-how-does-probability-differ-from-likelihood)
 15. [Explain the Monty Hall problem and its solution.](#q15-explain-the-monty-hall-problem-and-its-solution)
 16. [What's the expected value of a random variable?](#q16-whats-the-expected-value-of-a-random-variable)
 17. [What is the difference between a t-test and a z-test?](#q17-what-is-the-difference-between-a-t-test-and-a-z-test)
@@ -70,6 +70,8 @@
 68. [How do you evaluate a time series forecasting model?](#q68-how-do-you-evaluate-a-time-series-forecasting-model)
 69. [Describe the Holt-Winters model and its applications.](#q69-describe-the-holt-winters-model-and-its-applications)
 70. [How do you handle imbalanced datasets in a classification problem?](#q70-how-do-you-handle-imbalanced-datasets-in-a-classification-problem)
+
+
 
 **Q1: What’s the difference between independent and mutually exclusive events?**
 Answer:
