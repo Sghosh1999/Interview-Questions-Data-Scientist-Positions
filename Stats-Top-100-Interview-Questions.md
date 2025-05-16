@@ -2,8 +2,8 @@
 
 # Top Statistics Interview Questions
 
-1. [What's the difference between independent and mutually exclusive events?](#q1:-whats-the-difference-between-independent-and-mutually-exclusive-events)
-2. [Explain Bayes' theorem and provide an example of its use](#q2:-explain-bayes-theorem-and-provide-an-example-of-its-use)
+1. [What's the difference between independent and mutually exclusive events?](#q1-whats-the-difference-between-independent-and-mutually-exclusive-events)
+2. [Explain Bayes' theorem and provide an example of its use](#q2-explain-bayes-theorem-and-provide-an-example-of-its-use)
 3. [How do you calculate the probability of at least one event occurring?](#q3-how-do-you-calculate-the-probability-of-at-least-one-event-occurring)
 4. [Describe the concept of conditional probability with an example](#q4-describe-the-concept-of-conditional-probability-with-an-example)
 5. [What is the probability of getting at least one head when flipping two coins?](#q5-what-is-the-probability-of-getting-at-least-one-head-when-flipping-two-coins)
@@ -73,7 +73,7 @@
 
 
 
-**Q1: What’s the difference between independent and mutually exclusive events?**
+**Q1 What’s the difference between independent and mutually exclusive events?**
 Answer:
 Independent and mutually exclusive events describe distinct relationships concerning the likelihood of their occurrences:
 
@@ -100,7 +100,7 @@ Independent and mutually exclusive events describe distinct relationships concer
     | **P(A ∩ B) (Both occur)**    | P(A) * P(B)                                             | 0                                                       |
     | **P(A ∪ B) (Either occurs)** | P(A) + P(B) - P(A)P(B)                                  | P(A) + P(B)                                             |
 
-**Q2: Explain Bayes' theorem and provide an example of its use.**
+**Q2 Explain Bayes' theorem and provide an example of its use.**
 Answer:
 Bayes' Theorem is a fundamental concept in probability theory that describes how to update the probability of a hypothesis based on new evidence. It provides a way to calculate posterior probability from prior probability and likelihood.
 
@@ -124,7 +124,7 @@ Bayes' Theorem is a fundamental concept in probability theory that describes how
 
     We want to find `P(A|B)`: the probability that the patient actually has the disease, given that they tested positive.
 
-**Q3: How do you calculate the probability of at least one event occurring?**
+**Q3 How do you calculate the probability of at least one event occurring?**
 Answer:
 Calculating the probability of at least one event occurring from a set of events (A₁, A₂, ..., Aₙ) is often most easily done using the complement rule.
 
@@ -168,7 +168,7 @@ Calculating the probability of at least one event occurring from a set of events
 
 In summary, the method depends on the nature of the events (independent, mutually exclusive, or general). The complement rule is a powerful and often preferred technique.
 
-**Q4: Describe the concept of conditional probability with an example.**
+**Q4 Describe the concept of conditional probability with an example.**
 Answer:
 Conditional probability is the probability of an event occurring given that another event has already occurred or is known to have occurred. It quantifies how the knowledge of one event influences the likelihood of another.
 
