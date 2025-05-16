@@ -98,12 +98,6 @@ Independent and mutually exclusive events describe distinct relationships concer
     | **P(A ∩ B) (Both occur)**    | P(A) * P(B)                                             | 0                                                       |
     | **P(A ∪ B) (Either occurs)** | P(A) + P(B) - P(A)P(B)                                  | P(A) + P(B)                                             |
 
-*   **Important Relationship:** If two events A and B both have non-zero probabilities (P(A) > 0 and P(B) > 0), they *cannot* be both independent and mutually exclusive.
-    *   If they are mutually exclusive, then P(A ∩ B) = 0.
-    *   If they were also independent, then P(A ∩ B) = P(A) * P(B).
-    *   This would imply P(A) * P(B) = 0, which contradicts the assumption that P(A) > 0 and P(B) > 0.
-    *   Therefore, non-trivial mutually exclusive events are inherently dependent. If A occurs, you know B cannot occur, so P(B|A) = 0, which is different from P(B) (if P(B)>0).
-
 **Q2: Explain Bayes' theorem and provide an example of its use.**
 Answer:
 Bayes' Theorem is a fundamental concept in probability theory that describes how to update the probability of a hypothesis based on new evidence. It provides a way to calculate posterior probability from prior probability and likelihood.
@@ -127,30 +121,6 @@ Bayes' Theorem is a fundamental concept in probability theory that describes how
     *   B: The patient tests positive for the disease.
 
     We want to find `P(A|B)`: the probability that the patient actually has the disease, given that they tested positive.
-
-    Suppose we know the following:
-    *   `P(A)` (Prior probability): The prevalence of the disease in the population is 1%. So, P(A) = 0.01. This means P(¬A) = 1 - 0.01 = 0.99.
-    *   `P(B|A)` (Likelihood/Sensitivity of the test): If a patient has the disease, the test correctly identifies it 99% of the time. So, P(B|A) = 0.99.
-    *   `P(B|¬A)` (Likelihood of a false positive): If a patient does *not* have the disease, the test incorrectly indicates they do 5% of the time (false positive rate). So, P(B|¬A) = 0.05.
-
-    First, calculate `P(B)` (the overall probability of testing positive):
-    P(B) = P(B|A) * P(A) + P(B|¬A) * P(¬A)
-    P(B) = (0.99 * 0.01) + (0.05 * 0.99)
-    P(B) = 0.0099 + 0.0495
-    P(B) = 0.0594
-
-    Now, apply Bayes' Theorem:
-    P(A|B) = [P(B|A) * P(A)] / P(B)
-    P(A|B) = (0.99 * 0.01) / 0.0594
-    P(A|B) = 0.0099 / 0.0594
-    P(A|B) ≈ 0.1667 or 16.67%
-
-    **Interpretation:** Even with a positive test result from a test that is 99% sensitive, the probability of the patient actually having this rare disease is only about 16.67%. This highlights how prior probabilities (disease prevalence) significantly influence posterior probabilities.
-
-*   **Other Applications:**
-    *   **Spam Filtering:** Classifying an email as spam based on the occurrence of certain words.
-    *   **A/B Testing:** Updating the belief that variation B is better than variation A as more data comes in.
-    *   **Machine Learning:** Parameter estimation in Bayesian models, Naive Bayes classifiers.
 
 **Q3: How do you calculate the probability of at least one event occurring?**
 Answer:
@@ -330,18 +300,6 @@ Probability distributions describe the likelihoods of different outcomes for a r
         *   **Chi-Squared Distribution:** Used in hypothesis testing (e.g., goodness-of-fit tests, tests for variance).
         *   **T-Distribution:** Used in hypothesis testing with small sample sizes when population variance is unknown.
 
-*   **Key Differences Summarized:**
-    | Feature             | Discrete Probability Distribution                 | Continuous Probability Distribution                 |
-    |---------------------|---------------------------------------------------|-----------------------------------------------------|
-    | **Random Variable** | Takes countable values (e.g., 0, 1, 2, ...)     | Takes any value in an interval (e.g., 1.23, 5.678) |
-    | **P(X=x)**          | Can be > 0                                        | Is always 0                                         |
-    | **Probability given by** | Probability Mass Function (PMF), P(x)           | Probability Density Function (PDF), f(x)            |
-    | **Summation/Integral**| Σ P(x) = 1                                      | ∫ f(x) dx = 1                                       |
-    | **Focus**           | Probability of specific outcomes                  | Probability over intervals                          |
-    | **Examples**        | Binomial, Poisson, Geometric                      | Normal, Exponential, Uniform (continuous)           |
-
-Understanding whether data is discrete or continuous is crucial for selecting appropriate statistical methods and models.
-
 **Q7: How would you calculate the probability of independent events occurring together?**
 Answer:
 If a set of events A₁, A₂, ..., Aₙ are **mutually independent**, the probability that all of them occur together (their intersection) is calculated by multiplying their individual probabilities.
@@ -486,8 +444,6 @@ The expected value (often denoted as E[X], μ, or EV) of a random variable X is 
     *   **Insurance:** Determining fair premiums based on expected payouts.
     *   **Gambling:** Analyzing the fairness or profitability of games.
     *   **Machine Learning:** Loss functions often involve expected values (e.g., expected squared error).
-
-The expected value is a cornerstone of probability and statistics, providing a summary measure that is critical for theoretical development and practical applications.
 
 **Q10: Define cumulative distribution function (CDF).**
 Answer:
