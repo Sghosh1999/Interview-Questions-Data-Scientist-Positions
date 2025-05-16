@@ -1,6 +1,6 @@
 # Top Statistics Interview Questions
 
-1. What’s the difference between independent and mutually exclusive events?
+1. [What’s the difference between independent and mutually exclusive events?](#q1)
 2. Explain Bayes' theorem and provide an example of its use.
 3. How do you calculate the probability of at least one event occurring?
 4. Describe the concept of conditional probability with an example.
