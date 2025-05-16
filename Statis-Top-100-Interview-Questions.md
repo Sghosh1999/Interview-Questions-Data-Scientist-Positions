@@ -2478,3 +2478,233 @@ ROC (Receiver Operating Characteristic) curves and AUC (Area Under the ROC Curve
         *   **Diagonal Line (y=x):** Represents a random classifier (no discriminative ability). A model whose ROC curve is below this line is performing worse than random guessing.
     *   **Usefulness:**
         *   Visualizes the trade-off between sensitivity (correctly identifying positives) and specificity (correctly identifying negatives, since FPR = 1 - Specificity)
+
+45. **How would you calculate the sample size needed for an experiment?** To calculate sample size, you typically need:
+    *   Desired Statistical Power (1-β): Often 0.80 (80% chance to detect an effect if it exists).
+    *   Significance Level (α): Usually 0.05 (5% chance of Type I error).
+    *   Effect Size: The minimum magnitude of the effect you want to detect (e.g., difference in means, change in conversion rate). This is crucial and often estimated from prior research or defined by practical importance.
+    *   Variability of the Outcome: Standard deviation for continuous outcomes, or baseline proportion for binary outcomes. These parameters are used in power analysis formulas or software specific to the statistical test being planned (e.g., t-test, proportion test).
+
+46. **What is a placebo effect, and why is it important in experimental design?** The placebo effect is a beneficial health outcome resulting from a person's anticipation that an intervention—like a pill or injection (the placebo)—will help them, even if the intervention has no actual therapeutic effect. It's important in experimental design because:
+    *   Control for Psychological Factors: It allows researchers to separate the true physiological effect of a treatment from the psychological effects of receiving an intervention.
+    *   Blinding: Using a placebo enables blinding (single or double), where participants (and sometimes researchers) don't know who received the active treatment versus the placebo. This minimizes bias in outcome reporting and assessment.
+    *   Baseline Comparison: The placebo group acts as a control, providing a baseline against which the active treatment's efficacy can be measured.
+
+47. **Describe the purpose of a power analysis.** A power analysis is primarily conducted before a study to determine the minimum sample size required to detect a statistically significant effect of a specified size, given a desired level of statistical power (typically 80%) and a significance level (alpha, usually 0.05). Its purposes are:
+    *   Ensure Study Feasibility: To have a reasonable chance of detecting a true effect if one exists, avoiding underpowered studies (which risk Type II errors).
+    *   Optimize Resources: To avoid using an unnecessarily large sample size, which wastes time and money.
+    *   Ethical Considerations: To justify sample size and ensure participants are not subjected to research with little chance of yielding meaningful results.
+
+48. **How would you perform dimensionality reduction on a dataset?** Dimensionality reduction reduces the number of features while retaining important information. Key methods include:
+    *   **Feature Selection:** Choosing a subset of original features.
+        *   Filter Methods: Based on statistical scores (e.g., correlation, chi-squared) independent of a model.
+        *   Wrapper Methods: Use a predictive model to score feature subsets (e.g., Recursive Feature Elimination).
+        *   Embedded Methods: Feature selection is part of the model training (e.g., Lasso regularization, tree-based feature importance).
+    *   **Feature Extraction:** Creating new, fewer features from combinations of original ones.
+        *   Principal Component Analysis (PCA): Unsupervised linear transformation to find principal components that capture maximum variance.
+        *   Linear Discriminant Analysis (LDA): Supervised linear transformation that maximizes class separability.
+        *   t-SNE, UMAP: Non-linear methods for visualization and manifold learning.
+        *   Autoencoders: Neural networks for learning compressed representations. The choice depends on data type, whether interpretability of original features is key, and if the task is supervised/unsupervised.
+
+49. **How do you handle missing data in a dataset?** Handling missing data depends on its extent, pattern (MCAR, MAR, MNAR), and the variable type:
+    *   Understand the Missingness: Investigate why data is missing.
+    *   Deletion:
+        *   Listwise/Row Deletion: If few rows have missing data and it's MCAR. Can lose significant data.
+        *   Column Deletion: If a feature has excessive missingness and low importance.
+    *   Imputation (filling missing values):
+        *   Simple: Mean, median (for numerical), mode (for categorical). Can distort variance and correlations.
+        *   Model-Based: Regression imputation, k-Nearest Neighbors (KNN) imputation.
+        *   Advanced: Multiple Imputation (e.g., MICE) creates several imputed datasets and pools results, accounting for imputation uncertainty.
+    *   Use Algorithms that Handle Missing Data: Some models (e.g., XGBoost, LightGBM) can handle missing values internally.
+    *   Create Indicator Variable: A binary column indicating if data was missing, which can sometimes capture predictive information. Always assess the impact of the chosen method on model performance and potential biases.
+
+50. **What is a time series, and how is it different from other data types?** A time series is a sequence of data points indexed or ordered by time, typically collected at successive, equally spaced intervals. Key Differences from other data types (e.g., cross-sectional):
+    *   Temporal Order Matters: The sequence of observations is fundamental; shuffling destroys information.
+    *   Autocorrelation: Observations are often correlated with past observations (serial dependence).
+    *   Trends and Seasonality: Often exhibit long-term trends (upward/downward movements) and seasonality (repeating patterns at fixed intervals).
+    *   Forecasting Focus: A primary goal is often to predict future values based on historical patterns.
+
+51. **Describe the components of a time series.** A time series can typically be decomposed into four main components:
+    *   Trend (T): The long-term direction or general movement of the series (e.g., increasing, decreasing, or stable).
+    *   Seasonality (S): Predictable, repeating patterns or fluctuations that occur at fixed intervals (e.g., daily, weekly, monthly, yearly).
+    *   Cyclical Component (C): Longer-term fluctuations that are not of a fixed period, often related to broader economic or business cycles. These are usually of longer duration than seasonal patterns.
+    *   Irregular/Residual Component (I or R or ε): The random, unpredictable noise or error left over after accounting for the other components. These components can combine additively (Y = T + S + C + I) or multiplicatively (Y = T * S * C * I).
+
+52. **How do you decompose a time series?** Time series decomposition separates a series into its constituent components (trend, seasonality, residual). Common methods include:
+    *   Classical Decomposition: Uses moving averages to estimate the trend-cycle. Then, the seasonal component is estimated by averaging de-trended values for each season. The remainder is what's left. Can be additive or multiplicative.
+    *   STL (Seasonal and Trend decomposition using Loess): A more robust and flexible method using iterative Loess (locally weighted regression) smoothing. It can handle various types of seasonality and allows the seasonal component to change over time.
+    *   X-12-ARIMA / X-13-ARIMA-SEATS: Sophisticated methods often used in official statistics, combining regression with ARIMA models. Decomposition helps in understanding patterns and can aid in forecasting.
+
+53. **Explain the concept of seasonality in time series.** Seasonality refers to regular, predictable patterns or fluctuations in a time series that repeat over a fixed period of time. This period can be daily (e.g., website traffic), weekly (e.g., weekend sales), monthly (e.g., heating oil demand), quarterly, or yearly (e.g., holiday retail sales). The key aspects are:
+    *   Fixed Periodicity: The pattern repeats at known intervals.
+    *   Predictability: Because it's regular, it can be anticipated.
+    *   Causes: Often driven by calendar effects (weather, holidays), social customs, or business operations. Identifying and modeling seasonality is crucial for accurate forecasting.
+
+54. **What is a trend, and how do you identify it in data?** A trend in a time series is the long-term underlying direction or movement of the data, after short-term fluctuations like seasonality and noise are smoothed out. It indicates whether the series is generally increasing, decreasing, or remaining stable over an extended period. How to identify it:
+    *   Visual Inspection: Plot the time series data and look for a persistent upward, downward, or flat pattern.
+    *   Moving Averages: Calculate and plot a moving average to smooth out short-term variations, making the trend more apparent.
+    *   Regression Analysis: Fit a regression line (or curve) with time as the predictor. The slope indicates the trend.
+    *   Decomposition Methods: Techniques like STL or classical decomposition explicitly estimate and separate the trend component.
+    *   Statistical Tests: Tests like the Mann-Kendall test can formally assess the presence of a monotonic trend.
+
+55. **What is an ARIMA model, and when is it used?** ARIMA stands for AutoRegressive Integrated Moving Average. It's a class of statistical models for analyzing and forecasting time series data.
+    *   **AR (AutoRegressive - p):** Uses a linear combination of p past values of the series to predict the current value.
+    *   **I (Integrated - d):** Uses d degrees of differencing to make the time series stationary (constant mean/variance).
+    *   **MA (Moving Average - q):** Uses a linear combination of q past forecast errors to predict the current value.
+    The model is denoted ARIMA(p,d,q). When it's used:
+    *   For univariate time series data that can be made stationary through differencing.
+    *   When there's evidence of autocorrelation (dependencies on past values or errors).
+    *   Commonly for short to medium-term forecasting.
+    *   Seasonal ARIMA (SARIMA) extends it to handle seasonality.
+
+56. **Define autocorrelation and partial autocorrelation.**
+    *   **Autocorrelation (ACF):** Measures the linear correlation between a time series and its lagged versions (i.e., the series correlated with itself at different past time points). An ACF plot shows these correlations at various lags. It helps identify the overall dependency structure, including indirect effects. For an MA(q) process, ACF cuts off after lag q.
+    *   **Partial Autocorrelation (PACF):** Measures the linear correlation between a time series observation and its value at a specific lag k, after removing the linear effects of the observations at intervening lags (lags 1 to k-1). A PACF plot shows these partial correlations. It helps identify the direct relationship at a specific lag. For an AR(p) process, PACF cuts off after lag p.
+    Both ACF and PACF are crucial for identifying the orders (p,q) in ARIMA models.
+
+57. **Explain the purpose of differencing in time series analysis.** Differencing is a transformation applied to a non-stationary time series to make it stationary. A stationary series has a constant mean, variance, and autocorrelation structure over time, which is an assumption for many time series models like ARIMA. Purposes:
+    *   Remove Trends: First-order differencing (Y<sub>t</sub> - Y<sub>t-1</sub>) can remove linear trends. Higher-order differencing can remove polynomial trends.
+    *   Remove or Reduce Seasonality: Seasonal differencing (Y<sub>t</sub> - Y<sub>t-m</sub>, where m is seasonal period) can remove seasonal patterns.
+    *   Stabilize Mean: By removing trends, differencing helps make the mean of the series constant. The goal is to achieve stationarity so that standard modeling techniques can be effectively applied.
+
+58. **How do you handle missing values in a time series?** Handling missing values in time series requires care due to temporal dependencies:
+    *   Simple Imputation (use cautiously):
+        *   Mean/Median: Ignores time order, can distort series.
+        *   Last Observation Carried Forward (LOCF) / Next Observation Carried Backward (NOCB): Can create artificial steps.
+    *   Interpolation:
+        *   Linear Interpolation: Fills values on a straight line between known points.
+        *   Spline Interpolation: Uses a smooth curve.
+    *   Model-Based Imputation:
+        *   Use forecasting methods (e.g., Exponential Smoothing, ARIMA) to predict missing values based on surrounding data.
+        *   Kalman smoothing provides optimal estimates under certain assumptions.
+    *   Seasonal Imputation: If seasonality is present, use values from similar past seasonal periods. Deletion is generally not recommended as it disrupts the sequence. The choice depends on the amount and pattern of missingness and series characteristics.
+
+59. **What is the Box-Jenkins methodology?** The Box-Jenkins methodology is an iterative, three-stage process for identifying, estimating, and diagnosing ARIMA (or SARIMA) models for time series forecasting:
+    1.  **Identification:**
+        *   Assess stationarity (plots, unit root tests). Apply differencing if needed.
+        *   Examine ACF and PACF plots of the (differenced) series to tentatively select orders (p,d,q) and (P,D,Q)<sub>m</sub> for seasonal models.
+    2.  **Estimation:**
+        *   Estimate the parameters of the chosen ARIMA model using methods like maximum likelihood.
+    3.  **Diagnostic Checking:**
+        *   Evaluate model adequacy by analyzing residuals (should be white noise: uncorrelated, zero mean, constant variance). Check ACF/PACF of residuals, Ljung-Box test.
+        *   Compare models using information criteria (AIC, BIC). If diagnostics suggest the model is inadequate, the process iterates back to identification or estimation with a revised model.
+
+60. **Describe exponential smoothing and its applications.** Exponential smoothing is a family of forecasting methods where predictions are weighted averages of past observations, with weights decreasing exponentially as observations get older (more recent data gets more weight).
+    *   **Types:**
+        *   Simple Exponential Smoothing (SES): For data with no trend or seasonality.
+        *   Holt's Linear Trend Method (Double ES): Handles data with a trend.
+        *   Holt-Winters' Seasonal Method (Triple ES): Handles data with both trend and seasonality (additive or multiplicative).
+    *   **Smoothing Parameters (α, β, γ):** Control the rate of weight decay (0-1). Higher values mean more weight on recent data.
+    *   **Applications:**
+        *   Short to medium-term forecasting.
+        *   Widely used for inventory control, sales forecasting, demand planning.
+        *   Effective when patterns like level, trend, and seasonality are present.
+        *   Relatively simple to implement and understand.
+
+61. **How do you perform a stationarity test in time series?** Stationarity tests check if a time series has statistical properties (mean, variance, autocorrelation) that are constant over time. Common methods:
+    *   Visual Inspection:
+        *   Time Plot: Look for obvious trends or changes in variance.
+        *   ACF Plot: For a stationary series, ACF should decay quickly. Slow decay suggests non-stationarity.
+    *   Statistical Tests (Unit Root Tests):
+        *   **Augmented Dickey-Fuller (ADF) Test:**
+            *   H₀: Series has a unit root (is non-stationary).
+            *   H₁: Series is stationary.
+            *   A low p-value (< 0.05) suggests rejecting H₀ (i.e., series is stationary).
+        *   **Kwiatkowski-Phillips-Schmidt-Shin (KPSS) Test:**
+            *   H₀: Series is stationary (around a level or trend).
+            *   H₁: Series has a unit root (is non-stationary).
+            *   A low p-value (< 0.05) suggests rejecting H₀ (i.e., series is non-stationary). It's often good to use both ADF and KPSS as they have different null hypotheses.
+
+62. **What is a moving average, and why is it useful?** A moving average is a technique that calculates a series of averages of different subsets (windows) of a full data set. It smooths out short-term fluctuations and highlights longer-term patterns.
+    *   **Calculation:** For a window of size k, it's the average of k consecutive observations.
+    *   **Usefulness:**
+        *   Smoothing: Reduces noise to reveal underlying signals.
+        *   Trend Identification: Makes long-term trends more visible.
+        *   Seasonality Estimation: A centered moving average with a window equal to the seasonal period can help estimate the trend-cycle, aiding in seasonal decomposition.
+        *   Forecasting (Simple): The last MA value can be a basic forecast.
+        *   Technical Analysis (Finance): Used to identify trends and signals. The choice of window size affects the degree of smoothing.
+
+63. **Explain the concept of a lag in time series.** A "lag" refers to a previous time period or observation relative to the current time t.
+    *   Lag 1 (Y<sub>t-1</sub>) is the observation one time period before the current observation Y<sub>t</sub>.
+    *   Lag k (Y<sub>t-k</sub>) is the observation k time periods before Y<sub>t</sub>.
+    *   **Importance:**
+        *   Autocorrelation: Lags are used to measure how much current values are correlated with past values.
+        *   ARIMA Models: AR components use lagged values of the series, and MA components use lagged forecast errors.
+        *   Forecasting: Past (lagged) information is often predictive of future values.
+        *   Seasonality: Strong correlations at lags corresponding to seasonal periods (e.g., lag 12 for monthly data) indicate seasonality.
+
+64. **Describe the purpose of a seasonal decomposition of time series (STL).** STL (Seasonal and Trend decomposition using Loess) is a robust method to decompose a time series into three components: trend, seasonality, and remainder (residual). Purpose:
+    *   Understand Patterns: To clearly visualize and quantify the long-term trend, repeating seasonal effects, and irregular noise.
+    *   Improved Forecasting: Allows modeling and forecasting components separately (e.g., forecast seasonal component and seasonally adjusted series).
+    *   Seasonal Adjustment: Create a seasonally adjusted series (Trend + Remainder) by removing the seasonal component, making it easier to analyze underlying movements.
+    *   Anomaly Detection: Large residuals can highlight unusual observations. STL is valued for its flexibility in handling various seasonal patterns and allowing seasonality to change over time.
+
+65. **How do you select the best model for time series forecasting?** Selecting the best model involves:
+    *   Data Understanding: Plot data, check for trend, seasonality, stationarity (ACF/PACF, unit root tests).
+    *   Train-Test Split: Chronologically split data into training and test sets.
+    *   Candidate Models: Choose models based on data characteristics (e.g., ETS, ARIMA, Prophet, ML models).
+    *   Model Fitting: Train models on the training set.
+    *   Out-of-Sample Evaluation: Evaluate on the test set using metrics like MAE, RMSE, MAPE, MASE. Compare against naive benchmarks.
+    *   Residual Diagnostics: Check if residuals from the training set are white noise (uncorrelated, zero mean).
+    *   Cross-Validation (Time Series Specific): Use rolling forecast origin for more robust evaluation and hyperparameter tuning.
+    *   Information Criteria (AIC/BIC): For comparing models on training data, penalizing complexity.
+    *   Parsimony: Prefer simpler models if performance is similar.
+    *   Consider Forecast Horizon & Business Needs: The "best" model should be accurate, interpretable if needed, and practical.
+
+66. **Explain the difference between additive and multiplicative models.** Additive and multiplicative models describe how time series components (Trend T, Seasonality S, Remainder R) combine:
+    *   **Additive Model (Y = T + S + R):**
+        *   Assumes seasonal fluctuations and random error are constant in magnitude, regardless of the series level.
+        *   The size of seasonal swings doesn't change as the trend changes.
+        *   Use when seasonal effect is, e.g., "plus or minus 10 units."
+    *   **Multiplicative Model (Y = T * S * R):**
+        *   Assumes seasonal fluctuations and random error are proportional to the series level.
+        *   Seasonal swings are wider when the trend is high and narrower when low.
+        *   Use when seasonal effect is, e.g., "plus or minus 10% of the trend."
+        *   Can often be converted to additive by log-transforming the data: log(Y) = log(T) + log(S) + log(R). Visual inspection of the time series plot helps choose: if seasonal swing size changes with trend, multiplicative is likely.
+
+67. **What is the purpose of a rolling window in time series analysis?** A rolling (or moving/sliding) window applies a calculation or model to a fixed-size segment of consecutive data points as it moves through the series. Purpose:
+    *   Calculate Rolling Statistics: E.g., rolling mean, median, standard deviation to smooth data, identify local trends, or detect changes in volatility.
+    *   Feature Engineering: Create time-dependent features for ML models (e.g., average of past k values).
+    *   Time Series Cross-Validation: E.g., rolling forecast origin, where the training window rolls forward.
+    *   Detecting Changes/Anomalies: Compare statistics from current window to past or overall.
+    *   Local Modeling: Fit models to data within the window if parameters are time-varying. The window size determines responsiveness vs. smoothness.
+
+68. **How do you evaluate a time series forecasting model?** Evaluation is done on an out-of-sample test set (future data not used for training):
+    *   Error Metrics: Compare forecasts (Ŷ) to actuals (Y).
+        *   Scale-Dependent: MAE (Mean Absolute Error), MSE (Mean Squared Error), RMSE (Root MSE).
+        *   Percentage: MAPE (Mean Absolute Percentage Error) - use cautiously if Y is near zero.
+        *   Scaled: MASE (Mean Absolute Scaled Error) - compares to a naive benchmark, good for different scales.
+    *   Residual Analysis (on training data): Forecast errors (residuals) should ideally be white noise (uncorrelated, zero mean, constant variance). Check ACF of residuals, Ljung-Box test.
+    *   Visual Inspection: Plot actuals vs. forecasts to spot systematic errors.
+    *   Benchmark Comparison: Compare against simple models (Naive, Seasonal Naive).
+    *   Time Series Cross-Validation: For robust evaluation (e.g., rolling forecast origin).
+    *   Consider Forecast Horizon: Performance can vary by how far ahead you forecast.
+    *   Forecast Bias: Check if the model consistently over/under-forecasts (Mean Error).
+
+69. **Describe the Holt-Winters model and its applications.** The Holt-Winters model is an exponential smoothing method for forecasting time series data with both trend and seasonality. It's also called Triple Exponential Smoothing.
+    *   **Components Modeled:** It explicitly models and forecasts three components:
+        *   Level: Smoothed value of the series.
+        *   Trend: Smoothed slope of the series.
+        *   Seasonality: Smoothed seasonal factors.
+    *   **Variations:**
+        *   Additive Seasonality: Seasonal effect is constant in magnitude.
+        *   Multiplicative Seasonality: Seasonal effect is proportional to the series level.
+        *   Damped Trend: Trend can be damped to flatten out for longer forecasts.
+    *   **Smoothing Parameters (α, β, γ):** Control the weighting of recent vs. older data for level, trend, and seasonality.
+    *   **Applications:**
+        *   Forecasting data with clear trend and seasonal patterns (e.g., monthly product sales, quarterly demand).
+        *   Short to medium-term forecasting.
+        *   Popular due to its ability to capture these common patterns effectively.
+
+70. **How do you handle imbalanced datasets in a classification problem?** For imbalanced datasets (one class is rare, e.g., fraud):
+    *   Data-Level Methods (Resampling):
+        *   Oversampling Minority Class: E.g., Random Oversampling, SMOTE (creates synthetic samples).
+        *   Undersampling Majority Class: E.g., Random Undersampling, Tomek Links.
+        *   Apply only to training data after splitting.
+    *   Algorithmic-Level Methods:
+        *   Cost-Sensitive Learning: Assign higher misclassification costs to minority class errors (many algorithms support class weights).
+        *   Ensemble Techniques: E.g., Balanced Random Forest, EasyEnsemble.
+    *   Use Appropriate Evaluation Metrics:
+        *   Accuracy is misleading. Use: Precision, Recall, F1-Score (for minority class), AUC-ROC, AUC-PR (Precision-Recall AUC is often better for high imbalance), Confusion Matrix.
+    *   Threshold Moving: Adjust the decision threshold of probabilistic classifiers to optimize for minority class performance. The goal is to improve detection of the often more critical minority class.
+
